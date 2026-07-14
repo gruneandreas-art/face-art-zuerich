@@ -150,18 +150,11 @@
         <a href="about.html" class="nav__link" data-i18n="nav.ueber">Über mich</a>
         <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
-      <div class="lang-dropdown" id="langDropdown">
-        <button class="lang-trigger" id="langTrigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache wählen">
-          <svg class="lang-trigger__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
-          <span class="lang-trigger__code" id="langCurrentCode">DE</span>
-          <svg class="lang-trigger__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <ul class="lang-menu" role="listbox" id="langMenu" aria-label="Sprache wählen">
-          <li><button class="lang-option lang-option--active" data-lang="de" role="option" aria-selected="true"><span class="lang-option__flag">🇩🇪</span> Deutsch</button></li>
-          <li><button class="lang-option" data-lang="en" role="option" aria-selected="false"><span class="lang-option__flag">🇬🇧</span> English</button></li>
-          <li><button class="lang-option" data-lang="fr" role="option" aria-selected="false"><span class="lang-option__flag">🇫🇷</span> Français</button></li>
-          <li><button class="lang-option" data-lang="it" role="option" aria-selected="false"><span class="lang-option__flag">🇮🇹</span> Italiano</button></li>
-        </ul>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
       </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>

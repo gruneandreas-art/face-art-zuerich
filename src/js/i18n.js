@@ -169,8 +169,6 @@ const I18n = (() => {
     }
   };
 
-  const CODES = { de:'DE', en:'EN', fr:'FR', it:'IT' };
-
   /* ── Engine ───────────────────────────────────────────── */
   const detect = () => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -181,20 +179,6 @@ const I18n = (() => {
 
   const resolve = (obj, dotKey) =>
     dotKey.split('.').reduce((o, k) => o?.[k], obj);
-
-  const updateDropdownUI = lang => {
-    const codeEl  = document.getElementById('langCurrentCode');
-    const trigger = document.getElementById('langTrigger');
-    if (codeEl)  codeEl.textContent = CODES[lang] || lang.toUpperCase();
-    if (trigger) trigger.setAttribute('aria-expanded', 'false');
-    document.getElementById('langDropdown')?.classList.remove('lang-dropdown--open');
-
-    document.querySelectorAll('.lang-option').forEach(opt => {
-      const active = opt.dataset.lang === lang;
-      opt.classList.toggle('lang-option--active', active);
-      opt.setAttribute('aria-selected', String(active));
-    });
-  };
 
   const applyAll = (lang, t) => {
     document.documentElement.lang = lang;
@@ -222,7 +206,11 @@ const I18n = (() => {
       if (val != null) el.placeholder = val;
     });
 
-    updateDropdownUI(lang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle('lang-btn--active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
   };
 
   const setLang = lang => {
@@ -232,40 +220,16 @@ const I18n = (() => {
     applyAll(lang, lang === 'de' ? {} : T[lang]);
   };
 
-  const initDropdown = () => {
-    const dropdown = document.getElementById('langDropdown');
-    const trigger  = document.getElementById('langTrigger');
-    if (!dropdown || !trigger) return;
-
-    const toggle = () => {
-      const open = dropdown.classList.toggle('lang-dropdown--open');
-      trigger.setAttribute('aria-expanded', String(open));
-    };
-    const close = () => {
-      dropdown.classList.remove('lang-dropdown--open');
-      trigger.setAttribute('aria-expanded', 'false');
-    };
-
-    trigger.addEventListener('click', e => { e.stopPropagation(); toggle(); });
-
-    document.querySelectorAll('.lang-option').forEach(opt => {
-      opt.addEventListener('click', () => { setLang(opt.dataset.lang); close(); });
-    });
-
-    document.addEventListener('click', e => {
-      if (!dropdown.contains(e.target)) close();
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') close();
-    });
-  };
-
   const init = () => {
     const lang = detect();
     current = lang;
     if (lang !== 'de') applyAll(lang, T[lang]);
-    initDropdown();
-    updateDropdownUI(lang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle('lang-btn--active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
   };
 
   return { init };
