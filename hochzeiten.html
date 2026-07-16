@@ -24,13 +24,19 @@
         <img class="nav__logo-img" src="src/images/logo.png" alt="Face Art Zürich Logo">
       </a>
       <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
-        <a href="index.html" class="nav__link">Start</a>
-        <a href="kinderschminken.html" class="nav__link">Kinderschminken</a>
-        <a href="hochzeiten.html" class="nav__link nav__link--active">Hochzeiten</a>
-        <a href="unternehmen.html" class="nav__link">Für Unternehmen</a>
-        <a href="about.html" class="nav__link">Über mich</a>
-        <a href="kontakt.html" class="nav__link nav__link--cta">Kontakt</a>
+        <a href="index.html" class="nav__link" data-i18n="nav.start">Start</a>
+        <a href="kinderschminken.html" class="nav__link" data-i18n="nav.kinderschminken">Kinderschminken</a>
+        <a href="hochzeiten.html" class="nav__link nav__link--active" data-i18n="nav.hochzeiten">Hochzeiten</a>
+        <a href="unternehmen.html" class="nav__link" data-i18n="nav.unternehmen">Für Unternehmen</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.ueber">Über mich</a>
+        <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -44,11 +50,11 @@
       <div class="hero__bg"></div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Euer schönster Tag</p>
-        <h1 class="hero__title">Hochzeiten.<br><em>Face Art für euren grossen Tag.</em></h1>
-        <p class="hero__subtitle">Elegante Face Art und Body Art für euren Hochzeitstag in Zürich — ein Erlebnis, das Gäste begeistert und auf Fotos wunderschön aussieht.</p>
+        <p class="hero__eyebrow" data-i18n="hochzeiten.hero_eyebrow">Euer schönster Tag</p>
+        <h1 class="hero__title"><span data-i18n="hochzeiten.hero_title">Hochzeiten.</span><br><em data-i18n="hochzeiten.hero_title_em">Face Art für euren grossen Tag.</em></h1>
+        <p class="hero__subtitle" data-i18n="hochzeiten.hero_subtitle">Elegante Face Art und Body Art für euren Hochzeitstag in Zürich — ein Erlebnis, das Gäste begeistert und auf Fotos wunderschön aussieht.</p>
         <div class="hero__cta">
-          <a href="kontakt.html" class="btn btn--primary">Jetzt anfragen</a>
+          <a href="kontakt.html" class="btn btn--primary" data-i18n="hochzeiten.hero_cta">Jetzt anfragen</a>
           <a href="https://wa.me/41764394928?text=Hallo%20Isa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Face%20Art%20an%20meiner%20Hochzeit."
              class="btn btn--outline-white" target="_blank" rel="noopener noreferrer">
             WhatsApp
@@ -76,11 +82,11 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Ein Highlight für alle Gäste</span>
-            <h2 class="feature__title">Face Art &amp; Kinderschminken an eurer Hochzeit Zürich</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f1_label">Ein Highlight für alle Gäste</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f1_title">Face Art &amp; Kinderschminken an eurer Hochzeit Zürich</h2>
             <div class="divider"></div>
-            <p class="feature__text">Face Art an einer Hochzeit ist mehr als nur ein Detail — es ist ein Erlebnis. Gäste aller Altersgruppen kommen vorbei, lachen und staunen gemeinsam.</p>
-            <p class="feature__text">Von zarten Blumen über elegante Muster bis hin zu verspielten Motiven — Isa passt die Designs auf euer Hochzeitsthema ab.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f1_text1">Face Art an einer Hochzeit ist mehr als nur ein Detail — es ist ein Erlebnis. Gäste aller Altersgruppen kommen vorbei, lachen und staunen gemeinsam.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f1_text2">Von zarten Blumen über elegante Muster bis hin zu verspielten Motiven — Isa passt die Designs auf euer Hochzeitsthema ab.</p>
           </div>
         </div>
 
@@ -104,11 +110,11 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Romantisch &amp; Individuell</span>
-            <h2 class="feature__title">Hochzeits-Face Art individuell gestaltet</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f2_label">Romantisch &amp; Individuell</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f2_title">Hochzeits-Face Art individuell gestaltet</h2>
             <div class="divider"></div>
-            <p class="feature__text">Ob romantische Rosen, zarte Ranken oder filigranes Blattgold — jedes Motiv wird individuell gemalt und harmoniert mit eurem Hochzeitsthema.</p>
-            <p class="feature__text">Isa stimmt sich vorab mit euch ab, damit alles zur Farbwelt und Atmosphäre eures grossen Tages passt.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f2_text1">Ob romantische Rosen, zarte Ranken oder filigranes Blattgold — jedes Motiv wird individuell gemalt und harmoniert mit eurem Hochzeitsthema.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f2_text2">Isa stimmt sich vorab mit euch ab, damit alles zur Farbwelt und Atmosphäre eures grossen Tages passt.</p>
           </div>
         </div>
 
@@ -132,10 +138,10 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Erinnerungen, die bleiben</span>
-            <h2 class="feature__title">Momente, die bleiben</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f3_label">Erinnerungen, die bleiben</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f3_title">Momente, die bleiben</h2>
             <div class="divider"></div>
-            <p class="feature__text">Schöne Momente verdienen schöne Fotos. Die bemalten Gesichter werden zum echten Hingucker auf euren Hochzeitsbildern — ein Detail, über das man noch Jahre später schmunzelt.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f3_text1">Schöne Momente verdienen schöne Fotos. Die bemalten Gesichter werden zum echten Hingucker auf euren Hochzeitsbildern — ein Detail, über das man noch Jahre später schmunzelt.</p>
           </div>
         </div>
 
@@ -159,12 +165,12 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Body Art &amp; mehr</span>
-            <h2 class="feature__title">Nicht nur Gesichter</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f4_label">Body Art &amp; mehr</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f4_title">Nicht nur Gesichter</h2>
             <div class="divider"></div>
-            <p class="feature__text">Body Art auf Schulter, Arm oder Dekolleté — ein elegantes und einzigartiges Highlight, das auf eurem grossen Tag für Staunen sorgt.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f4_text1">Body Art auf Schulter, Arm oder Dekolleté — ein elegantes und einzigartiges Highlight, das auf eurem grossen Tag für Staunen sorgt.</p>
             <div style="margin-top: var(--sp-4);">
-              <a href="kontakt.html" class="btn btn--primary">Hochzeitstermin sichern</a>
+              <a href="kontakt.html" class="btn btn--primary" data-i18n="hochzeiten.f4_cta">Hochzeitstermin sichern</a>
             </div>
           </div>
         </div>
@@ -177,48 +183,48 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label">Preisstruktur</span>
-            <h2 class="section__title">Transparent &amp; Fair</h2>
-            <p class="section__subtitle">Inklusive individuelle Motivberatung und Abstimmung auf eure Farbwelt. Beliebte Sommerdaten früh anfragen.</p>
+            <span class="section__label" data-i18n="hochzeiten.price_label">Preisstruktur</span>
+            <h2 class="section__title" data-i18n="hochzeiten.price_title">Transparent &amp; Fair</h2>
+            <p class="section__subtitle" data-i18n="hochzeiten.price_subtitle">Inklusive individuelle Motivberatung und Abstimmung auf eure Farbwelt. Beliebte Sommerdaten früh anfragen.</p>
             <div class="pricing">
               <div class="pricing__card">
                 <div class="pricing__amount">CHF 145</div>
-                <div class="pricing__unit">pro Stunde</div>
-                <p class="pricing__note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Empfohlen: 2–3 Monate im Voraus</p>
+                <div class="pricing__unit" data-i18n="hochzeiten.price_unit">pro Stunde</div>
+                <p class="pricing__note" data-i18n="hochzeiten.price_note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Empfohlen: 2–3 Monate im Voraus</p>
               </div>
             </div>
           </div>
           <div>
-            <span class="section__label">Ablauf einer Buchung</span>
-            <h2 class="section__title">So einfach geht's</h2>
+            <span class="section__label" data-i18n="hochzeiten.booking_label">Ablauf einer Buchung</span>
+            <h2 class="section__title" data-i18n="hochzeiten.booking_title">So einfach geht's</h2>
             <div style="margin-top: var(--sp-6);">
               <ol class="steps">
                 <li class="step">
                   <span class="step__num">1</span>
                   <div>
-                    <p class="step__title">Melde dich bei mir</p>
-                    <p class="step__text">Schreib mir und nenn mir euer Datum, den Veranstaltungsort und eure Wünsche für das Hochzeitsthema.</p>
+                    <p class="step__title" data-i18n="hochzeiten.step1_title">Melde dich bei mir</p>
+                    <p class="step__text" data-i18n="hochzeiten.step1_text">Schreib mir und nenn mir euer Datum, den Veranstaltungsort und eure Wünsche für das Hochzeitsthema.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">2</span>
                   <div>
-                    <p class="step__title">Individuelles Angebot</p>
-                    <p class="step__text">Ihr erhaltet ein transparentes Angebot mit Preis, Dauer und allem was dazugehört — innerhalb von 24h.</p>
+                    <p class="step__title" data-i18n="hochzeiten.step2_title">Individuelles Angebot</p>
+                    <p class="step__text" data-i18n="hochzeiten.step2_text">Ihr erhaltet ein transparentes Angebot mit Preis, Dauer und allem was dazugehört — innerhalb von 24h.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">3</span>
                   <div>
-                    <p class="step__title">Design-Abstimmung</p>
-                    <p class="step__text">Wir besprechen Motive und Farbwelt, damit alles perfekt zu eurem Hochzeitsstil passt.</p>
+                    <p class="step__title" data-i18n="hochzeiten.step3_title">Design-Abstimmung</p>
+                    <p class="step__text" data-i18n="hochzeiten.step3_text">Wir besprechen Motive und Farbwelt, damit alles perfekt zu eurem Hochzeitsstil passt.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">4</span>
                   <div>
-                    <p class="step__title">Euer grosser Tag</p>
-                    <p class="step__text">Isa erscheint pünktlich, baut diskret auf und sorgt für strahlende Gesichter — auf jedem Foto sichtbar.</p>
+                    <p class="step__title" data-i18n="hochzeiten.step4_title">Euer grosser Tag</p>
+                    <p class="step__text" data-i18n="hochzeiten.step4_text">Isa erscheint pünktlich, baut diskret auf und sorgt für strahlende Gesichter — auf jedem Foto sichtbar.</p>
                   </div>
                 </li>
               </ol>
@@ -233,8 +239,8 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label">Was Face Art besonders macht</span>
-            <h2 class="section__title">Warum Gäste es lieben</h2>
+            <span class="section__label" data-i18n="hochzeiten.ben_label">Was Face Art besonders macht</span>
+            <h2 class="section__title" data-i18n="hochzeiten.ben_title">Warum Gäste es lieben</h2>
             <div style="margin-top: var(--sp-6);">
               <ul class="benefits">
                 <li class="benefit">
@@ -269,8 +275,8 @@
             </div>
           </div>
           <div>
-            <span class="section__label">Stressfrei organisiert</span>
-            <h2 class="section__title">Isa bringt alles mit</h2>
+            <span class="section__label" data-i18n="hochzeiten.setup_label">Stressfrei organisiert</span>
+            <h2 class="section__title" data-i18n="hochzeiten.setup_title">Isa bringt alles mit</h2>
             <div class="divider"></div>
             <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-3);">
               Ihr habt an eurem Tag genug zu koordinieren. Deshalb bringt Isa alles Nötige selbst mit — Farben, Pinsel, Tisch und Stuhl. Nach rund 10 Minuten Aufbau kann es losgehen.
@@ -399,10 +405,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <p class="footer__logo">Face Art Zürich</p>
-          <p class="footer__tagline">Kinderschminken &amp; Face Art</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
         </div>
         <div>
-          <p class="footer__heading">Seiten</p>
+          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
                     <nav class="footer__links" aria-label="Footer Navigation">
             <a href="kinderschminken.html">Kinderschminken</a>
             <a href="hochzeiten.html">Hochzeiten</a>
@@ -426,7 +432,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 Face Art Zürich — Isa, Dübendorf</p>
+        <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
       </div>
     </div>
   </footer>
@@ -437,6 +443,7 @@
     </svg>
   </a>
 
+  <script src="src/js/i18n.js"></script>
   <script src="src/js/main.js"></script>
   <script type="application/ld+json">
   {
