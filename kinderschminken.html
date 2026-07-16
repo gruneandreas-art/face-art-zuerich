@@ -24,13 +24,19 @@
         <img class="nav__logo-img" src="src/images/logo.png" alt="Face Art Zürich Logo">
       </a>
       <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
-        <a href="index.html" class="nav__link">Start</a>
-        <a href="kinderschminken.html" class="nav__link nav__link--active">Kinderschminken</a>
-        <a href="hochzeiten.html" class="nav__link">Hochzeiten</a>
-        <a href="unternehmen.html" class="nav__link">Für Unternehmen</a>
-        <a href="about.html" class="nav__link">Über mich</a>
-        <a href="kontakt.html" class="nav__link nav__link--cta">Kontakt</a>
+        <a href="index.html" class="nav__link" data-i18n="nav.start">Start</a>
+        <a href="kinderschminken.html" class="nav__link nav__link--active" data-i18n="nav.kinderschminken">Kinderschminken</a>
+        <a href="hochzeiten.html" class="nav__link" data-i18n="nav.hochzeiten">Hochzeiten</a>
+        <a href="unternehmen.html" class="nav__link" data-i18n="nav.unternehmen">Für Unternehmen</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.ueber">Über mich</a>
+        <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -44,11 +50,11 @@
       <div class="hero__bg"></div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Für Kinder &amp; Gross</p>
-        <h1 class="hero__title">Kinder&shy;schminken.<br><em>Magische Momente.</em></h1>
-        <p class="hero__subtitle">Einhörner, Superhelden, Tiger — jedes Motiv ein Unikat. Professionelles Kinderschminken in Zürich ab CHF 145/h, direkt bei eurem Event.</p>
+        <p class="hero__eyebrow" data-i18n="kinderschminken.hero_eyebrow">Für Kinder &amp; Gross</p>
+        <h1 class="hero__title"><span data-i18n="kinderschminken.hero_title">Kinder&shy;schminken.</span><br><em data-i18n="kinderschminken.hero_title_em">Magische Momente.</em></h1>
+        <p class="hero__subtitle" data-i18n="kinderschminken.hero_subtitle">Einhörner, Superhelden, Tiger — jedes Motiv ein Unikat. Professionelles Kinderschminken in Zürich ab CHF 145/h, direkt bei eurem Event.</p>
         <div class="hero__cta">
-          <a href="kontakt.html" class="btn btn--primary">Jetzt anfragen</a>
+          <a href="kontakt.html" class="btn btn--primary" data-i18n="kinderschminken.hero_cta">Jetzt anfragen</a>
           <a href="https://wa.me/41764394928?text=Hallo%20Isa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Kinderschminken."
              class="btn btn--outline-white" target="_blank" rel="noopener noreferrer">
             WhatsApp
@@ -86,11 +92,11 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Jedes Motiv ist ein Unikat</span>
-            <h2 class="feature__title">Professionelles Kinderschminken in Zürich</h2>
+            <span class="feature__label" data-i18n="kinderschminken.f1_label">Jedes Motiv ist ein Unikat</span>
+            <h2 class="feature__title" data-i18n="kinderschminken.f1_title">Professionelles Kinderschminken in Zürich</h2>
             <div class="divider"></div>
-            <p class="feature__text">Jedes Motiv entsteht live vor Ort — und kein Gesicht sieht danach gleich aus.</p>
-            <p class="feature__text">Ob Prinzessin, Tiger, Schmetterling oder Drachen — Isa malt jedes Motiv direkt vor Ort, in Zürich, Dübendorf und der ganzen Region.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f1_text1">Jedes Motiv entsteht live vor Ort — und kein Gesicht sieht danach gleich aus.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f1_text2">Ob Prinzessin, Tiger, Schmetterling oder Drachen — Isa malt jedes Motiv direkt vor Ort, in Zürich, Dübendorf und der ganzen Region.</p>
           </div>
         </div>
 
@@ -114,10 +120,10 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Flexibel &amp; Individuell</span>
-            <h2 class="feature__title">Kinderschminken für Geburtstage &amp; Partys in Zürich</h2>
+            <span class="feature__label" data-i18n="kinderschminken.f2_label">Flexibel &amp; Individuell</span>
+            <h2 class="feature__title" data-i18n="kinderschminken.f2_title">Kinderschminken für Geburtstage &amp; Partys in Zürich</h2>
             <div class="divider"></div>
-            <p class="feature__text">Mit oder ohne Thema — Isa malt alle Motive selbst und richtet sich dabei nach euren Wünschen. So passt Face Art zu jedem Event.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f2_text1">Mit oder ohne Thema — Isa malt alle Motive selbst und richtet sich dabei nach euren Wünschen. So passt Face Art zu jedem Event.</p>
           </div>
         </div>
 
@@ -141,11 +147,11 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Grössere Events</span>
-            <h2 class="feature__title">Kinderschminken für grosse Gruppen &amp; Events</h2>
+            <span class="feature__label" data-i18n="kinderschminken.f3_label">Grössere Events</span>
+            <h2 class="feature__title" data-i18n="kinderschminken.f3_title">Kinderschminken für grosse Gruppen &amp; Events</h2>
             <div class="divider"></div>
-            <p class="feature__text">Grösseres Event geplant? Isa klärt auf Anfrage, ob Verstärkung sinnvoll ist — direkt und unkompliziert.</p>
-            <p class="feature__text">Anfrage direkt via Kontaktformular oder WhatsApp.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f3_text1">Grösseres Event geplant? Isa klärt auf Anfrage, ob Verstärkung sinnvoll ist — direkt und unkompliziert.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f3_text2">Anfrage direkt via Kontaktformular oder WhatsApp.</p>
           </div>
         </div>
 
@@ -169,12 +175,12 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Prinzessinnen &amp; Träumer</span>
-            <h2 class="feature__title">Für jedes Kind das perfekte Motiv</h2>
+            <span class="feature__label" data-i18n="kinderschminken.f4_label">Prinzessinnen &amp; Träumer</span>
+            <h2 class="feature__title" data-i18n="kinderschminken.f4_title">Für jedes Kind das perfekte Motiv</h2>
             <div class="divider"></div>
-            <p class="feature__text">Von der zarten Einhorn-Krone bis zum funkelnden Schmetterling — für jedes Kind findet sich das Motiv, das seine Augen zum Leuchten bringt.</p>
+            <p class="feature__text" data-i18n="kinderschminken.f4_text1">Von der zarten Einhorn-Krone bis zum funkelnden Schmetterling — für jedes Kind findet sich das Motiv, das seine Augen zum Leuchten bringt.</p>
             <div style="margin-top: var(--sp-4);">
-              <a href="kontakt.html" class="btn btn--primary">Geburtstag buchen</a>
+              <a href="kontakt.html" class="btn btn--primary" data-i18n="kinderschminken.f4_cta">Geburtstag buchen</a>
             </div>
           </div>
         </div>
@@ -187,48 +193,48 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label">Preisstruktur</span>
-            <h2 class="section__title">Kinderschminken Preise — Zürich &amp; Dübendorf</h2>
-            <p class="section__subtitle">Ca. 6–8 Kinder pro Stunde — ab 1 Stunde buchbar, keine versteckten Kosten.</p>
+            <span class="section__label" data-i18n="kinderschminken.price_label">Preisstruktur</span>
+            <h2 class="section__title" data-i18n="kinderschminken.price_title">Kinderschminken Preise — Zürich &amp; Dübendorf</h2>
+            <p class="section__subtitle" data-i18n="kinderschminken.price_subtitle">Ca. 6–8 Kinder pro Stunde — ab 1 Stunde buchbar, keine versteckten Kosten.</p>
             <div class="pricing">
               <div class="pricing__card">
                 <div class="pricing__amount">CHF 145</div>
-                <div class="pricing__unit">pro Stunde</div>
-                <p class="pricing__note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Ca. 6–8 Kinder pro Stunde</p>
+                <div class="pricing__unit" data-i18n="kinderschminken.price_unit">pro Stunde</div>
+                <p class="pricing__note" data-i18n="kinderschminken.price_note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Ca. 6–8 Kinder pro Stunde</p>
               </div>
             </div>
           </div>
           <div>
-            <span class="section__label">Ablauf einer Buchung</span>
-            <h2 class="section__title">So einfach geht's</h2>
+            <span class="section__label" data-i18n="kinderschminken.booking_label">Ablauf einer Buchung</span>
+            <h2 class="section__title" data-i18n="kinderschminken.booking_title">So einfach geht's</h2>
             <div style="margin-top: var(--sp-6);">
               <ol class="steps">
                 <li class="step">
                   <span class="step__num">1</span>
                   <div>
-                    <p class="step__title">Melde dich bei mir</p>
-                    <p class="step__text">Schreib mir eine Mail oder ruf an und nenn mir Datum, Thema, Ort und die Anzahl der Gäste oder Kinder.</p>
+                    <p class="step__title" data-i18n="kinderschminken.step1_title">Melde dich bei mir</p>
+                    <p class="step__text" data-i18n="kinderschminken.step1_text">Schreib mir eine Mail oder ruf an und nenn mir Datum, Thema, Ort und die Anzahl der Gäste oder Kinder.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">2</span>
                   <div>
-                    <p class="step__title">Unverbindliches Angebot</p>
-                    <p class="step__text">Du erhältst innerhalb von 24h ein unverbindliches Angebot mit Preis und allen Details.</p>
+                    <p class="step__title" data-i18n="kinderschminken.step2_title">Unverbindliches Angebot</p>
+                    <p class="step__text" data-i18n="kinderschminken.step2_text">Du erhältst innerhalb von 24h ein unverbindliches Angebot mit Preis und allen Details.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">3</span>
                   <div>
-                    <p class="step__title">Klärung der Details</p>
-                    <p class="step__text">Nach der Buchung stimmt sich Isa persönlich mit euch ab — per Telefon oder kurzer Nachricht.</p>
+                    <p class="step__title" data-i18n="kinderschminken.step3_title">Klärung der Details</p>
+                    <p class="step__text" data-i18n="kinderschminken.step3_text">Nach der Buchung stimmt sich Isa persönlich mit euch ab — per Telefon oder kurzer Nachricht.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">4</span>
                   <div>
-                    <p class="step__title">Motive vorab (optional)</p>
-                    <p class="step__text">Wenn du möchtest, sende ich dir gerne vorab eine Auswahl an möglichen Motiven.</p>
+                    <p class="step__title" data-i18n="kinderschminken.step4_title">Motive vorab (optional)</p>
+                    <p class="step__text" data-i18n="kinderschminken.step4_text">Wenn du möchtest, sende ich dir gerne vorab eine Auswahl an möglichen Motiven.</p>
                   </div>
                 </li>
               </ol>
@@ -243,28 +249,28 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label">Professionelles Setup</span>
-            <h2 class="section__title">Alles dabei — sofort einsatzbereit</h2>
+            <span class="section__label" data-i18n="kinderschminken.setup_label">Professionelles Setup</span>
+            <h2 class="section__title" data-i18n="kinderschminken.setup_title">Alles dabei — sofort einsatzbereit</h2>
             <div class="divider"></div>
-            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-3);">
+            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-3);" data-i18n="kinderschminken.setup_text1">
               Isa hat alles dabei, was vor Ort gebraucht wird — Farben, Tisch, Stuhl und Materialien. Nach rund 10 Minuten Aufbau kann es losgehen, ob in Zürich, Dübendorf oder der ganzen Region.
             </p>
-            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-4);">
+            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-4);" data-i18n="kinderschminken.setup_text2">
               Das kompakte Setup lässt sich flexibel an jeden Ort anpassen — auch ein Ortswechsel während der Feier ist kein Problem.
             </p>
             <div class="material-box">
               <p class="material-box__title">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Vegan &amp; Unbedenklich
+                <span data-i18n="kinderschminken.material_title">Vegan &amp; Unbedenklich</span>
               </p>
-              <p class="material-box__text">
+              <p class="material-box__text" data-i18n="kinderschminken.material_text">
                 Verwendet werden ausschliesslich hochwertige Farben, die absolut unbedenklich sind — und vegan. Weder tierische Produkte noch Tierversuche.
               </p>
             </div>
           </div>
           <div>
-            <span class="section__label">Warum Face Art Zürich</span>
-            <h2 class="section__title">Das spricht für Face Art Zürich</h2>
+            <span class="section__label" data-i18n="kinderschminken.ben_label">Warum Face Art Zürich</span>
+            <h2 class="section__title" data-i18n="kinderschminken.ben_title">Das spricht für Face Art Zürich</h2>
             <div style="margin-top: var(--sp-6);">
               <ul class="benefits">
                 <li class="benefit">
@@ -430,10 +436,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <p class="footer__logo">Face Art Zürich</p>
-          <p class="footer__tagline">Kinderschminken &amp; Face Art</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
         </div>
         <div>
-          <p class="footer__heading">Seiten</p>
+          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
                     <nav class="footer__links" aria-label="Footer Navigation">
             <a href="kinderschminken.html">Kinderschminken</a>
             <a href="hochzeiten.html">Hochzeiten</a>
@@ -457,7 +463,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 Face Art Zürich — Isa, Dübendorf</p>
+        <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
       </div>
     </div>
   </footer>
@@ -468,6 +474,7 @@
     </svg>
   </a>
 
+  <script src="src/js/i18n.js"></script>
   <script src="src/js/main.js"></script>
   <script type="application/ld+json">
   {
