@@ -18,3 +18,9 @@
 - JS: Moderne ES6+ Syntax (const/let, arrow functions, modules)
 - Semantisches HTML5 (header, main, section, article, footer)
 - Mobile-first responsive Design
+
+## Workflow-Regeln (Pflicht nach jeder Änderung)
+- Kleine, atomare Git-Commits — ein Commit pro Thema/Feature
+- Nach jedem Commit sofort pushen: `git push origin main`
+- Nach jedem Push den Live-Link mitteilen: https://gruneandreas-art.github.io/face-art-zuerich/
+- Vor jeder UI/Design-Änderung: `frontend-design` Skill laden + `AskUserQuestion` für Design-Entscheidungen
