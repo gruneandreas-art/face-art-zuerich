@@ -126,7 +126,7 @@ const I18n = (() => {
         step2_title:'Offer within 24h', step2_text:'Isa sends a complete offer with price and contract documents.',
         step3_title:'Detail coordination', step3_text:'Design wishes, brand colours, schedule — personally by phone or message.',
         step4_title:'Isa arrives — ready for action', step4_text:'Setup in 10 minutes, full focus on your event.',
-        cta_label:'Enquire now', cta_title:'Ready for your next trade fair appearance?',
+        cta_label:'Enquire now', cta_title:'Ready for your next', cta_title_em:'trade fair appearance?',
         cta_subtitle:'Briefly describe your event — Isa will get back to you within 24h with a no-obligation offer.',
         cta_btn:'Request trade fair offer', cta_wa:'Write on WhatsApp',
         cta_note:'Also available for: Christmas party, summer festival, anniversary & brand activation',
@@ -160,11 +160,6 @@ const I18n = (() => {
         wa_btn:'+41 (0)76 439 4928', map_label:'Find me here'
       }
     },
-
-    fr: {
-      nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
-      footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
-      index: {
 
     fr: {
       nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
@@ -286,7 +281,7 @@ const I18n = (() => {
         step2_title:'Offre dans les 24h', step2_text:'Isa envoie une offre complète avec prix et documents contractuels.',
         step3_title:'Coordination des détails', step3_text:'Souhaits de motifs, couleurs de marque, planning — personnellement par téléphone ou message.',
         step4_title:'Isa arrive — prête à l\'action', step4_text:'Installation en 10 minutes, concentration totale sur votre événement.',
-        cta_label:'Demander maintenant', cta_title:'Prêt pour votre prochaine apparition en salon ?',
+        cta_label:'Demander maintenant', cta_title:'Prêt pour votre prochaine', cta_title_em:'salon ?',
         cta_subtitle:'Décrivez brièvement votre événement — Isa vous répondra dans les 24h avec une offre sans engagement.',
         cta_btn:'Demander une offre salon', cta_wa:'Écrire sur WhatsApp',
         cta_note:'Également disponible pour : fête de Noël, fête d\'été, anniversaire & activation de marque',
@@ -441,7 +436,7 @@ const I18n = (() => {
         step2_title:'Offerta entro 24h', step2_text:'Isa invia un\'offerta completa con prezzo e documenti contrattuali.',
         step3_title:'Coordinamento dettagli', step3_text:'Desideri di motivi, colori del brand, programma — personalmente per telefono o messaggio.',
         step4_title:'Isa arriva — pronta all\'azione', step4_text:'Allestimento in 10 minuti, piena concentrazione sul vostro evento.',
-        cta_label:'Richiedete ora', cta_title:'Pronti per la vostra prossima apparizione in fiera?',
+        cta_label:'Richiedete ora', cta_title:'Pronti per la vostra prossima', cta_title_em:'fiera?',
         cta_subtitle:'Descrivi brevemente il tuo evento — Isa ti ricontatterà entro 24h con un\'offerta senza impegno.',
         cta_btn:'Richiedere offerta fiera', cta_wa:'Scrivere su WhatsApp',
         cta_note:'Disponibile anche per: festa di Natale, festa estiva, anniversario & attivazione del brand',
