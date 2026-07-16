@@ -73,6 +73,10 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
+      // Honeypot: stiller Abbruch bei Bot-Ausfüllung
+      var hp = form.querySelector('[name="_gotcha"]');
+      if (hp && hp.value) return;
+
       // Validation
       var requiredFields = form.querySelectorAll('[required]');
       var valid = true;
@@ -288,6 +292,10 @@
     // Submit
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // Honeypot: stiller Abbruch bei Bot-Ausfüllung
+      const hp = form.querySelector('[name="_gotcha"]');
+      if (hp && hp.value) return;
 
       const emailInput = form.querySelector('.nl-form__input');
       const btn        = form.querySelector('.nl-form__btn');
