@@ -23,19 +23,6 @@
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav(); // run once on load
 
-  /* ===== Logo image fallback ===== */
-  document.querySelectorAll('.nav__logo-img').forEach(function (img) {
-    img.addEventListener('error', function () {
-      this.style.display = 'none';
-      const text = this.closest('.nav__logo') && this.closest('.nav__logo').querySelector('.nav__logo-text');
-      if (text) {
-        text.style.display = 'flex';
-        text.style.opacity = '1';
-        text.style.pointerEvents = 'auto';
-      }
-    });
-  });
-
   /* ===== Mobile menu toggle ===== */
   const navToggle = document.getElementById('navToggle');
   const navMenu   = document.getElementById('navMenu');

@@ -223,11 +223,6 @@ p  { color: var(--text-mid); }
   flex-direction: column;
 }
 
-/* Image version — hidden; text logo is shown on all states */
-.nav__logo-img {
-  display: none !important;
-}
-
 .nav__logo-main {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -316,10 +311,6 @@ p  { color: var(--text-mid); }
 .nav__toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav__toggle--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav__toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ===== 6b. Logo fallback when image fails ===== */
-.nav__logo-img--error { display: none !important; }
-.nav--scrolled .nav__logo-text--fallback { display: flex !important; }
 
 /* ===== 7. Gallery Hero (Startseite) ===== */
 @keyframes card-spread {
