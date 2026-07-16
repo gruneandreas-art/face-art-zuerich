@@ -24,13 +24,19 @@
         <img class="nav__logo-img" src="src/images/logo.png" alt="Face Art Zürich Logo">
       </a>
       <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
-        <a href="index.html" class="nav__link">Start</a>
-        <a href="kinderschminken.html" class="nav__link">Kinderschminken</a>
-        <a href="hochzeiten.html" class="nav__link">Hochzeiten</a>
-        <a href="unternehmen.html" class="nav__link nav__link--active">Für Unternehmen</a>
-        <a href="about.html" class="nav__link">Über mich</a>
-        <a href="kontakt.html" class="nav__link nav__link--cta">Kontakt</a>
+        <a href="index.html" class="nav__link" data-i18n="nav.start">Start</a>
+        <a href="kinderschminken.html" class="nav__link" data-i18n="nav.kinderschminken">Kinderschminken</a>
+        <a href="hochzeiten.html" class="nav__link" data-i18n="nav.hochzeiten">Hochzeiten</a>
+        <a href="unternehmen.html" class="nav__link nav__link--active" data-i18n="nav.unternehmen">Für Unternehmen</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.ueber">Über mich</a>
+        <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -44,11 +50,11 @@
       <div class="hero__bg"></div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Kids Experience Activation</p>
-        <h1 class="hero__title">Familien an Ihren Stand.<br><em>Eltern ins Gespräch.</em></h1>
-        <p class="hero__subtitle">Kompakte Erlebnismodule für Messen und Events — die Kinder begeistern und Eltern für Ihre Beratungsgespräche freispielen.</p>
+        <p class="hero__eyebrow" data-i18n="unternehmen.hero_eyebrow">Kids Experience Activation</p>
+        <h1 class="hero__title"><span data-i18n="unternehmen.hero_title">Familien an Ihren Stand.</span><br><em data-i18n="unternehmen.hero_title_em">Eltern ins Gespräch.</em></h1>
+        <p class="hero__subtitle" data-i18n="unternehmen.hero_subtitle">Kompakte Erlebnismodule für Messen und Events — die Kinder begeistern und Eltern für Ihre Beratungsgespräche freispielen.</p>
         <div class="hero__cta">
-          <a href="kontakt.html" class="btn btn--primary">Messeangebot anfragen</a>
+          <a href="kontakt.html" class="btn btn--primary" data-i18n="unternehmen.hero_cta">Messeangebot anfragen</a>
           <a href="https://wa.me/41764394928?text=Hallo%20Isa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Messeangebot."
              class="btn btn--outline-white" target="_blank" rel="noopener noreferrer">
             WhatsApp
@@ -60,9 +66,9 @@
     <!-- ========== PROBLEM-BRIDGE ========== -->
     <section class="section section--cream">
       <div class="container container--narrow" style="text-align:center;">
-        <p class="section__label">Das Problem an Familienmessen</p>
-        <h2 class="section__title">Kinder werden unruhig.<br><em>Eltern hetzen weiter.</em></h2>
-        <p class="section__subtitle">Familien mit Kindern verlassen die meisten Stände nach weniger als 3 Minuten. Face Art dreht das um: Kinder bleiben, Eltern entspannen — und Ihr Team hat endlich Zeit für echte Gespräche.</p>
+        <p class="section__label" data-i18n="unternehmen.prob_label">Das Problem an Familienmessen</p>
+        <h2 class="section__title"><span data-i18n="unternehmen.prob_title">Kinder werden unruhig.</span><br><em data-i18n="unternehmen.prob_title_em">Eltern hetzen weiter.</em></h2>
+        <p class="section__subtitle" data-i18n="unternehmen.prob_subtitle">Familien mit Kindern verlassen die meisten Stände nach weniger als 3 Minuten. Face Art dreht das um: Kinder bleiben, Eltern entspannen — und Ihr Team hat endlich Zeit für echte Gespräche.</p>
       </div>
     </section>
 
@@ -70,25 +76,25 @@
     <section class="section">
       <div class="container">
         <header class="section__header section__header--center">
-          <span class="section__label">Der Mechanismus dahinter</span>
-          <h2 class="section__title">Der Family Magnet Effect</h2>
-          <p class="section__subtitle">Schminken erzeugt Aufmerksamkeit. Kinder kommen. Familien bleiben. Eltern haben den Kopf frei.</p>
+          <span class="section__label" data-i18n="unternehmen.fme_label">Der Mechanismus dahinter</span>
+          <h2 class="section__title" data-i18n="unternehmen.fme_title">Der Family Magnet Effect</h2>
+          <p class="section__subtitle" data-i18n="unternehmen.fme_subtitle">Schminken erzeugt Aufmerksamkeit. Kinder kommen. Familien bleiben. Eltern haben den Kopf frei.</p>
         </header>
 
         <div class="messen-stats">
           <div class="messen-stat">
             <span class="messen-stat__value">3×</span>
-            <span class="messen-stat__label">längere Verweildauer am Stand</span>
+            <span class="messen-stat__label" data-i18n="unternehmen.stat1_label">längere Verweildauer am Stand</span>
           </div>
           <div class="messen-stat-divider"></div>
           <div class="messen-stat">
             <span class="messen-stat__value">2m²</span>
-            <span class="messen-stat__label">genügen am Stand</span>
+            <span class="messen-stat__label" data-i18n="unternehmen.stat2_label">genügen am Stand</span>
           </div>
           <div class="messen-stat-divider"></div>
           <div class="messen-stat">
             <span class="messen-stat__value">0</span>
-            <span class="messen-stat__label">Infrastruktur nötig</span>
+            <span class="messen-stat__label" data-i18n="unternehmen.stat3_label">Infrastruktur nötig</span>
           </div>
         </div>
       </div>
@@ -98,8 +104,8 @@
     <section class="section section--cream" id="messen">
       <div class="container">
         <header class="section__header section__header--center" style="margin-bottom: var(--sp-10);">
-          <span class="section__label">Beweis in Aktion</span>
-          <h2 class="section__title">Isa am Stand — live und ungestellt</h2>
+          <span class="section__label" data-i18n="unternehmen.proof_label">Beweis in Aktion</span>
+          <h2 class="section__title" data-i18n="unternehmen.proof_title">Isa am Stand — live und ungestellt</h2>
         </header>
 
         <div class="feature">
@@ -124,10 +130,10 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Besucherbindung</span>
-            <h2 class="feature__title">Familien bleiben. Eltern kaufen.</h2>
+            <span class="feature__label" data-i18n="unternehmen.f1_label">Besucherbindung</span>
+            <h2 class="feature__title" data-i18n="unternehmen.f1_title">Familien bleiben. Eltern kaufen.</h2>
             <div class="divider"></div>
-            <p class="feature__text">Kinder am Stand erzeugen sofortige Aufmerksamkeit — und eine entspannte Atmosphäre, in der echte Gespräche entstehen. Isa übernimmt die Kinder-Experience, Ihr Team übernimmt die Beratung.</p>
+            <p class="feature__text" data-i18n="unternehmen.f1_text">Kinder am Stand erzeugen sofortige Aufmerksamkeit — und eine entspannte Atmosphäre, in der echte Gespräche entstehen. Isa übernimmt die Kinder-Experience, Ihr Team übernimmt die Beratung.</p>
           </div>
         </div>
 
@@ -152,16 +158,16 @@
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label">Markenidentität</span>
-            <h2 class="feature__title">Ihr Brand auf jedem Gesicht</h2>
+            <span class="feature__label" data-i18n="unternehmen.f2_label">Markenidentität</span>
+            <h2 class="feature__title" data-i18n="unternehmen.f2_title">Ihr Brand auf jedem Gesicht</h2>
             <div class="divider"></div>
-            <p class="feature__text">Firmenfarben, Logos oder Event-Motive werden direkt in die Schminkbilder integriert. Jedes geschminkte Kind ist ein lebendiges Markenerlebnis — und ein Social-Media-Moment, der Ihren Stand über den Messetag hinaus sichtbar macht.</p>
+            <p class="feature__text" data-i18n="unternehmen.f2_text">Firmenfarben, Logos oder Event-Motive werden direkt in die Schminkbilder integriert. Jedes geschminkte Kind ist ein lebendiges Markenerlebnis — und ein Social-Media-Moment, der Ihren Stand über den Messetag hinaus sichtbar macht.</p>
             <div class="material-box" style="margin-top: var(--sp-4);">
               <p class="material-box__title">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Mindestbuchung: 2 Stunden
+                <span data-i18n="unternehmen.material_title">Mindestbuchung: 2 Stunden</span>
               </p>
-              <p class="material-box__text">Für Messeeinsätze empfehle ich mindestens 2 Stunden — Angebot innert 24h auf Anfrage.</p>
+              <p class="material-box__text" data-i18n="unternehmen.material_text">Für Messeeinsätze empfehle ich mindestens 2 Stunden — Angebot innert 24h auf Anfrage.</p>
             </div>
           </div>
         </div>
@@ -178,14 +184,14 @@
                  alt="Flug &amp; Zug Festival 2025 Dübendorf" width="787" height="512">
           </div>
           <div class="case-study__body">
-            <span class="section__label">Referenz 2025</span>
-            <h2 class="section__title">Flug &amp; Zug Festival,<br>Dübendorf</h2>
+            <span class="section__label" data-i18n="unternehmen.ref_label">Referenz 2025</span>
+            <h2 class="section__title" data-i18n="unternehmen.ref_title">Flug &amp; Zug Festival,<br>Dübendorf</h2>
             <div class="divider"></div>
-            <p>Auf dem Flug &amp; Zug Festival 2025 am Flugplatz Dübendorf war Isa mehrere Stunden im Einsatz. Kinder bildeten eine Schlange — der Stand wurde zum Treffpunkt des Events. Eltern blieben, Gespräche entstanden.</p>
+            <p data-i18n="unternehmen.ref_text">Auf dem Flug &amp; Zug Festival 2025 am Flugplatz Dübendorf war Isa mehrere Stunden im Einsatz. Kinder bildeten eine Schlange — der Stand wurde zum Treffpunkt des Events. Eltern blieben, Gespräche entstanden.</p>
             <ul class="case-study__facts">
-              <li><strong>Ort:</strong>&nbsp;Flugplatz Dübendorf</li>
-              <li><strong>Einsatzdauer:</strong>&nbsp;Ganztägig</li>
-              <li><strong>Motive:</strong>&nbsp;Event-spezifische Designs</li>
+              <li data-i18n="unternehmen.ref_f1"><strong>Ort:</strong>&nbsp;Flugplatz Dübendorf</li>
+              <li data-i18n="unternehmen.ref_f2"><strong>Einsatzdauer:</strong>&nbsp;Ganztägig</li>
+              <li data-i18n="unternehmen.ref_f3"><strong>Motive:</strong>&nbsp;Event-spezifische Designs</li>
             </ul>
           </div>
         </div>
@@ -196,24 +202,24 @@
     <section class="section section--mint">
       <div class="container">
         <header class="section__header section__header--center">
-          <span class="section__label">Für Aussteller &amp; Messebauer</span>
-          <h2 class="section__title">Was Ihr Stand gewinnt</h2>
+          <span class="section__label" data-i18n="unternehmen.ben_label">Für Aussteller &amp; Messebauer</span>
+          <h2 class="section__title" data-i18n="unternehmen.ben_title">Was Ihr Stand gewinnt</h2>
         </header>
         <div class="cards-3">
           <div class="benefit-card">
             <div class="benefit-card__value">3×</div>
-            <h3 class="benefit-card__title">Längere Verweildauer</h3>
-            <p class="benefit-card__text">Familien mit Kindern bleiben bis zu dreimal länger am Stand — mehr Zeit für Ihr Team, echte Gespräche zu führen.</p>
+            <h3 class="benefit-card__title" data-i18n="unternehmen.ben1_title">Längere Verweildauer</h3>
+            <p class="benefit-card__text" data-i18n="unternehmen.ben1_text">Familien mit Kindern bleiben bis zu dreimal länger am Stand — mehr Zeit für Ihr Team, echte Gespräche zu führen.</p>
           </div>
           <div class="benefit-card">
             <div class="benefit-card__value">✦</div>
-            <h3 class="benefit-card__title">Brand auf jedem Gesicht</h3>
-            <p class="benefit-card__text">Firmenfarben und Logos direkt ins Motiv integriert — jedes Kind trägt Ihr Branding in die Messe und weiter auf Social Media.</p>
+            <h3 class="benefit-card__title" data-i18n="unternehmen.ben2_title">Brand auf jedem Gesicht</h3>
+            <p class="benefit-card__text" data-i18n="unternehmen.ben2_text">Firmenfarben und Logos direkt ins Motiv integriert — jedes Kind trägt Ihr Branding in die Messe und weiter auf Social Media.</p>
           </div>
           <div class="benefit-card">
             <div class="benefit-card__value">2m²</div>
-            <h3 class="benefit-card__title">Kein Infrastruktur-Aufwand</h3>
-            <p class="benefit-card__text">Kein Strom, kein Wasser, kein Vorlauf — Isa ist in 10 Minuten aufgebaut und passt in jeden Stand.</p>
+            <h3 class="benefit-card__title" data-i18n="unternehmen.ben3_title">Kein Infrastruktur-Aufwand</h3>
+            <p class="benefit-card__text" data-i18n="unternehmen.ben3_text">Kein Strom, kein Wasser, kein Vorlauf — Isa ist in 10 Minuten aufgebaut und passt in jeden Stand.</p>
           </div>
         </div>
       </div>
@@ -224,48 +230,48 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label">Preisstruktur</span>
-            <h2 class="section__title">Transparente Kosten</h2>
-            <p class="section__subtitle">Unverbindliches Angebot auf Anfrage — Isa antwortet innerhalb von 24h mit Preis, Dauer und allen Details.</p>
+            <span class="section__label" data-i18n="unternehmen.price_label">Preisstruktur</span>
+            <h2 class="section__title" data-i18n="unternehmen.price_title">Transparente Kosten</h2>
+            <p class="section__subtitle" data-i18n="unternehmen.price_subtitle">Unverbindliches Angebot auf Anfrage — Isa antwortet innerhalb von 24h mit Preis, Dauer und allen Details.</p>
             <div class="pricing">
               <div class="pricing__card">
                 <div class="pricing__amount">CHF 145</div>
-                <div class="pricing__unit">pro Stunde</div>
-                <p class="pricing__note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Mindestbuchung: 2 Stunden</p>
+                <div class="pricing__unit" data-i18n="unternehmen.price_unit">pro Stunde</div>
+                <p class="pricing__note" data-i18n="unternehmen.price_note">+ CHF 1/km Anfahrtskosten<br>ab 8600 Dübendorf / Zürich<br>Mindestbuchung: 2 Stunden</p>
               </div>
             </div>
           </div>
           <div>
-            <span class="section__label">Buchungsablauf</span>
-            <h2 class="section__title">In 4 Schritten gebucht</h2>
+            <span class="section__label" data-i18n="unternehmen.booking_label">Buchungsablauf</span>
+            <h2 class="section__title" data-i18n="unternehmen.booking_title">In 4 Schritten gebucht</h2>
             <div style="margin-top: var(--sp-6);">
               <ol class="steps">
                 <li class="step">
                   <span class="step__num">1</span>
                   <div>
-                    <p class="step__title">Anfrage senden</p>
-                    <p class="step__text">Datum, Ort, Eventgrösse — eine kurze Nachricht genügt.</p>
+                    <p class="step__title" data-i18n="unternehmen.step1_title">Anfrage senden</p>
+                    <p class="step__text" data-i18n="unternehmen.step1_text">Datum, Ort, Eventgrösse — eine kurze Nachricht genügt.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">2</span>
                   <div>
-                    <p class="step__title">Angebot innerhalb von 24h</p>
-                    <p class="step__text">Isa sendet ein vollständiges Angebot mit Preis und Vertragsunterlagen.</p>
+                    <p class="step__title" data-i18n="unternehmen.step2_title">Angebot innerhalb von 24h</p>
+                    <p class="step__text" data-i18n="unternehmen.step2_text">Isa sendet ein vollständiges Angebot mit Preis und Vertragsunterlagen.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">3</span>
                   <div>
-                    <p class="step__title">Detailabstimmung</p>
-                    <p class="step__text">Motivwünsche, Markenfarben, Zeitplan — persönlich per Telefon oder Nachricht.</p>
+                    <p class="step__title" data-i18n="unternehmen.step3_title">Detailabstimmung</p>
+                    <p class="step__text" data-i18n="unternehmen.step3_text">Motivwünsche, Markenfarben, Zeitplan — persönlich per Telefon oder Nachricht.</p>
                   </div>
                 </li>
                 <li class="step">
                   <span class="step__num">4</span>
                   <div>
-                    <p class="step__title">Isa erscheint — einsatzbereit</p>
-                    <p class="step__text">Aufbau in 10 Minuten, volle Konzentration auf Ihr Event.</p>
+                    <p class="step__title" data-i18n="unternehmen.step4_title">Isa erscheint — einsatzbereit</p>
+                    <p class="step__text" data-i18n="unternehmen.step4_text">Aufbau in 10 Minuten, volle Konzentration auf Ihr Event.</p>
                   </div>
                 </li>
               </ol>
@@ -278,17 +284,17 @@
     <!-- ========== CTA ========== -->
     <section class="section text-center">
       <div class="container container--narrow">
-        <span class="section__label">Jetzt anfragen</span>
-        <h2 class="section__title">Bereit für Ihren nächsten<br><em>Messeauftritt?</em></h2>
-        <p class="section__subtitle" style="margin: var(--sp-3) auto var(--sp-6);">Beschreiben Sie kurz Ihr Event — Isa meldet sich innerhalb von 24h mit einem unverbindlichen Angebot.</p>
+        <span class="section__label" data-i18n="unternehmen.cta_label">Jetzt anfragen</span>
+        <h2 class="section__title"><span data-i18n="unternehmen.cta_title">Bereit für Ihren nächsten</span><br><em>Messeauftritt?</em></h2>
+        <p class="section__subtitle" style="margin: var(--sp-3) auto var(--sp-6);" data-i18n="unternehmen.cta_subtitle">Beschreiben Sie kurz Ihr Event — Isa meldet sich innerhalb von 24h mit einem unverbindlichen Angebot.</p>
         <div style="display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap;">
-          <a href="kontakt.html" class="btn btn--primary">Messeangebot anfragen</a>
+          <a href="kontakt.html" class="btn btn--primary" data-i18n="unternehmen.cta_btn">Messeangebot anfragen</a>
           <a href="https://wa.me/41764394928?text=Hallo%20Isa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Messeangebot."
-             class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+             class="btn btn--outline" target="_blank" rel="noopener noreferrer" data-i18n="unternehmen.cta_wa">
             WhatsApp schreiben
           </a>
         </div>
-        <p class="cta__events-note">Auch buchbar für: Weihnachtsfeier, Sommerfest, Jubiläum &amp; Markenaktivierung</p>
+        <p class="cta__events-note" data-i18n="unternehmen.cta_note">Auch buchbar für: Weihnachtsfeier, Sommerfest, Jubiläum &amp; Markenaktivierung</p>
       </div>
     </section>
 
@@ -299,10 +305,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <p class="footer__logo">Face Art Zürich</p>
-          <p class="footer__tagline">Kinderschminken &amp; Face Art</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
         </div>
         <div>
-          <p class="footer__heading">Seiten</p>
+          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
           <nav class="footer__links" aria-label="Footer Navigation">
             <a href="kinderschminken.html">Kinderschminken</a>
             <a href="hochzeiten.html">Hochzeiten</a>
@@ -326,7 +332,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 Face Art Zürich — Isa, Dübendorf</p>
+        <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
       </div>
     </div>
   </footer>
@@ -337,6 +343,7 @@
     </svg>
   </a>
 
+  <script src="src/js/i18n.js"></script>
   <script src="src/js/main.js"></script>
 </body>
 </html>
