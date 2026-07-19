@@ -5,6 +5,11 @@
 (function () {
   'use strict';
 
+  /* ===== i18n-Helper für JS-generierte Status-Texte ===== */
+  function msg(key, fallback) {
+    return (window.I18n && typeof I18n.msg === 'function') ? I18n.msg(key) : fallback;
+  }
+
   /* ===== Nav: transparent → scrolled ===== */
   const nav = document.getElementById('nav');
 
@@ -92,7 +97,7 @@
       var btn = form.querySelector('button[type="submit"]');
       var originalText = btn.textContent;
       btn.disabled = true;
-      btn.textContent = 'Wird gesendet…';
+      btn.textContent = msg('sending', 'Wird gesendet…');
 
       // Collect all form fields
       var data = {};
@@ -119,14 +124,14 @@
               confirmEl.classList.remove('contact-form__confirm--visible');
             }, 6000);
           } else {
-            confirmEl.textContent = 'Fehler beim Senden — bitte versuche es erneut.';
+            confirmEl.textContent = msg('send_error', 'Fehler beim Senden — bitte versuche es erneut.');
             confirmEl.classList.add('contact-form__confirm--visible');
           }
         })
         .catch(function () {
           btn.disabled = false;
           btn.textContent = originalText;
-          confirmEl.textContent = 'Keine Verbindung — bitte versuche es erneut.';
+          confirmEl.textContent = msg('no_connection', 'Keine Verbindung — bitte versuche es erneut.');
           confirmEl.classList.add('contact-form__confirm--visible');
         });
     });
@@ -311,13 +316,13 @@
           o.classList.add('nl-option--shake');
           setTimeout(function () { o.classList.remove('nl-option--shake'); }, 400);
         });
-        if (errorEl) errorEl.textContent = 'Bitte mindestens eine Option auswählen.';
+        if (errorEl) errorEl.textContent = msg('nl_choose_option', 'Bitte mindestens eine Option auswählen.');
         return;
       }
 
       // Validate email
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        if (errorEl) errorEl.textContent = 'Bitte eine gültige E-Mail-Adresse eingeben.';
+        if (errorEl) errorEl.textContent = msg('nl_invalid_email', 'Bitte eine gültige E-Mail-Adresse eingeben.');
         emailInput.focus();
         return;
       }
@@ -354,14 +359,14 @@
               showSuccess();
             } else {
               btn.disabled    = false;
-              btn.textContent = 'Jetzt anmelden';
-              if (errorEl) errorEl.textContent = 'Fehler beim Senden. Bitte versuche es erneut.';
+              btn.textContent = msg('nl_submit', 'Jetzt anmelden');
+              if (errorEl) errorEl.textContent = msg('nl_send_error', 'Fehler beim Senden. Bitte versuche es erneut.');
             }
           })
           .catch(function () {
             btn.disabled    = false;
-            btn.textContent = 'Jetzt anmelden';
-            if (errorEl) errorEl.textContent = 'Keine Verbindung. Bitte versuche es erneut.';
+            btn.textContent = msg('nl_submit', 'Jetzt anmelden');
+            if (errorEl) errorEl.textContent = msg('nl_no_connection', 'Keine Verbindung. Bitte versuche es erneut.');
           });
       } else {
         // No Formspree configured — show success after short delay (demo mode)

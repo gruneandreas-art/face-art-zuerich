@@ -472,6 +472,52 @@ const I18n = (() => {
     }
   };
 
+  /* ── UI-Meldungen (Formular-Status, nicht im DOM) ─────── */
+  const UI = {
+    de: {
+      sending:'Wird gesendet…',
+      send_error:'Fehler beim Senden — bitte versuche es erneut.',
+      no_connection:'Keine Verbindung — bitte versuche es erneut.',
+      nl_choose_option:'Bitte mindestens eine Option auswählen.',
+      nl_invalid_email:'Bitte eine gültige E-Mail-Adresse eingeben.',
+      nl_submit:'Jetzt anmelden',
+      nl_send_error:'Fehler beim Senden. Bitte versuche es erneut.',
+      nl_no_connection:'Keine Verbindung. Bitte versuche es erneut.'
+    },
+    en: {
+      sending:'Sending…',
+      send_error:'Error while sending — please try again.',
+      no_connection:'No connection — please try again.',
+      nl_choose_option:'Please select at least one option.',
+      nl_invalid_email:'Please enter a valid email address.',
+      nl_submit:'Subscribe now',
+      nl_send_error:'Error while sending. Please try again.',
+      nl_no_connection:'No connection. Please try again.'
+    },
+    fr: {
+      sending:'Envoi en cours…',
+      send_error:'Erreur lors de l\'envoi — veuillez réessayer.',
+      no_connection:'Pas de connexion — veuillez réessayer.',
+      nl_choose_option:'Veuillez sélectionner au moins une option.',
+      nl_invalid_email:'Veuillez saisir une adresse e-mail valide.',
+      nl_submit:'S\'inscrire',
+      nl_send_error:'Erreur lors de l\'envoi. Veuillez réessayer.',
+      nl_no_connection:'Pas de connexion. Veuillez réessayer.'
+    },
+    it: {
+      sending:'Invio in corso…',
+      send_error:'Errore durante l\'invio — riprova.',
+      no_connection:'Nessuna connessione — riprova.',
+      nl_choose_option:'Seleziona almeno un\'opzione.',
+      nl_invalid_email:'Inserisci un indirizzo e-mail valido.',
+      nl_submit:'Iscriviti ora',
+      nl_send_error:'Errore durante l\'invio. Riprova.',
+      nl_no_connection:'Nessuna connessione. Riprova.'
+    }
+  };
+
+  const msg = key => (UI[current] && UI[current][key]) || UI.de[key] || key;
+
   /* ── Engine ───────────────────────────────────────────── */
   const detect = () => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -535,7 +581,7 @@ const I18n = (() => {
     });
   };
 
-  return { init };
+  return { init, lang: () => current, msg };
 })();
 
 document.addEventListener('DOMContentLoaded', I18n.init);
