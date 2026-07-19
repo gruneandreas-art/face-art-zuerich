@@ -630,6 +630,21 @@ p  { color: var(--text-mid); }
 .acc-panel.acc-panel--kinder img { object-position: center 28%; transform: scale(1.12); }
 .acc-panel.acc-panel--kinder.acc-panel--active img { transform: scale(1.16); }
 
+/* Body Art: Rosen-Motiv sitzt unten auf der Schulter — Ausschnitt nach unten
+   verschieben, leicht reduzierter Zoom im aktiven Zustand */
+.acc-panel.acc-panel--bodyart img { object-position: center 65%; }
+.acc-panel.acc-panel--bodyart.acc-panel--active img { transform: scale(1.02); }
+
+/* Saisonal: Kindergesicht mittig — Ausschnitt leicht nach oben, weniger Zoom,
+   damit Kinn/Laecheln nicht abgeschnitten werden */
+.acc-panel.acc-panel--saisonal img { object-position: center 30%; }
+.acc-panel.acc-panel--saisonal.acc-panel--active img { transform: scale(1.02); }
+
+/* Face Art fuer Erwachsene: Hochformat, Gesicht in der Bildmitte — Ausschnitt
+   zentrieren und im aktiven Zustand kein zusaetzlicher Zoom */
+.acc-panel.acc-panel--erwachsene img { object-position: center 30%; }
+.acc-panel.acc-panel--erwachsene.acc-panel--active img { transform: none; }
+
 .acc-panel__overlay {
   position: absolute;
   inset: 0;
