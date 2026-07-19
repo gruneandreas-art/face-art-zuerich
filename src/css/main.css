@@ -625,6 +625,11 @@ p  { color: var(--text-mid); }
 }
 .acc-panel--active img { transform: scale(1.04); }
 
+/* Startseite-Hero: Kinderschminken-Panel (Schmetterling) — Motiv um die Augen
+   staerker zentriert und herangezoomt; ohne Verzerrung, Active-Animation bleibt erhalten */
+.acc-panel.acc-panel--kinder img { object-position: center 28%; transform: scale(1.12); }
+.acc-panel.acc-panel--kinder.acc-panel--active img { transform: scale(1.16); }
+
 .acc-panel__overlay {
   position: absolute;
   inset: 0;
