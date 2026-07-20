@@ -33,6 +33,8 @@ const I18n = (() => {
         nl_success_title:'Thank you, you\'re in!', nl_success_text:'Isa is delighted — you\'ll receive the first updates in your inbox soon.',
         contact_label:'Contact', contact_title:'I look forward to hearing from you!', contact_cta_form:'Form',
         form_first:'First name', form_last:'Last name', form_email:'Email', form_message:'Message',
+        form_phone:'Phone / WhatsApp', form_optional:'(optional)',
+        form_method:'Preferred contact method', form_method_wa:'Via WhatsApp', form_method_tel:'Phone', form_method_mail:'Email',
         form_ph_first:'Maria', form_ph_last:'Miller', form_ph_email:'maria@example.com', form_ph_message:'Hello Isa, I\'m planning a birthday party on …',
         form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.'
       },
@@ -190,6 +192,8 @@ const I18n = (() => {
         nl_success_title:'Merci, vous êtes inscrit !', nl_success_text:'Isa est ravie — vous recevrez bientôt les premières actualités dans votre boîte mail.',
         contact_label:'Contact', contact_title:'Je me réjouis de votre message !', contact_cta_form:'Formulaire',
         form_first:'Prénom', form_last:'Nom', form_email:'E-mail', form_message:'Message',
+        form_phone:'Téléphone / WhatsApp', form_optional:'(facultatif)',
+        form_method:'Moyen de contact préféré', form_method_wa:'Par WhatsApp', form_method_tel:'Téléphone', form_method_mail:'E-mail',
         form_ph_first:'Marie', form_ph_last:'Dupont', form_ph_email:'marie@exemple.fr', form_ph_message:'Bonjour Isa, je planifie un anniversaire le …',
         form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.'
       },
@@ -347,6 +351,8 @@ const I18n = (() => {
         nl_success_title:'Grazie, sei dentro!', nl_success_text:'Isa è felice — riceverai presto i primi aggiornamenti nella tua casella di posta.',
         contact_label:'Contatto', contact_title:'Non vedo l\'ora di sentirti!', contact_cta_form:'Modulo',
         form_first:'Nome', form_last:'Cognome', form_email:'E-mail', form_message:'Messaggio',
+        form_phone:'Telefono / WhatsApp', form_optional:'(facoltativo)',
+        form_method:'Canale di contatto preferito', form_method_wa:'Via WhatsApp', form_method_tel:'Telefono', form_method_mail:'E-mail',
         form_ph_first:'Maria', form_ph_last:'Rossi', form_ph_email:'maria@esempio.it', form_ph_message:'Ciao Isa, sto pianificando una festa di compleanno il …',
         form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.'
       },

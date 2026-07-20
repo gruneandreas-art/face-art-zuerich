@@ -445,9 +445,22 @@
               <input class="contact-form__input" type="email" id="email" name="email" placeholder="maria@beispiel.ch" required data-i18n-placeholder="index.form_ph_email">
             </div>
             <div class="contact-form__field">
+              <label class="contact-form__label" for="telefon"><span data-i18n="index.form_phone">Telefon / WhatsApp</span> <span class="contact-form__optional" data-i18n="index.form_optional">(optional)</span></label>
+              <input class="contact-form__input" type="tel" id="telefon" name="telefon" placeholder="+41 76 123 45 67" autocomplete="tel">
+            </div>
+            <fieldset class="contact-form__field contact-form__methods">
+              <legend class="contact-form__label" data-i18n="index.form_method">Bevorzugter Kontaktweg</legend>
+              <div class="contact-form__radios">
+                <label class="contact-form__radio"><input type="radio" name="kontaktweg" value="Mail" checked><span data-i18n="index.form_method_mail">Mail</span></label>
+                <label class="contact-form__radio"><input type="radio" name="kontaktweg" value="Per WhatsApp"><span data-i18n="index.form_method_wa">Per WhatsApp</span></label>
+                <label class="contact-form__radio"><input type="radio" name="kontaktweg" value="Telefon"><span data-i18n="index.form_method_tel">Telefon</span></label>
+              </div>
+            </fieldset>
+            <div class="contact-form__field">
               <label class="contact-form__label" for="message" data-i18n="index.form_message">Nachricht</label>
               <textarea class="contact-form__textarea" id="message" name="message" rows="5" placeholder="Hallo Isa, ich plane einen Kindergeburtstag am …" required data-i18n-placeholder="index.form_ph_message"></textarea>
             </div>
+            <p class="contact-form__error" role="alert" aria-live="polite" hidden></p>
             <button type="submit" class="btn btn--primary btn--full" data-i18n="index.form_submit">Senden</button>
             <p class="contact-form__confirm" id="formConfirm" data-i18n="index.form_confirm">Danke — ich melde mich in der Regel innerhalb von 24 Stunden.</p>
           </form>
