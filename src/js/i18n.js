@@ -154,6 +154,8 @@ const I18n = (() => {
         info_label:'Contact',
         form_title:'Send enquiry',
         form_first:'First name', form_last:'Last name', form_email:'Email', form_message:'Message',
+        form_phone:'Phone / WhatsApp', form_optional:'(optional)',
+        form_method:'Preferred contact method', form_method_wa:'Via WhatsApp', form_method_tel:'Phone', form_method_mail:'Email',
         form_ph_first:'Maria', form_ph_last:'Miller', form_ph_email:'maria@example.com', form_ph_message:'Hello Isa, I\'m planning a birthday party on …',
         form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.',
         wa_label:'WhatsApp — fastest', wa_hint:'Reply usually within 24h — directly from Isa.',
@@ -309,6 +311,8 @@ const I18n = (() => {
         info_label:'Contact',
         form_title:'Envoyer une demande',
         form_first:'Prénom', form_last:'Nom', form_email:'E-mail', form_message:'Message',
+        form_phone:'Téléphone / WhatsApp', form_optional:'(facultatif)',
+        form_method:'Moyen de contact préféré', form_method_wa:'Par WhatsApp', form_method_tel:'Téléphone', form_method_mail:'E-mail',
         form_ph_first:'Marie', form_ph_last:'Dupont', form_ph_email:'marie@exemple.fr', form_ph_message:'Bonjour Isa, je planifie un anniversaire le …',
         form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.',
         wa_label:'WhatsApp — le plus rapide', wa_hint:'Réponse en général dans les 24h — directement d\'Isa.',
@@ -464,6 +468,8 @@ const I18n = (() => {
         info_label:'Contatto',
         form_title:'Invia richiesta',
         form_first:'Nome', form_last:'Cognome', form_email:'E-mail', form_message:'Messaggio',
+        form_phone:'Telefono / WhatsApp', form_optional:'(facoltativo)',
+        form_method:'Canale di contatto preferito', form_method_wa:'Via WhatsApp', form_method_tel:'Telefono', form_method_mail:'E-mail',
         form_ph_first:'Maria', form_ph_last:'Rossi', form_ph_email:'maria@esempio.it', form_ph_message:'Ciao Isa, sto pianificando una festa di compleanno il …',
         form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.',
         wa_label:'WhatsApp — il più veloce', wa_hint:'Risposta di solito entro 24h — direttamente da Isa.',
@@ -476,6 +482,7 @@ const I18n = (() => {
   const UI = {
     de: {
       sending:'Wird gesendet…',
+      phone_required:'Für WhatsApp oder Telefon braucht Isa eure Telefonnummer.',
       send_error:'Fehler beim Senden — bitte versuche es erneut.',
       no_connection:'Keine Verbindung — bitte versuche es erneut.',
       nl_choose_option:'Bitte mindestens eine Option auswählen.',
@@ -486,6 +493,7 @@ const I18n = (() => {
     },
     en: {
       sending:'Sending…',
+      phone_required:'For WhatsApp or phone contact, please add your phone number.',
       send_error:'Error while sending — please try again.',
       no_connection:'No connection — please try again.',
       nl_choose_option:'Please select at least one option.',
@@ -496,6 +504,7 @@ const I18n = (() => {
     },
     fr: {
       sending:'Envoi en cours…',
+      phone_required:'Pour un contact par WhatsApp ou téléphone, merci d\'indiquer votre numéro.',
       send_error:'Erreur lors de l\'envoi — veuillez réessayer.',
       no_connection:'Pas de connexion — veuillez réessayer.',
       nl_choose_option:'Veuillez sélectionner au moins une option.',
@@ -506,6 +515,7 @@ const I18n = (() => {
     },
     it: {
       sending:'Invio in corso…',
+      phone_required:'Per essere ricontattati via WhatsApp o telefono, indicate il vostro numero.',
       send_error:'Errore durante l\'invio — riprova.',
       no_connection:'Nessuna connessione — riprova.',
       nl_choose_option:'Seleziona almeno un\'opzione.',

@@ -75,6 +75,39 @@
     var confirmEl = document.getElementById(confirmId);
     if (!confirmEl) return;
 
+    /* Bevorzugter Kontaktweg: Telefonnummer nur bei WhatsApp/Telefon Pflicht */
+    var phoneInput   = form.querySelector('input[name="telefon"]');
+    var phoneOptHint = form.querySelector('.contact-form__optional');
+    var methodInputs = form.querySelectorAll('input[name="kontaktweg"]');
+    var errorEl      = form.querySelector('.contact-form__error');
+
+    function selectedMethod() {
+      var checked = form.querySelector('input[name="kontaktweg"]:checked');
+      return checked ? checked.value : '';
+    }
+
+    function syncPhoneRequired() {
+      if (!phoneInput || !methodInputs.length) return;
+      var needsPhone = selectedMethod() === 'Per WhatsApp' || selectedMethod() === 'Telefon';
+      phoneInput.required = needsPhone;
+      phoneInput.setAttribute('aria-required', String(needsPhone));
+      if (phoneOptHint) phoneOptHint.hidden = needsPhone;
+      if (!needsPhone) {
+        phoneInput.style.borderColor = '';
+        if (errorEl) errorEl.hidden = true;
+      }
+    }
+
+    methodInputs.forEach(function (radio) {
+      radio.addEventListener('change', syncPhoneRequired);
+    });
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function () {
+        if (errorEl) errorEl.hidden = true;
+      });
+    }
+    syncPhoneRequired();
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -92,7 +125,14 @@
           field.style.borderColor = '#E07070';
         }
       });
-      if (!valid) return;
+      if (!valid) {
+        if (errorEl && phoneInput && phoneInput.required && !phoneInput.value.trim()) {
+          errorEl.textContent = msg('phone_required', 'Für WhatsApp oder Telefon braucht Isa eure Telefonnummer.');
+          errorEl.hidden = false;
+        }
+        return;
+      }
+      if (errorEl) errorEl.hidden = true;
 
       var btn = form.querySelector('button[type="submit"]');
       var originalText = btn.textContent;
@@ -102,6 +142,17 @@
       // Collect all form fields
       var data = {};
       new FormData(form).forEach(function (value, key) { data[key] = value; });
+
+      // Lesbare Keys für die Empfänger-Mail (Kontaktweg + Telefonnummer)
+      if (data.kontaktweg) {
+        data['Bevorzugter Kontaktweg'] = data.kontaktweg;
+        delete data.kontaktweg;
+      }
+      if ('telefon' in data) {
+        var tel = String(data.telefon).trim();
+        if (tel) data['Telefonnummer'] = tel;
+        delete data.telefon;
+      }
 
       // Email subject per form type
       data._subject = form.id === 'messenContactForm'
