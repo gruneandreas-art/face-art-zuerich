@@ -954,7 +954,7 @@ p  { color: var(--text-mid); }
 }
 
 .service-card__img {
-  height: 280px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -986,7 +986,7 @@ p  { color: var(--text-mid); }
 .service-card__img--kinder img    { object-position: center 32%; }
 .service-card__img--hochzeit img  { object-position: center 65%; }
 .service-card__img--corporate img { object-position: center 45%; }
-.service-card__img--about img     { object-position: center 25%; }
+.service-card__img--about img     { object-position: center 32%; }
 
 /* Isa cut-out photo — stands in the card */
 .service-card__isa {
@@ -1007,7 +1007,8 @@ p  { color: var(--text-mid); }
   color: rgba(255,255,255,.6);
 }
 
-.service-card__body { padding: var(--sp-4) var(--sp-4) var(--sp-5); }
+/* Padding bewusst gesetzt (--sp-5 ist projektweit undefiniert -> war ungueltig) */
+.service-card__body { padding: var(--sp-4); }
 
 .service-card__title {
   font-family: var(--font-display);
@@ -1015,12 +1016,14 @@ p  { color: var(--text-mid); }
   font-weight: 600;
   color: var(--text);
   margin-bottom: var(--sp-2);
+  line-height: 1.2;
 }
 .service-card__text {
   font-size: .9rem;
   color: var(--text-mid);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: var(--sp-3);
+  max-width: 42ch;
 }
 .service-card__link {
   font-size: .85rem;
