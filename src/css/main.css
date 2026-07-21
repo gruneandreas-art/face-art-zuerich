@@ -1791,6 +1791,13 @@ span.t-card__avatar {
 }
 .gallery-acc__panel--active img { transform: scale(1.04); }
 
+/* Kinderschminken-Akkordeon: motivgerechter Ausschnitt je Bild (Querformate
+   werden im hochkant-Panel horizontal beschnitten -> Hauptmotiv sichtbar halten) */
+.gallery-acc__panel.gallery-acc__panel--otj6 img { object-position: 60% center; }
+.gallery-acc__panel.gallery-acc__panel--cool img { object-position: center 25%; }
+.gallery-acc__panel.gallery-acc__panel--otj2 img { object-position: 40% center; }
+.gallery-acc__panel.gallery-acc__panel--otj3 img { object-position: 62% center; }
+
 .gallery-acc__overlay {
   position: absolute;
   inset: 0;
