@@ -1658,13 +1658,6 @@ span.t-card__avatar {
   margin-top: 2px;
 }
 
-.contact-teaser__actions {
-  display: flex;
-  gap: var(--sp-2);
-  margin-top: var(--sp-6);
-  flex-wrap: wrap;
-}
-
 /* ===== 12. Contact Form ===== */
 .contact-form {
   background: var(--white);
@@ -2313,7 +2306,6 @@ span.t-card__avatar {
 @media (max-width: 480px) {
   .hero__cta { flex-direction: column; align-items: stretch; }
   .hero__cta .btn { justify-content: center; }
-  .contact-teaser__actions { flex-direction: column; }
   .contact-form { padding: var(--sp-4); }
 }
 
