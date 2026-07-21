@@ -1798,6 +1798,15 @@ span.t-card__avatar {
 .gallery-acc__panel.gallery-acc__panel--otj2 img { object-position: 40% center; }
 .gallery-acc__panel.gallery-acc__panel--otj3 img { object-position: 62% center; }
 
+/* Feature 2 „Jedes Motiv ein Unikat" — Porträts, Motiv sitzt an Stirn/Augen:
+   Ausschnitt leicht nach oben, damit Gesicht + Motiv sichtbar bleiben */
+.gallery-acc__panel.gallery-acc__panel--f2butterfly img { object-position: center 22%; }
+.gallery-acc__panel.gallery-acc__panel--f2eiskoenigin img { object-position: center 20%; }
+.gallery-acc__panel.gallery-acc__panel--f2ninja img { object-position: center 25%; }
+.gallery-acc__panel.gallery-acc__panel--f2flugzeug img { object-position: center 18%; }
+.gallery-acc__panel.gallery-acc__panel--f2pikachu img { object-position: center 30%; }
+.gallery-acc__panel.gallery-acc__panel--f2einhorn img { object-position: center 30%; }
+
 .gallery-acc__overlay {
   position: absolute;
   inset: 0;
