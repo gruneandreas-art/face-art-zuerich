@@ -983,9 +983,10 @@ p  { color: var(--text-mid); }
   object-fit: cover;
   object-position: center center;
 }
-.service-card__img--kinder img    { object-position: center 20%; }
-.service-card__img--hochzeit img  { object-position: center 30%; }
-.service-card__img--corporate img { object-position: center 25%; }
+.service-card__img--kinder img    { object-position: center 32%; }
+.service-card__img--hochzeit img  { object-position: center 65%; }
+.service-card__img--corporate img { object-position: center 45%; }
+.service-card__img--about img     { object-position: center 25%; }
 
 /* Isa cut-out photo — stands in the card */
 .service-card__isa {
