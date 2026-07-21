@@ -31,6 +31,7 @@
   --sp-2:  1rem;
   --sp-3:  1.5rem;
   --sp-4:  2rem;
+  --sp-5:  2.5rem;
   --sp-6:  3rem;
   --sp-8:  4rem;
   --sp-12: 6rem;
@@ -983,10 +984,11 @@ p  { color: var(--text-mid); }
   object-fit: cover;
   object-position: center center;
 }
-.service-card__img--kinder img    { object-position: center 32%; }
-.service-card__img--hochzeit img  { object-position: center 65%; }
+.service-card__img--kinder img    { object-position: center 20%; }
 .service-card__img--corporate img { object-position: center 45%; }
-.service-card__img--about img     { object-position: center 32%; }
+/* Hochzeit & Über mich: ganzes Motiv zeigen (rausgezoomt) statt Anschnitt */
+.service-card__img--hochzeit img  { object-fit: contain; object-position: center; }
+.service-card__img--about img     { object-fit: contain; object-position: center; }
 
 /* Isa cut-out photo — stands in the card */
 .service-card__isa {
@@ -1007,7 +1009,6 @@ p  { color: var(--text-mid); }
   color: rgba(255,255,255,.6);
 }
 
-/* Padding bewusst gesetzt (--sp-5 ist projektweit undefiniert -> war ungueltig) */
 .service-card__body { padding: var(--sp-4); }
 
 .service-card__title {
