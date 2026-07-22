@@ -991,6 +991,20 @@ p  { color: var(--text-mid); }
 .service-card__img--hochzeit img  { object-fit: contain; object-position: center; }
 .service-card__img--about img     { object-fit: contain; object-position: center; }
 
+/* Die :not()-Klausel der Basisregel oben hat höhere Spezifität als die
+   Varianten-Regeln und überschreibt sie faktisch (kinder/about greifen nie).
+   Gezielter Desktop-Fix mit ausreichender Spezifität — Mobile bleibt bei der
+   bisherigen (funktionierenden) Darstellung unverändert. */
+@media (min-width: 769px) {
+  .service-card__img--kinder.service-card__img img:not(.service-card__isa) {
+    object-position: center 10%;
+  }
+  .service-card__img--about.service-card__img img:not(.service-card__isa) {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
 /* Isa cut-out photo — stands in the card */
 .service-card__isa {
   height: 110%;
@@ -1627,11 +1641,19 @@ span.t-card__avatar {
   font-size: clamp(2.8rem, 5.5vw, 4.5rem);
   color: var(--mint-dark);
 }
+.price-teaser__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: var(--sp-4) auto var(--sp-6);
+  max-width: 440px;
+}
 .price-teaser__text {
   font-size: 1.05rem;
-  margin: var(--sp-3) auto var(--sp-6);
-  max-width: 440px;
   line-height: 1.75;
+}
+.price-teaser__details .pricing__note {
+  margin-top: 0;
 }
 
 /* ===== 11. Contact Teaser ===== */
