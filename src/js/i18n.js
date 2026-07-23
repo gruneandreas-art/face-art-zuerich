@@ -107,9 +107,9 @@ const I18n = (() => {
         ref_subtitle:'A selection from Isa\'s appearances — from atmospheric Christmas markets to large city festivals to birthday parties.'
       },
       kontakt: {
-        hero_eyebrow:'Non-binding & quick',
-        hero_title:'Write to me -', hero_title_em:'Reply within 24h.',
-        hero_subtitle:'I look forward to your enquiry and will get back to you as soon as possible!',
+        hero_eyebrow:'Let\'s talk',
+        hero_title:'I look forward to', hero_title_em:'your message.',
+        hero_subtitle:'Whether a children\'s birthday, wedding or corporate event — reply usually within 24h.',
         info_label:'Contact',
         form_title:'Send enquiry',
         form_first:'First name', form_last:'Last name', form_email:'Email', form_message:'Message',
@@ -220,9 +220,9 @@ const I18n = (() => {
         ref_subtitle:'Une sélection d\'apparitions d\'Isa — de marchés de Noël chaleureux à de grands festivals urbains en passant par des fêtes d\'anniversaire.'
       },
       kontakt: {
-        hero_eyebrow:'Sans engagement & rapide',
-        hero_title:'Écrivez-moi -', hero_title_em:'Réponse dans les 24h.',
-        hero_subtitle:'Je me réjouis de votre demande et je vous réponds dans les meilleurs délais !',
+        hero_eyebrow:'Parlons-en',
+        hero_title:'Je me réjouis de', hero_title_em:'votre message.',
+        hero_subtitle:'Anniversaire d\'enfant, mariage ou événement d\'entreprise — réponse en général sous 24h.',
         info_label:'Contact',
         form_title:'Envoyer une demande',
         form_first:'Prénom', form_last:'Nom', form_email:'E-mail', form_message:'Message',
@@ -333,9 +333,9 @@ const I18n = (() => {
         ref_subtitle:'Una selezione delle apparizioni di Isa — da atmosferici mercatini di Natale a grandi festival urbani a feste di compleanno.'
       },
       kontakt: {
-        hero_eyebrow:'Senza impegno & veloce',
-        hero_title:'Scrivetemi -', hero_title_em:'Risposta entro 24h.',
-        hero_subtitle:'Non vedo l\'ora della vostra richiesta e vi rispondo il prima possibile!',
+        hero_eyebrow:'Parliamone',
+        hero_title:'Non vedo l\'ora di', hero_title_em:'ricevere il vostro messaggio.',
+        hero_subtitle:'Festa di compleanno, matrimonio o evento aziendale — risposta di solito entro 24h.',
         info_label:'Contatto',
         form_title:'Invia richiesta',
         form_first:'Nome', form_last:'Cognome', form_email:'E-mail', form_message:'Messaggio',
