@@ -60,6 +60,7 @@ const I18n = (() => {
         setup_text1:'I bring everything needed on the day — colours, table, chair and materials. After around 10 minutes of setup, it\'s time to get started, whether in Zurich, Dübendorf or the surrounding area.',
         setup_text2:'My compact setup adapts flexibly to any location — even a change of venue during the event is no problem.',
         material_title:'Vegan & safe', material_text:'Only high-quality colours are used, which are completely safe — and vegan. No animal products, no animal testing.',
+        hygiene_intro:'Cleanliness and safety are my top priority — how I work on site is set out transparently in my hygiene concept.', hygiene_link:'View hygiene concept →',
         ben_label:'Why Face Art Zürich', ben_title:'What speaks for Face Art Zürich'
       },
       hochzeiten: {
@@ -199,6 +200,7 @@ const I18n = (() => {
         setup_text1:'J\'apporte tout le nécessaire — couleurs, table, chaise et matériaux. Après environ 10 minutes de mise en place, c\'est parti, que ce soit à Zurich, Dübendorf ou dans toute la région.',
         setup_text2:'Mon setup compact s\'adapte à n\'importe quel lieu — même un changement d\'endroit pendant la fête n\'est pas un problème.',
         material_title:'Vegan & sûr', material_text:'Seules des couleurs de haute qualité sont utilisées, absolument sûres — et véganes. Pas de produits animaux, pas de tests sur animaux.',
+        hygiene_intro:'La propreté et la sécurité sont ma priorité absolue — ma façon de travailler sur place est détaillée en toute transparence dans mon concept d\'hygiène.', hygiene_link:'Voir le concept d\'hygiène →',
         ben_label:'Pourquoi Face Art Zürich', ben_title:'Ce qui parle pour Face Art Zürich'
       },
       hochzeiten: {
@@ -338,6 +340,7 @@ const I18n = (() => {
         setup_text1:'Porto tutto il necessario — colori, tavolo, sedia e materiali. Dopo circa 10 minuti di allestimento, si può iniziare, a Zurigo, Dübendorf o in tutta la regione.',
         setup_text2:'Il mio setup compatto si adatta a qualsiasi luogo — anche un cambio di posto durante la festa non è un problema.',
         material_title:'Vegano & sicuro', material_text:'Si utilizzano solo colori di alta qualità, assolutamente sicuri — e vegani. Nessun prodotto animale, nessun test su animali.',
+        hygiene_intro:'Pulizia e sicurezza sono la mia priorità assoluta — come lavoro sul posto è descritto in modo trasparente nel mio piano d\'igiene.', hygiene_link:'Consulta il piano d\'igiene →',
         ben_label:'Perché Face Art Zürich', ben_title:'Cosa parla per Face Art Zürich'
       },
       hochzeiten: {

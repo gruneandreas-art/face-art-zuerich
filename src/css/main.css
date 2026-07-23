@@ -2089,6 +2089,15 @@ span.t-card__avatar {
   color: var(--text-mid);
   line-height: 1.7;
 }
+.material-box__link {
+  color: var(--mint-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  transition: color var(--t);
+}
+.material-box__link:hover { color: var(--mint-hover); }
 
 /* ===== 18. Two-col layout ===== */
 .two-col {
