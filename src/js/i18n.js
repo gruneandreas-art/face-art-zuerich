@@ -3,7 +3,6 @@ const I18n = (() => {
   const STORAGE_KEY = 'faz_lang';
   let current = 'de';
   const cache = new Map();
-
   /* ── Translations ─────────────────────────────────────── */
   const T = {
     en: {
@@ -13,7 +12,6 @@ const I18n = (() => {
         hero_label:'Zurich & surroundings',
         hero_title:'Face Painting & Face Art in Zurich',
         hero_title_em:'For birthdays, events & weddings',
-        hero_subtitle:'Face Painting & Face Art — right to your event',
         hero_cta_contact:'Send enquiry',
         services_label:'My Services',
         services_title:'Face Painting & Face Art for every occasion',
@@ -53,9 +51,6 @@ const I18n = (() => {
         f3_text1:'Planning a larger event and want to offer your little guests a special highlight? I\'m happy to advise you personally and without fuss on whether support from additional professional face painters makes sense for your event. Just send a no-obligation enquiry!',
         f3_text2:'Thanks to my many years of experience in event management, I not only paint faces but also support you with advice throughout the planning. If your occasion needs extra help on site, I draw on my network of experienced, professional colleagues who can easily be booked through me.',
         f3_text3:'That way you get everything from a single source, smooth organisation and a magical experience for your little guests – even at large events.',
-        f4_label:'Princesses & dreamers', f4_title:'The perfect design for every child',
-        f4_text1:'From the delicate unicorn crown to the sparkling butterfly — for every child there\'s a design that makes their eyes light up.',
-        f4_cta:'Enquire now',
         setup_label:'Professional setup', setup_title:'Everything included — ready to go',
         setup_text1:'I bring everything needed on the day — colours, table, chair and materials. After around 10 minutes of setup, it\'s time to get started, whether in Zurich, Dübendorf or the surrounding area.',
         setup_text2:'My compact setup adapts flexibly to any location — even a change of venue during the event is no problem.',
@@ -87,9 +82,7 @@ const I18n = (() => {
         step2_title:'Personal offer', step2_text:'You\'ll receive a transparent offer from me with price, duration and everything included — within 24h.',
         step3_title:'Design coordination', step3_text:'We discuss designs and colour schemes so everything perfectly matches your wedding style.',
         step4_title:'Your special day', step4_text:'I arrive on time, set up discreetly and ensure glowing faces — visible in every photo.',
-        booking_cta:'Secure wedding date',
         ben_label:'What makes face art special', ben_title:'Why guests love it',
-        ben1_title:'For young and old', ben2_title:'Perfect for photos', ben3_title:'Conversation starter', ben4_title:'Vegan & skin-friendly',
         setup_label:'Stress-free organised', setup_title:'I bring everything'
       },
       unternehmen: {
@@ -112,10 +105,7 @@ const I18n = (() => {
         step1_title:'Send enquiry', step1_text:'Date, location, event size — a short message is enough.',
         step2_title:'Offer within 24h', step2_text:'Isa sends a complete offer with price and contract documents.',
         step3_title:'Detail coordination', step3_text:'Design wishes, brand colours, schedule — personally by phone or message.',
-        step4_title:'Isa arrives — ready for action', step4_text:'Setup in 10 minutes, full focus on your event.',
-        cta_wa:'Write on WhatsApp',
-        booking_cta:'Request trade fair offer'
-      },
+        step4_title:'Isa arrives — ready for action', step4_text:'Setup in 10 minutes, full focus on your event.'},
       about: {
         hero_eyebrow:'About me',
         hero_title:'Hello!', hero_title_em:'I\'m Isa.',
@@ -123,8 +113,7 @@ const I18n = (() => {
         about_eyebrow:'Face Art Zürich', about_title:'My passion is my profession',
         about_text1:'Hello! I\'m Isa, the artist behind Face Art Zürich. I\'m a professional speed painter.',
         about_text2:'With professional paint, I create all kinds of designs on face and body in no time at events, for young and old alike — a wonderful highlight to watch and join in for the whole family.',
-        about_cta:'Get in touch', about_wa:'WhatsApp',
-        val_label:'What defines me', val_title:'Values & promise',
+        about_cta:'Get in touch', val_label:'What defines me', val_title:'Values & promise',
         ben1_title:'Passion', ben2_title:'Reliability', ben3_title:'Personal service',
         ben4_title:'Quality', ben5_title:'Mobility', ben6_title:'Hygiene standards',
         ref_label:'Appearances & Portfolio', ref_title:'Where I could be found',
@@ -140,12 +129,8 @@ const I18n = (() => {
         form_phone:'Phone / WhatsApp', form_optional:'(optional)',
         form_method:'Preferred contact method', form_method_wa:'Via WhatsApp', form_method_tel:'Phone', form_method_mail:'Email',
         form_ph_first:'Maria', form_ph_last:'Miller', form_ph_email:'maria@example.com', form_ph_message:'Hello Isa, I\'m planning a birthday party on …',
-        form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.',
-        wa_label:'WhatsApp — fastest', wa_hint:'Reply usually within 24h — directly from Isa.',
-        wa_btn:'+41 (0)76 439 4928', map_label:'Find me here'
-      }
+        form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.'}
     },
-
     fr: {
       nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
       footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
@@ -153,7 +138,6 @@ const I18n = (() => {
         hero_label:'Zurich & environs',
         hero_title:'Maquillage enfants & Face Art à Zurich',
         hero_title_em:'Pour anniversaires, événements & mariages',
-        hero_subtitle:'Maquillage enfants & Face Art — directement à votre événement',
         hero_cta_contact:'Envoyer une demande',
         services_label:'Mes services',
         services_title:'Maquillage enfants & Face Art pour chaque occasion',
@@ -193,9 +177,6 @@ const I18n = (() => {
         f3_text1:'Vous organisez un grand événement et souhaitez offrir un moment fort à vos petits invités ? Je vous conseille volontiers, personnellement et simplement, pour savoir si le renfort d\'autres maquilleuses professionnelles est judicieux pour votre événement. Faites simplement une demande sans engagement !',
         f3_text2:'Grâce à ma longue expérience dans l\'organisation d\'événements, je ne me contente pas de maquiller : je vous accompagne aussi de mes conseils tout au long de la planification. Si votre occasion nécessite un renfort sur place, je fais appel à mon réseau de collègues expérimentées et professionnelles, faciles à réserver via moi.',
         f3_text3:'Ainsi, vous avez tout d\'une seule main, une organisation sans accroc et une expérience magique pour vos petits invités – même lors de grandes manifestations.',
-        f4_label:'Princesses & rêveurs', f4_title:'Le motif parfait pour chaque enfant',
-        f4_text1:'De la délicate couronne de licorne au papillon scintillant — pour chaque enfant, il y a un motif qui fait briller ses yeux.',
-        f4_cta:'Faire une demande',
         setup_label:'Setup professionnel', setup_title:'Tout inclus — prêt à démarrer',
         setup_text1:'J\'apporte tout le nécessaire — couleurs, table, chaise et matériaux. Après environ 10 minutes de mise en place, c\'est parti, que ce soit à Zurich, Dübendorf ou dans toute la région.',
         setup_text2:'Mon setup compact s\'adapte à n\'importe quel lieu — même un changement d\'endroit pendant la fête n\'est pas un problème.',
@@ -227,9 +208,7 @@ const I18n = (() => {
         step2_title:'Offre personnelle', step2_text:'Vous recevrez de ma part une offre transparente avec le prix, la durée et tout ce qui est inclus — dans les 24h.',
         step3_title:'Coordination des designs', step3_text:'Nous discutons des motifs et des couleurs pour que tout corresponde parfaitement à votre style de mariage.',
         step4_title:'Votre grand jour', step4_text:'J\'arrive à l\'heure, je m\'installe discrètement et j\'assure des visages rayonnants — visibles sur chaque photo.',
-        booking_cta:'Réserver la date de mariage',
         ben_label:'Ce qui rend le face art spécial', ben_title:'Pourquoi les invités adorent',
-        ben1_title:'Pour petits et grands', ben2_title:'Parfait pour les photos', ben3_title:'Brise-glace', ben4_title:'Vegan & adapté à la peau',
         setup_label:'Organisé sans stress', setup_title:'J\'apporte tout'
       },
       unternehmen: {
@@ -252,10 +231,7 @@ const I18n = (() => {
         step1_title:'Envoyer une demande', step1_text:'Date, lieu, taille de l\'événement — un court message suffit.',
         step2_title:'Offre dans les 24h', step2_text:'Isa envoie une offre complète avec prix et documents contractuels.',
         step3_title:'Coordination des détails', step3_text:'Souhaits de motifs, couleurs de marque, planning — personnellement par téléphone ou message.',
-        step4_title:'Isa arrive — prête à l\'action', step4_text:'Installation en 10 minutes, concentration totale sur votre événement.',
-        cta_wa:'Écrire sur WhatsApp',
-        booking_cta:'Demander une offre salon'
-      },
+        step4_title:'Isa arrive — prête à l\'action', step4_text:'Installation en 10 minutes, concentration totale sur votre événement.'},
       about: {
         hero_eyebrow:'À propos',
         hero_title:'Bonjour !', hero_title_em:'Je suis Isa.',
@@ -263,8 +239,7 @@ const I18n = (() => {
         about_eyebrow:'Face Art Zürich', about_title:'Ma passion est mon métier',
         about_text1:'Bonjour ! Je suis Isa, l\'artiste derrière Face Art Zürich. Je suis une speed painter professionnelle.',
         about_text2:'Avec du maquillage professionnel, je crée en un rien de temps toutes sortes de motifs sur le visage et le corps lors d\'événements, pour petits et grands — un magnifique moment à regarder et à partager pour toute la famille.',
-        about_cta:'Prendre contact', about_wa:'WhatsApp',
-        val_label:'Ce qui me définit', val_title:'Valeurs & promesses',
+        about_cta:'Prendre contact', val_label:'Ce qui me définit', val_title:'Valeurs & promesses',
         ben1_title:'Passion', ben2_title:'Fiabilité', ben3_title:'Service personnel',
         ben4_title:'Qualité', ben5_title:'Mobilité', ben6_title:'Standards d\'hygiène',
         ref_label:'Apparitions & Portfolio', ref_title:'Où j\'ai participé',
@@ -280,12 +255,8 @@ const I18n = (() => {
         form_phone:'Téléphone / WhatsApp', form_optional:'(facultatif)',
         form_method:'Moyen de contact préféré', form_method_wa:'Par WhatsApp', form_method_tel:'Téléphone', form_method_mail:'E-mail',
         form_ph_first:'Marie', form_ph_last:'Dupont', form_ph_email:'marie@exemple.fr', form_ph_message:'Bonjour Isa, je planifie un anniversaire le …',
-        form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.',
-        wa_label:'WhatsApp — le plus rapide', wa_hint:'Réponse en général dans les 24h — directement d\'Isa.',
-        wa_btn:'+41 (0)76 439 4928', map_label:'Où me trouver'
-      }
+        form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.'}
     },
-
     it: {
       nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
       footer: { tagline:'Truccabimbi & Face Art', pages:'Pagine', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
@@ -293,7 +264,6 @@ const I18n = (() => {
         hero_label:'Zurigo & dintorni',
         hero_title:'Truccabimbi & Face Art a Zurigo',
         hero_title_em:'Per compleanni, eventi & matrimoni',
-        hero_subtitle:'Truccabimbi & Face Art — direttamente al vostro evento',
         hero_cta_contact:'Invia richiesta',
         services_label:'I miei servizi',
         services_title:'Truccabimbi & Face Art per ogni occasione',
@@ -333,9 +303,6 @@ const I18n = (() => {
         f3_text1:'State organizzando un evento più grande e volete offrire ai vostri piccoli ospiti un momento speciale? Vi consiglio volentieri, di persona e senza complicazioni, se sia utile il supporto di altre truccatrici professioniste per il vostro evento. Richiedete semplicemente senza impegno!',
         f3_text2:'Grazie alla mia lunga esperienza nell\'organizzazione di eventi, non mi occupo solo del trucco, ma vi affianco anche con consigli nella pianificazione. Se il vostro evento necessita di supporto aggiuntivo sul posto, mi avvalgo della mia rete di colleghe esperte e professioniste, prenotabili facilmente tramite me.',
         f3_text3:'Così avete tutto da un unico interlocutore, un\'organizzazione impeccabile e un\'esperienza magica per i vostri piccoli ospiti – anche in occasione di grandi eventi.',
-        f4_label:'Principesse & sognatori', f4_title:'Il motivo perfetto per ogni bambino',
-        f4_text1:'Dalla delicata corona di unicorno alla farfalla scintillante — per ogni bambino c\'è un motivo che fa brillare i suoi occhi.',
-        f4_cta:'Richiedi ora',
         setup_label:'Setup professionale', setup_title:'Tutto incluso — pronto a partire',
         setup_text1:'Porto tutto il necessario — colori, tavolo, sedia e materiali. Dopo circa 10 minuti di allestimento, si può iniziare, a Zurigo, Dübendorf o in tutta la regione.',
         setup_text2:'Il mio setup compatto si adatta a qualsiasi luogo — anche un cambio di posto durante la festa non è un problema.',
@@ -367,9 +334,7 @@ const I18n = (() => {
         step2_title:'Offerta personale', step2_text:'Riceverete da me un\'offerta trasparente con prezzo, durata e tutto incluso — entro 24h.',
         step3_title:'Coordinamento design', step3_text:'Discutiamo i motivi e i colori in modo che tutto corrisponda perfettamente al vostro stile matrimoniale.',
         step4_title:'Il vostro grande giorno', step4_text:'Arrivo puntuale, mi installo con discrezione e assicuro visi raggianti — visibili in ogni foto.',
-        booking_cta:'Blocca la data del matrimonio',
         ben_label:'Cosa rende speciale il face art', ben_title:'Perché gli ospiti lo amano',
-        ben1_title:'Per grandi e piccoli', ben2_title:'Perfetto per le foto', ben3_title:'Rompighiaccio', ben4_title:'Vegano & adatto alla pelle',
         setup_label:'Organizzato senza stress', setup_title:'Porto tutto'
       },
       unternehmen: {
@@ -392,10 +357,7 @@ const I18n = (() => {
         step1_title:'Inviare richiesta', step1_text:'Data, luogo, dimensione dell\'evento — un breve messaggio è sufficiente.',
         step2_title:'Offerta entro 24h', step2_text:'Isa invia un\'offerta completa con prezzo e documenti contrattuali.',
         step3_title:'Coordinamento dettagli', step3_text:'Desideri di motivi, colori del brand, programma — personalmente per telefono o messaggio.',
-        step4_title:'Isa arriva — pronta all\'azione', step4_text:'Allestimento in 10 minuti, piena concentrazione sul vostro evento.',
-        cta_wa:'Scrivere su WhatsApp',
-        booking_cta:'Richiedere offerta fiera'
-      },
+        step4_title:'Isa arriva — pronta all\'azione', step4_text:'Allestimento in 10 minuti, piena concentrazione sul vostro evento.'},
       about: {
         hero_eyebrow:'Chi sono',
         hero_title:'Ciao!', hero_title_em:'Sono Isa.',
@@ -403,8 +365,7 @@ const I18n = (() => {
         about_eyebrow:'Face Art Zürich', about_title:'La mia passione è il mio lavoro',
         about_text1:'Ciao! Sono Isa, l\'artista dietro Face Art Zürich. Sono una speed painter professionista.',
         about_text2:'Con colori professionali realizzo in pochissimo tempo ogni tipo di motivo su viso e corpo agli eventi, per grandi e piccoli — un meraviglioso momento da guardare e a cui partecipare per tutta la famiglia.',
-        about_cta:'Prendere contatto', about_wa:'WhatsApp',
-        val_label:'Cosa mi contraddistingue', val_title:'Valori & promesse',
+        about_cta:'Prendere contatto', val_label:'Cosa mi contraddistingue', val_title:'Valori & promesse',
         ben1_title:'Passione', ben2_title:'Affidabilità', ben3_title:'Servizio personale',
         ben4_title:'Qualità', ben5_title:'Mobilità', ben6_title:'Standard igienici',
         ref_label:'Apparizioni & Portfolio', ref_title:'Dove sono stata',
@@ -420,13 +381,9 @@ const I18n = (() => {
         form_phone:'Telefono / WhatsApp', form_optional:'(facoltativo)',
         form_method:'Canale di contatto preferito', form_method_wa:'Via WhatsApp', form_method_tel:'Telefono', form_method_mail:'E-mail',
         form_ph_first:'Maria', form_ph_last:'Rossi', form_ph_email:'maria@esempio.it', form_ph_message:'Ciao Isa, sto pianificando una festa di compleanno il …',
-        form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.',
-        wa_label:'WhatsApp — il più veloce', wa_hint:'Risposta di solito entro 24h — direttamente da Isa.',
-        wa_btn:'+41 (0)76 439 4928', map_label:'Dove trovarmi'
-      }
+        form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.'}
     }
   };
-
   /* ── UI-Meldungen (Formular-Status, nicht im DOM) ─────── */
   const UI = {
     de: {
@@ -474,9 +431,7 @@ const I18n = (() => {
       nl_no_connection:'Nessuna connessione. Riprova.'
     }
   };
-
   const msg = key => (UI[current] && UI[current][key]) || UI.de[key] || key;
-
   /* ── Engine ───────────────────────────────────────────── */
   const detect = () => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -484,20 +439,16 @@ const I18n = (() => {
     const browser = (navigator.language || 'de').split('-')[0].toLowerCase();
     return SUPPORTED.includes(browser) ? browser : 'de';
   };
-
   const resolve = (obj, dotKey) =>
     dotKey.split('.').reduce((o, k) => o?.[k], obj);
-
   const applyAll = (lang, t) => {
     document.documentElement.lang = lang;
-
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       if (!cache.has(key)) cache.set(key, el.textContent);
       const val = lang === 'de' ? cache.get(key) : resolve(t, key);
       if (val != null) el.textContent = val;
     });
-
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.dataset.i18nHtml;
       const cacheKey = 'html:' + key;
@@ -505,7 +456,6 @@ const I18n = (() => {
       const val = lang === 'de' ? cache.get(cacheKey) : resolve(t, key);
       if (val != null) el.innerHTML = val;
     });
-
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.dataset.i18nPlaceholder;
       const cacheKey = 'ph:' + key;
@@ -513,21 +463,18 @@ const I18n = (() => {
       const val = lang === 'de' ? cache.get(cacheKey) : resolve(t, key);
       if (val != null) el.placeholder = val;
     });
-
     document.querySelectorAll('.lang-btn').forEach(btn => {
       const active = btn.dataset.lang === lang;
       btn.classList.toggle('lang-btn--active', active);
       btn.setAttribute('aria-pressed', String(active));
     });
   };
-
   const setLang = lang => {
     if (!SUPPORTED.includes(lang) || lang === current) return;
     current = lang;
     localStorage.setItem(STORAGE_KEY, lang);
     applyAll(lang, lang === 'de' ? {} : T[lang]);
   };
-
   const init = () => {
     const lang = detect();
     current = lang;
@@ -539,8 +486,6 @@ const I18n = (() => {
       btn.setAttribute('aria-pressed', String(active));
     });
   };
-
   return { init, lang: () => current, msg };
 })();
-
 document.addEventListener('DOMContentLoaded', I18n.init);
