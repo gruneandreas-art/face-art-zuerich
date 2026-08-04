@@ -75,7 +75,10 @@ const I18n = (() => {
         ben2_title:'Memories with a wow effect', ben2_text:'Matched to the theme and colour scheme — so the photos still shine years later.',
         ben3_title:'Minimal effort', ben3_text:'Just a small table and a chair — I adapt to whatever the location offers.',
         ben4_title:'Weather-independent', ben4_text:'As long as it\'s dry. Moving location during the event is no problem at all.',
-        ben5_title:'Crowd magnet', ben5_text:'Face painting fascinates all age groups — young and old.'
+        ben5_title:'Crowd magnet', ben5_text:'Face painting fascinates all age groups — young and old.',
+        crosslink_text:'Also planning a wedding or a corporate event?',
+        crosslink_hochzeiten:'Face Art for weddings →',
+        crosslink_unternehmen:'Face Art for companies →'
       },
       hochzeiten: {
         hero_eyebrow:'Your most beautiful day',
@@ -105,7 +108,9 @@ const I18n = (() => {
         ben2_title:'Perfect for photos', ben2_text:'Always matched to the wedding\'s design, the motifs and colours fit perfectly into the picture and make the photos even more unique.',
         ben3_title:'Ice breaker', ben3_text:'Guests watch, queue up and naturally start chatting. The perfect start to a wonderful time.',
         ben4_title:'Professional & vegan', ben4_text:'Only high-quality, vegan professional colours are used. For more information on the brands and my hygiene measures, click here:',
-        ben4_link:'View hygiene concept →'
+        ben4_link:'View hygiene concept →',
+        crosslink_text:'Are there children among your wedding guests too?',
+        crosslink_kinderschminken:'Face painting →'
       },
       unternehmen: {
         hero_eyebrow:'Kids Experience Activation',
@@ -119,7 +124,9 @@ const I18n = (() => {
         stat1_label:'longer dwell time at the booth', stat2_label:'are enough at the booth', stat3_label:'infrastructure needed',
         proof_label:'Proof in action', proof_title:'At the booth — live and unstaged',
         f1_label:'Visitor engagement', f1_title:'Families stay. Parents buy.',
-        f1_text:'Children at the booth create instant attention — and a relaxed atmosphere where real conversations happen. I handle the kids\' experience, your team handles the consulting. And together we create an unforgettable experience for young and old.'},
+        f1_text:'Children at the booth create instant attention — and a relaxed atmosphere where real conversations happen. I handle the kids\' experience, your team handles the consulting. And together we create an unforgettable experience for young and old.',
+        crosslink_text:'More about classic face painting for children:',
+        crosslink_kinderschminken:'Face painting →'},
       about: {
         hero_eyebrow:'About me',
         hero_title:'Hello!', hero_title_em:'I\'m Isa.',
@@ -234,7 +241,10 @@ const I18n = (() => {
         ben2_title:'Des souvenirs à effet wow', ben2_text:'Adapté au thème et aux couleurs — pour que les photos brillent encore des années plus tard.',
         ben3_title:'Peu d\'effort', ben3_text:'Juste une petite table et une chaise — je m\'adapte aux conditions sur place.',
         ben4_title:'Indépendant de la météo', ben4_text:'L\'essentiel est qu\'il fasse sec. Un changement de lieu pendant l\'événement n\'est absolument pas un problème.',
-        ben5_title:'Un aimant pour le public', ben5_text:'Le maquillage pour enfants fascine toutes les générations — petits et grands.'
+        ben5_title:'Un aimant pour le public', ben5_text:'Le maquillage pour enfants fascine toutes les générations — petits et grands.',
+        crosslink_text:'Vous prévoyez aussi un mariage ou un événement d\'entreprise ?',
+        crosslink_hochzeiten:'Face Art pour mariages →',
+        crosslink_unternehmen:'Face Art pour entreprises →'
       },
       hochzeiten: {
         hero_eyebrow:'Votre plus beau jour',
@@ -264,7 +274,9 @@ const I18n = (() => {
         ben2_title:'Parfait pour les photos', ben2_text:'Toujours adaptés au design du mariage, les motifs et les couleurs s\'intègrent parfaitement dans l\'image et rendent les photos encore plus uniques.',
         ben3_title:'Brise-glace', ben3_text:'On regarde, on fait la queue et on entre naturellement en conversation. Le début parfait d\'un moment merveilleux.',
         ben4_title:'Professionnel & végane', ben4_text:'Seules des couleurs professionnelles véganes et de haute qualité sont utilisées. Pour plus d\'informations sur les marques et mes mesures d\'hygiène, cliquez ici :',
-        ben4_link:'Voir le concept d\'hygiène →'
+        ben4_link:'Voir le concept d\'hygiène →',
+        crosslink_text:'Des enfants parmi vos invités de mariage ?',
+        crosslink_kinderschminken:'Maquillage enfants →'
       },
       unternehmen: {
         hero_eyebrow:'Kids Experience Activation',
@@ -278,7 +290,9 @@ const I18n = (() => {
         stat1_label:'plus de temps passé au stand', stat2_label:'suffisent au stand', stat3_label:'infrastructure nécessaire',
         proof_label:'Preuve en action', proof_title:'Au stand — en direct et sans mise en scène',
         f1_label:'Engagement des visiteurs', f1_title:'Les familles restent. Les parents achètent.',
-        f1_text:'Les enfants au stand créent une attention immédiate — et une atmosphère détendue où de vraies conversations se créent. Je m\'occupe de l\'expérience des enfants, votre équipe s\'occupe du conseil. Et ensemble, nous créons une expérience inoubliable pour petits et grands.'},
+        f1_text:'Les enfants au stand créent une attention immédiate — et une atmosphère détendue où de vraies conversations se créent. Je m\'occupe de l\'expérience des enfants, votre équipe s\'occupe du conseil. Et ensemble, nous créons une expérience inoubliable pour petits et grands.',
+        crosslink_text:'En savoir plus sur le maquillage enfants classique :',
+        crosslink_kinderschminken:'Maquillage enfants →'},
       about: {
         hero_eyebrow:'À propos',
         hero_title:'Bonjour !', hero_title_em:'Je suis Isa.',
@@ -393,7 +407,10 @@ const I18n = (() => {
         ben2_title:'Ricordi con effetto wow', ben2_text:'Abbinati al tema e ai colori — così le foto brillano ancora anni dopo.',
         ben3_title:'Poco impegno', ben3_text:'Basta un piccolo tavolo e una sedia — mi adatto alle condizioni sul posto.',
         ben4_title:'Indipendente dal meteo', ben4_text:'L\'importante è che sia asciutto. Anche un cambio di luogo durante l\'evento non è affatto un problema.',
-        ben5_title:'Calamita per il pubblico', ben5_text:'Il trucco per bambini affascina tutte le età — grandi e piccini.'
+        ben5_title:'Calamita per il pubblico', ben5_text:'Il trucco per bambini affascina tutte le età — grandi e piccini.',
+        crosslink_text:'State organizzando anche un matrimonio o un evento aziendale?',
+        crosslink_hochzeiten:'Face Art per matrimoni →',
+        crosslink_unternehmen:'Face Art per aziende →'
       },
       hochzeiten: {
         hero_eyebrow:'Il vostro giorno più bello',
@@ -423,7 +440,9 @@ const I18n = (() => {
         ben2_title:'Perfetto per le foto', ben2_text:'Sempre adattati al design del matrimonio, i motivi e i colori si integrano perfettamente nell\'immagine e rendono le foto ancora più uniche.',
         ben3_title:'Rompighiaccio', ben3_text:'Si osserva, ci si mette in fila e si inizia naturalmente a conversare. L\'inizio perfetto di un momento meraviglioso.',
         ben4_title:'Professionale & vegano', ben4_text:'Vengono utilizzati esclusivamente colori professionali vegani di alta qualità. Per maggiori informazioni sui brand e sulle mie misure igieniche, cliccate qui:',
-        ben4_link:'Consulta il piano d\'igiene →'
+        ben4_link:'Consulta il piano d\'igiene →',
+        crosslink_text:'Ci sono bambini tra gli invitati al vostro matrimonio?',
+        crosslink_kinderschminken:'Trucco bimbi →'
       },
       unternehmen: {
         hero_eyebrow:'Kids Experience Activation',
@@ -437,7 +456,9 @@ const I18n = (() => {
         stat1_label:'più tempo trascorso allo stand', stat2_label:'bastano allo stand', stat3_label:'infrastruttura necessaria',
         proof_label:'Prova in azione', proof_title:'Allo stand — dal vivo e spontaneo',
         f1_label:'Coinvolgimento dei visitatori', f1_title:'Le famiglie restano. I genitori comprano.',
-        f1_text:'I bambini allo stand creano attenzione immediata — e un\'atmosfera rilassata in cui nascono vere conversazioni. Gestisco io l\'esperienza dei bambini, il vostro team gestisce la consulenza. E insieme creiamo un\'esperienza indimenticabile per grandi e piccini.'},
+        f1_text:'I bambini allo stand creano attenzione immediata — e un\'atmosfera rilassata in cui nascono vere conversazioni. Gestisco io l\'esperienza dei bambini, il vostro team gestisce la consulenza. E insieme creiamo un\'esperienza indimenticabile per grandi e piccini.',
+        crosslink_text:'Scopri di più sul classico trucco bimbi:',
+        crosslink_kinderschminken:'Trucco bimbi →'},
       about: {
         hero_eyebrow:'Chi sono',
         hero_title:'Ciao!', hero_title_em:'Sono Isa.',
