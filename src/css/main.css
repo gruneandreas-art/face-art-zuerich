@@ -103,8 +103,12 @@ p  { color: var(--text-mid); }
   font-weight: 600;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--mint-dark);
+  color: var(--mint-hover);
   margin-bottom: var(--sp-2);
+}
+.section--mint .section__label {
+  /* --mint-hover only reaches 4.47:1 on --mint-light — darkened slightly here to clear WCAG AA (4.5:1) */
+  color: #39736D;
 }
 
 .section__header { margin-bottom: var(--sp-8); }
@@ -1628,7 +1632,7 @@ span.t-card__avatar {
 .t-card__role {
   display: block;
   font-size: .78rem;
-  color: var(--text-light);
+  color: var(--text-mid);
   line-height: 1.4;
 }
 
@@ -1981,7 +1985,7 @@ span.t-card__avatar {
 }
 .pricing__unit {
   font-size: .9rem;
-  color: var(--text-light);
+  color: var(--text-mid);
   margin-top: .375rem;
 }
 .pricing__note {
