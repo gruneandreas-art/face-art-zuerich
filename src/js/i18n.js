@@ -103,7 +103,7 @@ const I18n = (() => {
         ben4_link:'View hygiene concept →',
         ben5_text:'I come to you — wherever you are in Zurich and the surrounding area. Coming from a different region? I\'m happy to come to you too! We\'ll definitely find a solution!',
         ref_label:'Appearances & Portfolio', ref_title:'Where I could be found',
-        ref_subtitle:'A selection from Isa\'s appearances — from atmospheric Christmas markets to large city festivals to birthday parties.'
+        ref_subtitle:'A selection of my appearances — from atmospheric Christmas markets to large city festivals to birthday parties.'
       },
       kontakt: {
         hero_eyebrow:'Let\'s talk',
@@ -215,7 +215,7 @@ const I18n = (() => {
         ben4_link:'Voir le concept d\'hygiène →',
         ben5_text:'Je viens à vous — où que vous soyez à Zurich et dans les environs. Vous venez d\'une autre région ? Je viens volontiers chez vous aussi ! Nous trouverons sûrement une solution !',
         ref_label:'Apparitions & Portfolio', ref_title:'Où j\'ai participé',
-        ref_subtitle:'Une sélection d\'apparitions d\'Isa — de marchés de Noël chaleureux à de grands festivals urbains en passant par des fêtes d\'anniversaire.'
+        ref_subtitle:'Une sélection de mes apparitions — de marchés de Noël chaleureux à de grands festivals urbains en passant par des fêtes d\'anniversaire.'
       },
       kontakt: {
         hero_eyebrow:'Parlons-en',
@@ -327,7 +327,7 @@ const I18n = (() => {
         ben4_link:'Consulta il piano d\'igiene →',
         ben5_text:'Vengo da voi — ovunque siate a Zurigo e dintorni. Venite da un\'altra regione? Vengo volentieri anche da voi! Troveremo sicuramente una soluzione!',
         ref_label:'Apparizioni & Portfolio', ref_title:'Dove sono stata',
-        ref_subtitle:'Una selezione delle apparizioni di Isa — da atmosferici mercatini di Natale a grandi festival urbani a feste di compleanno.'
+        ref_subtitle:'Una selezione delle mie apparizioni — da atmosferici mercatini di Natale a grandi festival urbani a feste di compleanno.'
       },
       kontakt: {
         hero_eyebrow:'Parliamone',
@@ -346,7 +346,7 @@ const I18n = (() => {
   const UI = {
     de: {
       sending:'Wird gesendet…',
-      phone_required:'Für WhatsApp oder Telefon braucht Isa eure Telefonnummer.',
+      phone_required:'Für WhatsApp oder Telefon brauche ich eure Telefonnummer.',
       send_error:'Fehler beim Senden — bitte versuche es erneut.',
       no_connection:'Keine Verbindung — bitte versuche es erneut.',
       nl_choose_option:'Bitte mindestens eine Option auswählen.',
