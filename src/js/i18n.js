@@ -102,7 +102,7 @@ const I18n = (() => {
       kontakt: {
         hero_eyebrow:'Let\'s talk',
         hero_title:'I look forward to', hero_title_em:'your message.',
-        hero_subtitle:'Whether a children\'s birthday, wedding or corporate event — reply usually within 24h.',
+        hero_subtitle:'The wow factor is guaranteed.',
         info_label:'Contact',
         form_title:'Send enquiry',
         form_first:'First name', form_last:'Last name', form_email:'Email', form_message:'Message',
@@ -208,7 +208,7 @@ const I18n = (() => {
       kontakt: {
         hero_eyebrow:'Parlons-en',
         hero_title:'Je me réjouis de', hero_title_em:'votre message.',
-        hero_subtitle:'Anniversaire d\'enfant, mariage ou événement d\'entreprise — réponse en général sous 24h.',
+        hero_subtitle:'Le facteur wow est garanti.',
         info_label:'Contact',
         form_title:'Envoyer une demande',
         form_first:'Prénom', form_last:'Nom', form_email:'E-mail', form_message:'Message',
@@ -314,7 +314,7 @@ const I18n = (() => {
       kontakt: {
         hero_eyebrow:'Parliamone',
         hero_title:'Non vedo l\'ora di', hero_title_em:'ricevere il vostro messaggio.',
-        hero_subtitle:'Festa di compleanno, matrimonio o evento aziendale — risposta di solito entro 24h.',
+        hero_subtitle:'Il fattore wow è garantito.',
         info_label:'Contatto',
         form_title:'Invia richiesta',
         form_first:'Nome', form_last:'Cognome', form_email:'E-mail', form_message:'Messaggio',
