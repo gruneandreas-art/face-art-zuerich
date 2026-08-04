@@ -1795,17 +1795,24 @@ span.t-card__avatar {
 
 /* Bild-Platzhalter (markenkonforme Gradient-Flaeche, wenn noch kein Foto vorliegt) */
 .feature__placeholder {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1200 / 669;
   border-radius: var(--radius);
   background: linear-gradient(135deg, #CCDCD8 0%, #A8C8C4 50%, #C0C8D0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .feature__placeholder svg {
   width: 68px;
   height: 68px;
   color: rgba(255, 255, 255, 0.72);
+}
+.feature__placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-acc__panel {
