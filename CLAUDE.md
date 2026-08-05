@@ -1,6 +1,7 @@
 # Projektüberblick
 Statische, mehrsprachige Website für **Face Art Zürich** (Kinderschminken & Face Art von Isa, Dübendorf/Zürich). 6 Seiten: `index`, `kinderschminken`, `hochzeiten`, `unternehmen`, `about`, `kontakt`. Sprachen DE/EN/FR/IT.
-Maßgebliche Live-URL: https://gruneandreas-art.github.io/face-art-zuerich/
+Maßgebliche Live-URL (Produktionsdomain, über Netlify): https://face-art-zuerich.ch/
+GitHub-Pages-Spiegel (immer aktuell zu `main`): https://gruneandreas-art.github.io/face-art-zuerich/
 
 # Technischer Stack
 - Vanilla **HTML5 + CSS3 + JavaScript (ES6+)**. Kein Build, kein Framework, keine Paketverwaltung (keine `package.json`).
@@ -57,10 +58,10 @@ Maßgebliche Live-URL: https://gruneandreas-art.github.io/face-art-zuerich/
 - Formulareingaben nie ungeprüft ins DOM schreiben.
 
 # Git, Release und GitHub Pages
-- Branch `main`, Remote `origin`. Deployment = GitHub Pages **direkt aus `main`** (kein `.github/`, keine Actions, kein Build).
-- Nach `git push origin main` baut Pages ~1 Min; erst danach ist die Live-URL aktuell. „Live aktualisiert" nur behaupten, wenn verifiziert — sonst auf den Rebuild hinweisen.
-- Kein Custom-Domain/CNAME. Maßgebliche Domain = die GitHub-Pages-URL.
-- **Bekannte Inkonsistenz:** canonical/OG/`sitemap.xml`/`robots.txt` zeigen auf `www.faceartzuerich.ch` und passen nicht zur Pages-URL — bei SEO-Arbeit angleichen (eigene Aufgabe).
+- Branch `main`, Remote `origin`. Zwei parallele Deployments aus `main`:
+  - **GitHub Pages** (direkt aus `main`, kein `.github/`, keine Actions, kein Build) — Spiegel, baut nach Push ~1 Min neu.
+  - **Netlify** (verbunden mit diesem Repo) — beliefert die Produktionsdomain `face-art-zuerich.ch`. Autobuild kann pausiert sein (Details/aktueller Stand in `CLAUDE.local.md`) — vor „Live aktualisiert"-Aussagen auf `face-art-zuerich.ch` immer separat verifizieren, nicht vom Pages-Spiegel ableiten.
+- `_redirects` im Repo-Root steuert Netlify-seitige Redirects (z. B. `.html` → clean URL).
 
 # Sicherheits- und Scope-Grenzen
 - Keine neuen Frameworks/Libraries/Build-Tools/Dependencies ohne dokumentierten Nutzen und Freigabe.
