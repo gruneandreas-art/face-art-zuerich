@@ -687,6 +687,9 @@ p  { color: var(--text-mid); }
   transform: translateX(0) rotate(0deg);
   font-size: 0.85rem;
   letter-spacing: 0.1em;
+  white-space: normal;
+  max-width: calc(100% - 44px);
+  line-height: 1.3;
 }
 
 @media (max-width: 980px) {
@@ -723,6 +726,9 @@ p  { color: var(--text-mid); }
     font-size: .75rem;
     bottom: 14px;
     left: 14px;
+    white-space: normal;
+    max-width: calc(100% - 28px);
+    line-height: 1.3;
   }
 }
 @media (prefers-reduced-motion: reduce) {
