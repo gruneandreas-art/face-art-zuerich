@@ -1,6 +1,10 @@
-/index.html               /                     301
-/kinderschminken.html     /kinderschminken      301
-/hochzeiten.html          /hochzeiten           301
-/unternehmen.html         /unternehmen          301
-/about.html               /about                301
-/kontakt.html             /kontakt              301
+# .html -> Clean URL (301).
+# Force-Flag "!" ist nötig: die .html-Dateien existieren als statische Dateien im
+# Deploy und würden die Regel sonst überschatten (Netlify Rule Shadowing) — die
+# Datei würde mit 200 ausgeliefert und der Redirect nie greifen.
+/index.html               /                     301!
+/kinderschminken.html     /kinderschminken      301!
+/hochzeiten.html          /hochzeiten           301!
+/unternehmen.html         /unternehmen          301!
+/about.html               /about                301!
+/kontakt.html             /kontakt              301!
