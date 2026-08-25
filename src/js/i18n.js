@@ -7,7 +7,7 @@ const I18n = (() => {
   const T = {
     en: {
       nav: { start:'Home', kinderschminken:'Face Painting', hochzeiten:'Weddings', unternehmen:'For Companies', ueber:'About me', kontakt:'Contact' },
-      footer: { tagline:'Face Painting & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
+      footer: { tagline:'Face Painting & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Legal notice', privacy:'Privacy policy' },
       index: {
         hero_label:'Zurich & surroundings',
         hero_title:'Face Painting & Face Art in Zurich',
@@ -174,7 +174,7 @@ const I18n = (() => {
     },
     fr: {
       nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
-      footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
+      footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Mentions légales', privacy:'Politique de confidentialité' },
       index: {
         hero_label:'Zurich & environs',
         hero_title:'Maquillage enfants & Face Art à Zurich',
@@ -341,7 +341,7 @@ const I18n = (() => {
     },
     it: {
       nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
-      footer: { tagline:'Truccabimbi & Face Art', pages:'Pagine', copy:'© 2026 Face Art Zürich — Isa, Dübendorf' },
+      footer: { tagline:'Truccabimbi & Face Art', pages:'Pagine', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Note legali', privacy:'Informativa sulla privacy' },
       index: {
         hero_label:'Zurigo & dintorni',
         hero_title:'Truccabimbi & Face Art a Zurigo',

@@ -5,7 +5,7 @@ set -u
 cd "$(dirname "$0")/.." || exit 1
 
 fail=0
-pages=(index kinderschminken hochzeiten unternehmen about kontakt)
+pages=(index kinderschminken hochzeiten unternehmen about kontakt impressum datenschutz)
 
 echo "== WhatsApp =="
 for p in "${pages[@]}"; do

@@ -904,6 +904,12 @@ p  { color: var(--text-mid); }
 }
 .hero--sub .hero__cta { justify-content: flex-start; }
 
+/* Rechtstexte: gleicher Kopf wie die Unterseiten, nur kompakt — kein Bild, reiner Gradient */
+.hero--legal {
+  min-height: auto;
+  padding-bottom: var(--sp-6);
+}
+
 /* Page-specific hero backgrounds — unified gradient across all pages */
 .page--home .acc-hero .hero__bg,
 .page--kinderschminken .hero--sub .hero__bg,
@@ -912,7 +918,8 @@ p  { color: var(--text-mid); }
 .page--kontakt .hero--sub .hero__bg,
 .page--hochzeiten .hero--sub .hero__bg,
 .page--events .hero--sub .hero__bg,
-.page--messen .hero--sub .hero__bg {
+.page--messen .hero--sub .hero__bg,
+.page--legal .hero--sub .hero__bg {
   background: linear-gradient(140deg, #1C1420 0%, #3C2050 30%, #6E3C6A 58%, #3A1830 85%, #1C1020 100%);
 }
 
@@ -2831,3 +2838,76 @@ span.t-card__avatar {
   .lang-btn { padding: 2px 5px; font-size: .62rem; }
   .lang-switcher { margin-right: var(--sp-1); }
 }
+
+
+/* ===== 23. Rechtstexte (Impressum, Datenschutz) ===== */
+.legal { max-width: 720px; }
+
+.legal__note {
+  font-size: .85rem;
+  color: var(--text-light);
+  padding-bottom: var(--sp-4);
+  margin-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.legal h2 {
+  font-size: 1.4rem;
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-2);
+}
+.legal h2:first-of-type { margin-top: 0; }
+
+.legal h3 {
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-top: var(--sp-3);
+  margin-bottom: var(--sp-1);
+}
+
+.legal p { margin-bottom: var(--sp-2); }
+
+.legal ul {
+  list-style: disc;
+  padding-left: var(--sp-3);
+  margin-bottom: var(--sp-2);
+  color: var(--text-mid);
+}
+.legal li { margin-bottom: .35rem; }
+
+.legal a {
+  color: var(--mint-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal a:hover { color: var(--mint-dark); }
+
+.legal address {
+  font-style: normal;
+  color: var(--text-mid);
+  margin-bottom: var(--sp-2);
+}
+
+.legal__updated {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+  font-size: .85rem;
+  color: var(--text-light);
+}
+
+/* Footer: dezente Rechtslinks neben dem Copyright */
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-1) var(--sp-2);
+  margin-top: .5rem;
+}
+.footer__legal a {
+  font-size: .78rem;
+  color: rgba(255,255,255,.55);
+  transition: color var(--t);
+}
+.footer__legal a:hover { color: var(--white); }
