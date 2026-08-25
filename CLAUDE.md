@@ -1,7 +1,6 @@
 # Projektüberblick
-Statische, mehrsprachige Website für **Face Art Zürich** (Kinderschminken & Face Art von Isa, Dübendorf/Zürich). 6 Seiten: `index`, `kinderschminken`, `hochzeiten`, `unternehmen`, `about`, `kontakt`. Sprachen DE/EN/FR/IT.
-Maßgebliche Live-URL (Produktionsdomain, über Netlify): https://face-art-zuerich.ch/
-GitHub-Pages-Spiegel (immer aktuell zu `main`): https://gruneandreas-art.github.io/face-art-zuerich/
+Statische, mehrsprachige Website für **Face Art Zürich** (Kinderschminken & Face Art von Isa, Dübendorf/Zürich). 8 Seiten: `index`, `kinderschminken`, `hochzeiten`, `unternehmen`, `about`, `kontakt`, `impressum`, `datenschutz`. Sprachen DE/EN/FR/IT.
+Maßgebliche Live-URL: https://face-art-zuerich.ch (Netlify, Custom Domain via Infomaniak)
 
 # Technischer Stack
 - Vanilla **HTML5 + CSS3 + JavaScript (ES6+)**. Kein Build, kein Framework, keine Paketverwaltung (keine `package.json`).
@@ -31,12 +30,12 @@ GitHub-Pages-Spiegel (immer aktuell zu `main`): https://gruneandreas-art.github.
 
 # Arbeitsablauf
 - Kleine, **atomare Commits** — ein Thema pro Commit, Messages auf Deutsch im bestehenden Stil.
-- Nach jedem abgeschlossenen, geprüften Arbeitspaket: `git push origin main`, danach Live-URL mitteilen.
+- Nach jedem abgeschlossenen, geprüften Arbeitspaket: `git push origin main`, danach Live-URL mitteilen — **nicht nach jedem einzelnen Commit**, und der Deploy erfolgt manuell (siehe Abschnitt Netlify).
 - Deutsch antworten und dokumentieren, sofern nicht anders gewünscht.
 - Reale Repo-Fakten und verfügbare Tools zuerst prüfen; nichts erfinden (Dateien, Befehle, Skills, Ergebnisse).
 
 # Verifikation und QA
-- Nach jeder Änderung: `bash scripts/qa.sh`. Prüft `.wa-float` auf allen 6 Seiten, kein `btn--whatsapp`, `i18n.js` vor `main.js`, JSON-LD-Parsing (`python3`), JS-Syntax von `i18n.js`/`main.js`.
+- Nach jeder Änderung: `bash scripts/qa.sh`. Prüft `.wa-float` auf allen 8 Seiten, kein `btn--whatsapp`, `i18n.js` vor `main.js`, JSON-LD-Parsing (`python3`), JS-Syntax von `i18n.js`/`main.js`.
 - Kein node/npm/lint/test vorhanden — nicht so tun als ob. JS-Syntax nur via `osascript -l JavaScript <datei>` (SyntaxError = Fehler; ReferenceError `document` = Syntax OK).
 - Bei i18n-/Inhaltsänderungen zusätzlich manuell: jeder verwendete `data-i18n`-Key hat in EN/FR/IT einen Wert.
 - Ausgabe nach QA:
@@ -50,6 +49,8 @@ GitHub-Pages-Spiegel (immer aktuell zu `main`): https://gruneandreas-art.github.
 - Bilder komprimieren: `sips -Z 1600 -s formatOptions 80` (JPEG); Ziel möglichst < 300 KB, nur ersetzen wenn kleiner als Original.
 - Fotos ohne Transparenz nicht als PNG. Für WebP portables `cwebp` nutzen (kein brew auf diesem Mac): `<picture><source type="image/webp">` + Original als Fallback; Transparenz mit `webpinfo` prüfen.
 - Keine zusätzlichen externen Ressourcen/Fonts/Skripte ohne Freigabe.
+- Bandbreite kostet auf Netlify direkt Credits (20 Credits/GB). Bildoptimierung senkt also nicht
+  nur die Ladezeit, sondern auch den monatlichen Verbrauch.
 
 # Security und Privacy
 - Keine Secrets/Tokens/Passwörter in getrackte Dateien. Kein PAT in der Git-Remote-URL — Credential-Helper oder SSH bevorzugen.
@@ -57,11 +58,27 @@ GitHub-Pages-Spiegel (immer aktuell zu `main`): https://gruneandreas-art.github.
 - Kein Tracking/Analytics/Fingerprinting einführen.
 - Formulareingaben nie ungeprüft ins DOM schreiben.
 
-# Git, Release und GitHub Pages
-- Branch `main`, Remote `origin`. Zwei parallele Deployments aus `main`:
-  - **GitHub Pages** (direkt aus `main`, kein `.github/`, keine Actions, kein Build) — Spiegel, baut nach Push ~1 Min neu.
-  - **Netlify** (verbunden mit diesem Repo) — beliefert die Produktionsdomain `face-art-zuerich.ch`. Autobuild kann pausiert sein (Details/aktueller Stand in `CLAUDE.local.md`) — vor „Live aktualisiert"-Aussagen auf `face-art-zuerich.ch` immer separat verifizieren, nicht vom Pages-Spiegel ableiten.
-- `_redirects` im Repo-Root steuert Netlify-seitige Redirects (z. B. `.html` → clean URL).
+# Git, Release und Netlify
+- Branch `main`, Remote `origin`. Deployment = **Netlify**. Kein Build-Schritt, kein `.github/`,
+  keine Actions.
+- **Automatisches Deployment ist abgeschaltet.** Ein Push auf `main` veröffentlicht nichts.
+  Der Deploy wird manuell in der Netlify-UI ausgelöst (Deploys → Trigger deploy → Deploy site).
+  Nach einem Push daher **nie** „live aktualisiert" melden, sondern auf den manuellen
+  Deploy-Schritt hinweisen.
+- **Abrechnung (Netlify Free, Credit-Modell): 300 Credits/Monat.**
+  Ein Produktions-Deploy kostet 15 Credits — ca. 20 Deploys/Monat, abzüglich Bandbreite
+  (20 Credits/GB) und Web-Requests (2 Credits/10.000). Deploy Previews, Branch-Deploys,
+  fehlgeschlagene Deploys und Rollbacks kosten 0 Credits. Bei erschöpftem Kontingent geht die
+  Seite bis zum Monatsersten offline — keine Drosselung, keine Kulanzfrist.
+- **Push-Strategie:** Netlify baut pro Push, nicht pro Commit. Weiterhin kleine, atomare Commits —
+  aber erst nach einem vollständig abgeschlossenen und geprüften Arbeitspaket einmal
+  `git push origin main`. Fünf Commits in einem Push = ein Deploy.
+- Für Zwischenstände: Feature-Branch nutzen. Branch-Deploys und Previews sind kostenlos.
+- Änderungen ohne Auswirkung auf die Live-Site (`CLAUDE.md`, README, Testpläne):
+  `[skip netlify]` in die Commit-Message.
+- Custom Domain `face-art-zuerich.ch` ist aktiv (A-Record auf Netlify-Loadbalancer, CNAME für
+  `www`, DNS bei Infomaniak). E-Mail bleibt bei GMX, von DNS-Änderungen nicht betroffen.
+- `_redirects` liegt im Netlify-Format vor und ist massgeblich für Clean URLs.
 
 # Sicherheits- und Scope-Grenzen
 - Keine neuen Frameworks/Libraries/Build-Tools/Dependencies ohne dokumentierten Nutzen und Freigabe.
