@@ -2,6 +2,62 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <!-- Fehlerreporter: steht bewusst inline im <head> und damit vor i18n.js und main.js,
+       sonst wuerden Fehler aus i18n.js nicht erfasst. Meldet nur technische Angaben,
+       nie Formular- oder Personendaten. Max. eine Meldung pro Browser-Session, damit
+       das Formspree-Kontingent (50/Monat) nicht das Kontaktformular blockiert. -->
+  <script>
+  (function () {
+    /* TODO: eigene Formspree-Form-ID fuer Fehlerberichte anlegen, damit sich Fehler
+       und Kundenanfragen das Kontingent von 50 Einreichungen/Monat nicht teilen. */
+    var ENDPOINT = 'https://formspree.io/f/myklqzbr';
+    var KEY = 'fa_js_error_sent';
+    var sent = false;
+    var lastMsg = '';
+
+    function alreadySent() {
+      if (sent) return true;
+      try { return !!sessionStorage.getItem(KEY); } catch (e) { return false; }
+    }
+
+    function markSent() {
+      sent = true;
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }
+
+    function report(message, file, line, col) {
+      try {
+        var msg = String(message || '').slice(0, 300);
+        if (!msg) return;
+        if (msg === lastMsg) return;   /* identische Meldung nicht erneut senden */
+        if (alreadySent()) return;     /* max. eine Meldung pro Browser-Session */
+        lastMsg = msg;
+        markSent();
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: 'JS-Fehler face-art-zuerich.ch',
+            Fehler: msg,
+            Datei: String(file || '').slice(0, 200),
+            Position: (line || 0) + ':' + (col || 0),
+            Seite: location.href,
+            Browser: navigator.userAgent
+          })
+        }).catch(function () {});      /* Fehler beim Melden still verschlucken */
+      } catch (e) {}                   /* Reporter darf nie etwas blockieren */
+    }
+
+    window.onerror = function (message, file, line, col) {
+      report(message, file, line, col);
+    };
+
+    window.addEventListener('unhandledrejection', function (ev) {
+      var r = ev && ev.reason;
+      report((r && r.message) ? r.message : r, 'unhandledrejection', 0, 0);
+    });
+  })();
+  </script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://face-art-zuerich.ch/kinderschminken">

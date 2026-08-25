@@ -15,9 +15,11 @@ if [ "$(grep -rl 'btn--whatsapp' ./*.html 2>/dev/null | wc -l | tr -d ' ')" = 0 
   echo "  ✓ kein btn--whatsapp"; else echo "  ✗ btn--whatsapp gefunden"; fail=1; fi
 
 echo "== Script-Reihenfolge (i18n.js vor main.js) =="
+# Bewusst auf das echte <script src="…">-Tag gematcht, nicht auf beliebige
+# Vorkommen der Dateinamen — sonst zaehlen auch Kommentartexte als Treffer.
 for p in "${pages[@]}"; do
-  i=$(grep -n 'i18n.js' "$p.html" | head -1 | cut -d: -f1)
-  m=$(grep -n 'js/main.js' "$p.html" | head -1 | cut -d: -f1)
+  i=$(grep -n '<script src="src/js/i18n.js"' "$p.html" | head -1 | cut -d: -f1)
+  m=$(grep -n '<script src="src/js/main.js"' "$p.html" | head -1 | cut -d: -f1)
   if [ -n "$i" ] && [ -n "$m" ] && [ "$i" -lt "$m" ]; then echo "  ✓ $p"; else echo "  ✗ $p: i18n.js nicht vor main.js"; fail=1; fi
 done
 
@@ -43,6 +45,19 @@ for jf in src/js/i18n.js src/js/main.js; do
   out=$(osascript -l JavaScript "$jf" 2>&1)
   if echo "$out" | grep -qi 'SyntaxError'; then echo "  ✗ $jf: SyntaxError"; fail=1; else echo "  ✓ $jf"; fi
 done
+
+echo "== JS-Syntax Inline-Fehlerreporter (<head>) =="
+tmpdir="$(mktemp -d)"
+tmpjs="$tmpdir/reporter.js"
+for p in "${pages[@]}"; do
+  sed -n '/^  <script>$/,/^  <\/script>$/p' "$p.html" | sed '1d;$d' > "$tmpjs"
+  if [ ! -s "$tmpjs" ]; then
+    echo "  ✗ $p: kein Inline-Fehlerreporter gefunden"; fail=1; continue
+  fi
+  out=$(osascript -l JavaScript "$tmpjs" 2>&1)
+  if echo "$out" | grep -qi 'SyntaxError'; then echo "  ✗ $p: SyntaxError im Inline-Reporter"; fail=1; else echo "  ✓ $p"; fi
+done
+rm -rf "$tmpdir"
 
 echo ""
 if [ "$fail" = 0 ]; then echo "QA ✅ — alle Grundfunktionen OK"; else echo "QA ❌ — siehe ✗ oben"; fi
