@@ -1,7 +1,14 @@
 const I18n = (() => {
   const SUPPORTED = ['de', 'en', 'fr', 'it'];
   const STORAGE_KEY = 'faz_lang';
-  let current = 'de';
+  /* Basissprache der aktuellen Seite: steht als data-base-lang am <html>.
+     DE liegt im Root, EN als eigene statische Seiten unter /en/ — "DE ist immer
+     Default" gilt daher nicht mehr. */
+  const BASE = (document.documentElement.getAttribute('data-base-lang') === 'en') ? 'en' : 'de';
+  /* Slugs mit eigener Seite. impressum/datenschutz bewusst ohne EN-Entsprechung. */
+  const SLUGS = ['kinderschminken', 'hochzeiten', 'unternehmen', 'about', 'kontakt'];
+  const DE_ONLY = ['impressum', 'datenschutz'];
+  let current = BASE;
   const cache = new Map();
   /* ── Translations ─────────────────────────────────────── */
   const T = {
@@ -587,7 +594,36 @@ const I18n = (() => {
      getroffene Wahl bleibt in localStorage erhalten. */
   const detect = () => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    return (stored && SUPPORTED.includes(stored)) ? stored : 'de';
+    return (stored && SUPPORTED.includes(stored)) ? stored : BASE;
+  };
+
+  /* Zerlegt den Pfad in Verzeichnis-Praefix und Seiten-Slug. Der Praefix macht
+     die Umschaltung auch dann richtig, wenn die Site in einem Unterverzeichnis
+     liegt (z. B. der GitHub-Pages-Spiegel). */
+  const parsePath = () => {
+    const segs = location.pathname.replace(/\/+$/, '').split('/').filter(Boolean);
+    const strip = v => v.replace(/\.html$/, '');
+    if (BASE === 'en') {
+      const i = segs.lastIndexOf('en');
+      const slug = strip(segs.slice(i + 1).join('/'));
+      return { prefix: segs.slice(0, i), slug: slug === 'index' ? '' : slug };
+    }
+    const last = strip(segs[segs.length - 1] || '');
+    return SLUGS.concat(DE_ONLY, ['index']).includes(last)
+      ? { prefix: segs.slice(0, -1), slug: last === 'index' ? '' : last }
+      : { prefix: segs, slug: '' };
+  };
+
+  /* Ziel-URL fuer den Wechsel zwischen den beiden statischen Sprachen.
+     Fehlt die englische Entsprechung (Impressum, Datenschutz), fuehrt EN auf
+     die englische Startseite statt ins Leere. */
+  const urlFor = lang => {
+    const { prefix, slug } = parsePath();
+    const base = prefix.length ? '/' + prefix.join('/') : '';
+    if (lang === 'en') {
+      return base + '/en/' + (SLUGS.includes(slug) ? slug : '');
+    }
+    return base + '/' + slug;
   };
   const resolve = (obj, dotKey) =>
     dotKey.split('.').reduce((o, k) => o?.[k], obj);
@@ -596,21 +632,21 @@ const I18n = (() => {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       if (!cache.has(key)) cache.set(key, el.textContent);
-      const val = lang === 'de' ? cache.get(key) : resolve(t, key);
+      const val = lang === BASE ? cache.get(key) : resolve(t, key);
       if (val != null) el.textContent = val;
     });
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.dataset.i18nHtml;
       const cacheKey = 'html:' + key;
       if (!cache.has(cacheKey)) cache.set(cacheKey, el.innerHTML);
-      const val = lang === 'de' ? cache.get(cacheKey) : resolve(t, key);
+      const val = lang === BASE ? cache.get(cacheKey) : resolve(t, key);
       if (val != null) el.innerHTML = val;
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.dataset.i18nPlaceholder;
       const cacheKey = 'ph:' + key;
       if (!cache.has(cacheKey)) cache.set(cacheKey, el.placeholder);
-      const val = lang === 'de' ? cache.get(cacheKey) : resolve(t, key);
+      const val = lang === BASE ? cache.get(cacheKey) : resolve(t, key);
       if (val != null) el.placeholder = val;
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -623,14 +659,32 @@ const I18n = (() => {
     if (!SUPPORTED.includes(lang) || lang === current) return;
     current = lang;
     localStorage.setItem(STORAGE_KEY, lang);
-    applyAll(lang, lang === 'de' ? {} : T[lang]);
+    applyAll(lang, lang === BASE ? {} : T[lang]);
+  };
+
+  /* DE und EN sind echte Navigation zwischen zwei statischen Seiten,
+     FR und IT bleiben clientseitiger Texttausch auf der aktuellen Seite. */
+  const choose = lang => {
+    if (!SUPPORTED.includes(lang)) return;
+    if (lang === 'de' || lang === 'en') {
+      if (lang === BASE) { setLang(BASE); return; }
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      location.href = urlFor(lang);
+      return;
+    }
+    setLang(lang);
   };
   const init = () => {
-    const lang = detect();
+    let lang = detect();
+    /* Die URL gewinnt immer ueber den gespeicherten Wert: Auf /en/ wird nie
+       automatisch auf Deutsch geschaltet und auf den deutschen Seiten nie
+       automatisch auf Englisch. FR und IT bleiben davon unberuehrt. */
+    if (lang === 'de' && BASE === 'en') lang = 'en';
+    if (lang === 'en' && BASE === 'de') lang = 'de';
     current = lang;
-    if (lang !== 'de') applyAll(lang, T[lang]);
+    if (lang !== BASE) applyAll(lang, T[lang]);
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      btn.addEventListener('click', () => choose(btn.dataset.lang));
       const active = btn.dataset.lang === lang;
       btn.classList.toggle('lang-btn--active', active);
       btn.setAttribute('aria-pressed', String(active));
