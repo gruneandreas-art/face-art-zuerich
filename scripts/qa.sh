@@ -19,7 +19,7 @@ if [ "$(grep -rl 'btn--whatsapp' ./*.html ./en/*.html 2>/dev/null | wc -l | tr -
 echo "== Script-Reihenfolge (i18n.js vor main.js) =="
 # Bewusst auf das echte <script src="…">-Tag gematcht, nicht auf beliebige
 # Vorkommen der Dateinamen — sonst zaehlen auch Kommentartexte als Treffer.
-# Die EN-Seiten nutzen root-relative Pfade, daher .* vor js/.
+# Die EN-Seiten nutzen ../-Pfade, daher .* vor js/.
 for p in "${pages[@]}"; do
   i=$(grep -n '<script src=".*js/i18n.js"' "$p.html" | head -1 | cut -d: -f1)
   m=$(grep -n '<script src=".*js/main.js"' "$p.html" | head -1 | cut -d: -f1)
@@ -34,10 +34,14 @@ for p in "${en_pages[@]}"; do
   if grep -q '<html lang="en" data-base-lang="en">' "$p.html"; then echo "  ✓ $p: en"; else echo "  ✗ $p: html-Element ohne lang=en/data-base-lang=en"; fail=1; fi
 done
 
-echo "== EN-Seiten: keine relativen Asset-Pfade =="
+echo "== EN-Seiten: keine root-absoluten Pfade =="
+# /src/... setzt voraus, dass die Site auf der Domainwurzel liegt. Im
+# GitHub-Pages-Unterverzeichnis zeigt das ins Leere — daher ../src/...
 for p in "${en_pages[@]}"; do
-  if grep -qE '(src|href|srcset)="src/' "$p.html"; then
-    echo "  ✗ $p: relativer src/-Pfad"; fail=1
+  if grep -qE '(src|href|srcset)="/[^/]' "$p.html"; then
+    echo "  ✗ $p: root-absoluter Pfad"; fail=1
+  elif grep -qE '(src|href|srcset)="src/' "$p.html"; then
+    echo "  ✗ $p: Pfad ohne ../ (bricht unter /en/)"; fail=1
   else echo "  ✓ $p"; fi
 done
 

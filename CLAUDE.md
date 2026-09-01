@@ -34,7 +34,10 @@ Maßgebliche Live-URL: https://face-art-zuerich.ch (Netlify, Custom Domain via I
 - Der Sprachumschalter behandelt DE/EN als echte Navigation zwischen den beiden statischen
   Versionen, FR/IT als clientseitigen Texttausch. Die URL gewinnt immer über den in
   `localStorage` gespeicherten Wert. **Keine** automatische Auswertung von `navigator.language`.
-- EN-Seiten nutzen **root-relative** Asset-Pfade (`/src/…`), sonst brechen sie unter `/en/`.
+- EN-Seiten nutzen **verzeichnisrelative** Pfade (`../src/…`, `../impressum`, Geschwisterseiten
+  ohne Präfix). **Keine root-absoluten Pfade** (`/src/…`) — die setzen voraus, dass die Site auf
+  der Domainwurzel liegt, und brechen im GitHub-Pages-Unterverzeichnis. `../` trifft in beiden
+  Umgebungen. Dasselbe gilt für die deutschen Seiten (`./`, nicht `/`).
 - Texte ausserhalb des `data-i18n`-Systems (`alt`, `aria-label`, Galerie-Labels) müssen in den
   `/en/`-Dateien ebenfalls englisch sein.
 - hreflang: jede DE-Seite und ihre EN-Entsprechung verweisen wechselseitig aufeinander.
