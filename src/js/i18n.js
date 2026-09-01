@@ -577,11 +577,17 @@ const I18n = (() => {
   };
   const msg = key => (UI[current] && UI[current][key]) || UI.de[key] || key;
   /* ── Engine ───────────────────────────────────────────── */
+  /* Bewusst KEINE Auswertung von navigator.language.
+     Seit es die statische englische Version unter /en/ gibt, wuerde eine
+     automatische Umschaltung mit den eigenen URLs konkurrieren: Ein
+     englischsprachiger Besucher saehe auf der deutschen URL eine englische
+     Ansicht, die Google nie indexiert — und ein Zuercher mit englischem
+     Betriebssystem bekaeme auf / eine englische Seite, obwohl er auf Deutsch
+     gesucht hat. Die Sprache waehlt man ueber den Umschalter; eine einmal
+     getroffene Wahl bleibt in localStorage erhalten. */
   const detect = () => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored && SUPPORTED.includes(stored)) return stored;
-    const browser = (navigator.language || 'de').split('-')[0].toLowerCase();
-    return SUPPORTED.includes(browser) ? browser : 'de';
+    return (stored && SUPPORTED.includes(stored)) ? stored : 'de';
   };
   const resolve = (obj, dotKey) =>
     dotKey.split('.').reduce((o, k) => o?.[k], obj);
