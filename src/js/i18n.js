@@ -170,7 +170,14 @@ const I18n = (() => {
         form_phone:'Phone / WhatsApp', form_optional:'(optional)',
         form_method:'Preferred contact method', form_method_wa:'Via WhatsApp', form_method_tel:'Phone', form_method_mail:'Email',
         form_ph_first:'Maria', form_ph_last:'Miller', form_ph_email:'maria@example.com', form_ph_message:'Hello Isa, I\'m planning a birthday party on …',
-        form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.'}
+        form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.',
+        area_label:'Service area',
+        area_intro:'Face Art Zürich is mobile — I come to your event with all the materials. You will regularly find me in:',
+        area_r1_label:'City of Zurich and Glattal',
+        area_r2_label:'Zurich Oberland',
+        area_r3_label:'Lake Zurich and Obersee',
+        area_r4_label:'Further afield',
+        area_note:'Your town not listed? Ask anyway — I also travel further when it fits the schedule.'}
     },
     fr: {
       nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
@@ -337,7 +344,14 @@ const I18n = (() => {
         form_phone:'Téléphone / WhatsApp', form_optional:'(facultatif)',
         form_method:'Moyen de contact préféré', form_method_wa:'Par WhatsApp', form_method_tel:'Téléphone', form_method_mail:'E-mail',
         form_ph_first:'Marie', form_ph_last:'Dupont', form_ph_email:'marie@exemple.fr', form_ph_message:'Bonjour Isa, je planifie un anniversaire le …',
-        form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.'}
+        form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.',
+        area_label:'Zone d\'intervention',
+        area_intro:'Face Art Zürich est mobile — je viens à votre événement avec tout le matériel. Je me déplace régulièrement entre autres à :',
+        area_r1_label:'Ville de Zurich et Glattal',
+        area_r2_label:'Oberland zurichois',
+        area_r3_label:'Lac de Zurich et Obersee',
+        area_r4_label:'Plus loin',
+        area_note:'Votre localité n\'y figure pas ? Demandez quand même — je me déplace aussi plus loin si le planning le permet.'}
     },
     it: {
       nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
@@ -504,7 +518,14 @@ const I18n = (() => {
         form_phone:'Telefono / WhatsApp', form_optional:'(facoltativo)',
         form_method:'Canale di contatto preferito', form_method_wa:'Via WhatsApp', form_method_tel:'Telefono', form_method_mail:'E-mail',
         form_ph_first:'Maria', form_ph_last:'Rossi', form_ph_email:'maria@esempio.it', form_ph_message:'Ciao Isa, sto pianificando una festa di compleanno il …',
-        form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.'}
+        form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.',
+        area_label:'Zona di attività',
+        area_intro:'Face Art Zürich è mobile — vengo al vostro evento con tutto il materiale. Sono regolarmente in giro tra l\'altro a:',
+        area_r1_label:'Città di Zurigo e Glattal',
+        area_r2_label:'Oberland zurighese',
+        area_r3_label:'Lago di Zurigo e Obersee',
+        area_r4_label:'Più lontano',
+        area_note:'La vostra località non è elencata? Chiedete comunque — mi sposto anche più lontano se gli orari lo permettono.'}
     }
   };
   /* ── UI-Meldungen (Formular-Status, nicht im DOM) ─────── */
