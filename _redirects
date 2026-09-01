@@ -10,3 +10,11 @@
 /kontakt.html             /kontakt              301!
 /impressum.html           /impressum            301!
 /datenschutz.html         /datenschutz          301!
+
+# Englische Version: .html -> Clean URL, gleiches Force-Flag-Muster.
+/en/index.html            /en/                  301!
+/en/kinderschminken.html  /en/kinderschminken   301!
+/en/hochzeiten.html       /en/hochzeiten        301!
+/en/unternehmen.html      /en/unternehmen       301!
+/en/kontakt.html          /en/kontakt           301!
+/en/about.html            /en/about             301!

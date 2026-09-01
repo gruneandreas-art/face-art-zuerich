@@ -1,51 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://face-art-zuerich.ch/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://face-art-zuerich.ch/kinderschminken</loc>
-    <lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/kinderschminken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/kinderschminken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/kinderschminken"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://face-art-zuerich.ch/hochzeiten</loc>
-    <lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/hochzeiten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/hochzeiten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/hochzeiten"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://face-art-zuerich.ch/unternehmen</loc>
-    <lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/unternehmen"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://face-art-zuerich.ch/about</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://face-art-zuerich.ch/kontakt</loc>
-    <lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/kontakt"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://face-art-zuerich.ch/about</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/about"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/kinderschminken</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/kinderschminken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/kinderschminken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/kinderschminken"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/hochzeiten</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/hochzeiten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/hochzeiten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/hochzeiten"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/unternehmen</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/unternehmen"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/kontakt"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/about"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://face-art-zuerich.ch/impressum</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://face-art-zuerich.ch/datenschutz</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 </urlset>
