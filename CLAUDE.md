@@ -1,5 +1,5 @@
 # Projektüberblick
-Statische, mehrsprachige Website für **Face Art Zürich** (Kinderschminken & Face Art von Isa, Dübendorf/Zürich). 8 Seiten: `index`, `kinderschminken`, `hochzeiten`, `unternehmen`, `about`, `kontakt`, `impressum`, `datenschutz`. Sprachen DE/EN/FR/IT.
+Statische, mehrsprachige Website für **Face Art Zürich** (Kinderschminken & Face Art von Isa, Dübendorf/Zürich). 14 Seiten: 6 deutsche im Root (`index`, `kinderschminken`, `hochzeiten`, `unternehmen`, `about`, `kontakt`), dieselben 6 englisch unter `/en/`, dazu `impressum` und `datenschutz` (nur Deutsch). Sprachen DE/EN statisch, FR/IT clientseitig.
 Maßgebliche Live-URL: https://face-art-zuerich.ch (Netlify, Custom Domain via Infomaniak)
 
 # Technischer Stack
@@ -16,11 +16,30 @@ Maßgebliche Live-URL: https://face-art-zuerich.ch (Netlify, Custom Domain via I
 - Nur ändern, was die Aufgabe erfordert. Keine ungefragten Refactorings/Dependency-Änderungen. Ungenutzten Code nur im Aufgaben-Scope entfernen.
 
 # i18n und Inhalte
-- Logik in `src/js/i18n.js` (`I18n`-Modul). Übersetzungen unter `T.en` / `T.fr` / `T.it`, je mit `nav`, `footer` und pro Seite `T.<lang>.<seite>.<key>` — **keine falsche Verschachtelung**. DE ist Default und bleibt im HTML (DOM-Cache), kein `T.de`.
+- Logik in `src/js/i18n.js` (`I18n`-Modul). Übersetzungen unter `T.en` / `T.fr` / `T.it`, je mit `nav`, `footer` und pro Seite `T.<lang>.<seite>.<key>` — **keine falsche Verschachtelung**. Die Basissprache einer Seite steht im HTML (DOM-Cache) und wird über `data-base-lang` am `<html>`-Element deklariert; kein `T.de`.
 - Sichtbare Texte in mehrsprachigen Bereichen brauchen `data-i18n` / `data-i18n-html` / `data-i18n-placeholder`; kein verwaister DE-Text ohne Attribut.
 - JS-generierte Statustexte (Formular) über `I18n.msg('key')` + `UI`-Map in `i18n.js` — nicht hartcodieren. Interne E-Mail-Felder (`_subject`, `labelMap`) bleiben DE.
 - `i18n.js` **vor** `main.js` einbinden (alle Seiten).
 - Neuer `data-i18n`-Key ⇒ Wert in **allen** Sprachen (EN/FR/IT) ergänzen; DE aus dem HTML.
+- **Ausnahme von der `data-i18n`-Pflicht:** reine Eigennamenlisten (z. B. die Ortsnamen im Einzugsgebiet auf `kontakt.html`) bleiben ohne Attribut — sie lauten in keiner Sprache anders.
+
+# Zweisprachige Struktur DE/EN
+- DE liegt im Root, EN unter `/en/`. Beide sind **statische, vollständige HTML-Dateien**.
+- **Jede inhaltliche Änderung muss in beiden Versionen erfolgen.** Es gibt kein Build-System,
+  das das erzwingt. Ein Commit, der nur eine Sprache anfasst, ist unvollständig — ausser die
+  Änderung ist ausdrücklich sprachspezifisch.
+- FR und IT bleiben clientseitig über `i18n.js`, ohne eigene URLs und ohne SEO-Anspruch.
+- Die Basissprache einer Seite steht in `data-base-lang` am `<html>`-Element. `i18n.js` liest
+  dieses Attribut; „DE ist immer Default" gilt nicht mehr.
+- Der Sprachumschalter behandelt DE/EN als echte Navigation zwischen den beiden statischen
+  Versionen, FR/IT als clientseitigen Texttausch. Die URL gewinnt immer über den in
+  `localStorage` gespeicherten Wert. **Keine** automatische Auswertung von `navigator.language`.
+- EN-Seiten nutzen **root-relative** Asset-Pfade (`/src/…`), sonst brechen sie unter `/en/`.
+- Texte ausserhalb des `data-i18n`-Systems (`alt`, `aria-label`, Galerie-Labels) müssen in den
+  `/en/`-Dateien ebenfalls englisch sein.
+- hreflang: jede DE-Seite und ihre EN-Entsprechung verweisen wechselseitig aufeinander.
+  Neue Seiten brauchen beide Richtungen plus Sitemap-Eintrag.
+- Impressum und Datenschutz sind bewusst einsprachig deutsch, ohne hreflang.
 
 # Design, UX und Accessibility
 - Eigenständiges, hochwertiges Design (Modern & Elegant; Mint `#68A9A0` + Creme `#FAFAF8`; Cormorant Garamond / Inter). Keine generischen AI-Ästhetiken.
@@ -35,7 +54,7 @@ Maßgebliche Live-URL: https://face-art-zuerich.ch (Netlify, Custom Domain via I
 - Reale Repo-Fakten und verfügbare Tools zuerst prüfen; nichts erfinden (Dateien, Befehle, Skills, Ergebnisse).
 
 # Verifikation und QA
-- Nach jeder Änderung: `bash scripts/qa.sh`. Prüft `.wa-float` auf allen 8 Seiten, kein `btn--whatsapp`, `i18n.js` vor `main.js`, JSON-LD-Parsing (`python3`), JS-Syntax von `i18n.js`/`main.js`.
+- Nach jeder Änderung: `bash scripts/qa.sh`. Prüft `.wa-float` auf allen 14 Seiten, kein `btn--whatsapp`, `i18n.js` vor `main.js`, JSON-LD-Parsing (`python3`), JS-Syntax von `i18n.js`/`main.js`.
 - Kein node/npm/lint/test vorhanden — nicht so tun als ob. JS-Syntax nur via `osascript -l JavaScript <datei>` (SyntaxError = Fehler; ReferenceError `document` = Syntax OK).
 - Bei i18n-/Inhaltsänderungen zusätzlich manuell: jeder verwendete `data-i18n`-Key hat in EN/FR/IT einen Wert.
 - Ausgabe nach QA:
