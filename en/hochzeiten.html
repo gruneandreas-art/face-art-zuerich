@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-base-lang="de">
+<html lang="en" data-base-lang="en">
 <head>
   <meta charset="UTF-8" />
   <!-- Fehlerreporter: steht bewusst inline im <head> und damit vor i18n.js und main.js,
@@ -58,26 +58,26 @@
     });
   })();
   </script>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://face-art-zuerich.ch/hochzeiten">
-  <title>Face Art Hochzeit Zürich | Body Art & Kinderschminken | Face Art Zürich</title>
-  <meta name="description" content="Face Art für Hochzeiten in Zürich — ein romantisches Highlight für Brautpaar und Gäste. Elegante Motive, individuelle Abstimmung, CHF 145/h.">
+  <link rel="canonical" href="https://face-art-zuerich.ch/en/hochzeiten">
+  <title>Wedding Face Painting Zurich | Face Art Zürich</title>
+  <meta name="description" content="Wedding face painting and body art in Zurich — a romantic highlight for the couple and every guest. Elegant designs, agreed with you in advance.">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_CH">
-  <meta property="og:url" content="https://face-art-zuerich.ch/hochzeiten">
-  <meta property="og:title" content="Face Art Hochzeit Zürich | Body Art &amp; Kinderschminken | Face Art Zürich">
-  <meta property="og:description" content="Face Art für Hochzeiten in Zürich — ein romantisches Highlight für Brautpaar und Gäste. Elegante Motive, individuelle Abstimmung, CHF 145/h.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://face-art-zuerich.ch/en/hochzeiten">
+  <meta property="og:title" content="Wedding Face Painting Zurich | Face Art Zürich">
+  <meta property="og:description" content="Wedding face painting and body art in Zurich — a romantic highlight for the couple and every guest. Elegant designs, agreed with you in advance.">
   <meta property="og:image" content="https://face-art-zuerich.ch/src/images/gallery/Hochzeit/elegantes-blumen-face-art-hochzeit.jpg">
   <meta property="og:site_name" content="Face Art Zürich">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Face Art Hochzeit Zürich | Body Art &amp; Kinderschminken">
-  <meta name="twitter:description" content="Ein romantisches Highlight für Brautpaar und Gäste — elegante Face Art & Body Art für euren Hochzeitstag in Zürich.">
+  <meta name="twitter:title" content="Wedding Face Painting Zurich | Face Art Zürich">
+  <meta name="twitter:description" content="Wedding face painting and body art in Zurich — a romantic highlight for the couple and every guest. Elegant designs, agreed with you in advance.">
   <meta name="twitter:image" content="https://face-art-zuerich.ch/src/images/gallery/Hochzeit/elegantes-blumen-face-art-hochzeit.jpg">
-  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/main.css" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 </head>
@@ -86,27 +86,27 @@
   <!-- Navigation -->
   <header class="nav nav--transparent" id="nav">
     <div class="nav__container">
-      <a href="./" class="nav__logo">
+      <a href="/en/" class="nav__logo">
         <span class="nav__logo-text">
           <span class="nav__logo-main">Face Art</span>
           <span class="nav__logo-sub">Zürich</span>
         </span>
       </a>
-      <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
-        <a href="./" class="nav__link" data-i18n="nav.start">Start</a>
-        <a href="kinderschminken" class="nav__link" data-i18n="nav.kinderschminken">Kinderschminken</a>
-        <a href="hochzeiten" class="nav__link nav__link--active" data-i18n="nav.hochzeiten">Hochzeiten</a>
-        <a href="unternehmen" class="nav__link" data-i18n="nav.unternehmen">Für Unternehmen</a>
-        <a href="about" class="nav__link" data-i18n="nav.ueber">Über mich</a>
-        <a href="kontakt" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
+      <nav class="nav__menu" id="navMenu" aria-label="Main navigation">
+        <a href="/en/" class="nav__link" data-i18n="nav.start">Home</a>
+        <a href="/en/kinderschminken" class="nav__link" data-i18n="nav.kinderschminken">Face Painting</a>
+        <a href="/en/hochzeiten" class="nav__link nav__link--active" data-i18n="nav.hochzeiten">Weddings</a>
+        <a href="/en/unternehmen" class="nav__link" data-i18n="nav.unternehmen">For Companies</a>
+        <a href="/en/about" class="nav__link" data-i18n="nav.ueber">About me</a>
+        <a href="/en/kontakt" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Contact</a>
       </nav>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <div class="lang-switcher" role="group" aria-label="Choose language">
         <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
         <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
         <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
         <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
       </div>
-      <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -119,11 +119,11 @@
       <div class="hero__bg"></div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__eyebrow" data-i18n="hochzeiten.hero_eyebrow">Euer schönster Tag</p>
-        <h1 class="hero__title"><span data-i18n="hochzeiten.hero_title">Euer Tag.</span><br><em data-i18n="hochzeiten.hero_title_em">Unvergesslich. Einzigartig. Persönlich.</em></h1>
-        <p class="hero__subtitle" data-i18n="hochzeiten.hero_subtitle">Ein wunderbares Erlebnis für alle Gäste.</p>
+        <p class="hero__eyebrow" data-i18n="hochzeiten.hero_eyebrow">Your most beautiful day</p>
+        <h1 class="hero__title"><span data-i18n="hochzeiten.hero_title">Wedding Face Painting in Zurich.</span><br><em data-i18n="hochzeiten.hero_title_em">Unforgettable. Unique. Personal.</em></h1>
+        <p class="hero__subtitle" data-i18n="hochzeiten.hero_subtitle">A wonderful experience for all your guests.</p>
         <div class="hero__cta">
-          <a href="kontakt" class="btn btn--primary" data-i18n="hochzeiten.hero_cta">Jetzt anfragen</a>
+          <a href="/en/kontakt" class="btn btn--primary" data-i18n="hochzeiten.hero_cta">Enquire now</a>
         </div>
       </div>
     </section>
@@ -136,23 +136,23 @@
         <div class="feature">
           <div class="gallery-acc">
             <div class="gallery-acc__panel gallery-acc__panel--active gallery-acc__panel--magnolie">
-              <img src="src/images/gallery/Hochzeit/magnolie-face-art-hochzeit.jpg" alt="Florale Body Art mit Blattgold am Oberarm" draggable="false" width="1200" height="946" fetchpriority="high">
+              <img src="/src/images/gallery/Hochzeit/magnolie-face-art-hochzeit.jpg" alt="Floral body art with gold leaf on the upper arm" draggable="false" width="1200" height="946" fetchpriority="high">
               <div class="gallery-acc__overlay"></div>
               <span class="gallery-acc__label">Body Art</span>
             </div>
             <div class="gallery-acc__panel">
-              <img loading="lazy" src="src/images/gallery/Hochzeit/isa-gaensebluemchen-face-art-hochzeit.jpg" alt="Gänseblümchen Face Art" draggable="false" width="1600" height="1495">
+              <img loading="lazy" src="/src/images/gallery/Hochzeit/isa-gaensebluemchen-face-art-hochzeit.jpg" alt="Daisy face art" draggable="false" width="1600" height="1495">
               <div class="gallery-acc__overlay"></div>
-              <span class="gallery-acc__label">Gänseblümchen</span>
+              <span class="gallery-acc__label">Daisies</span>
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label" data-i18n="hochzeiten.f1_label">Ein Highlight für alle Gäste</span>
-            <h2 class="feature__title" data-i18n="hochzeiten.f1_title">Face Art &amp; Kinderschminken an eurer Hochzeit Zürich</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f1_label">A highlight for all guests</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f1_title">Face Art & face painting at your Zurich wedding</h2>
             <div class="divider"></div>
-            <p class="feature__text" data-i18n="hochzeiten.f1_text1">Face Art an einer Hochzeit ist mehr als nur ein Detail — es ist ein Erlebnis. Gäste aller Altersgruppen kommen vorbei, lachen und staunen gemeinsam.</p>
-            <p class="feature__text" data-i18n="hochzeiten.f1_text2">Von zarten Rosen über elegante Muster bis hin zu verspielteren Motiven — genau so, wie ihr euch das wünscht und garantiert passend, auch zu euren Farben, die ihr euch für eure Hochzeit ausgesucht habt. So passen alle Motive auch farblich ins Bild.</p>
-            <p class="feature__text" data-i18n="hochzeiten.f1_text3">Egal ob Gross oder Klein: Face &amp; Body Art auf einer Hochzeit ist nicht nur ein schönes Highlight als Motiv auf der Haut, sondern auch ein wunderbarer Showact zum Beobachten, Mitfiebern und gemeinsam Gestalten.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f1_text1">Face art at a wedding is more than just a detail — it's an experience. Guests of all ages come by, laugh and marvel together.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f1_text2">From delicate roses to elegant patterns to more playful designs — exactly the way you want it, and guaranteed to match, even the colours you've chosen for your wedding. That way every design fits the picture, colour-wise too.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f1_text3">Big or small: face & body art at a wedding isn't just a beautiful highlight as a design on the skin — it's also a wonderful show to watch, get excited about and create together.</p>
           </div>
         </div>
 
@@ -160,22 +160,22 @@
         <div class="feature feature--reverse">
           <div class="gallery-acc">
             <div class="gallery-acc__panel gallery-acc__panel--active">
-              <img loading="lazy" src="src/images/gallery/Hochzeit/blumen-ranken-face-art-hochzeit.jpg" alt="Blumen und Ranken Face Art" draggable="false" width="1600" height="1408">
+              <img loading="lazy" src="/src/images/gallery/Hochzeit/blumen-ranken-face-art-hochzeit.jpg" alt="Flower and vine face art" draggable="false" width="1600" height="1408">
               <div class="gallery-acc__overlay"></div>
-              <span class="gallery-acc__label">Blumen &amp; Ranken</span>
+              <span class="gallery-acc__label">Flowers &amp; Vines</span>
             </div>
             <div class="gallery-acc__panel">
-              <img loading="lazy" src="src/images/gallery/Hochzeit/elegantes-blumen-face-art-hochzeit.jpg" alt="Blaue Blumen Face Art" draggable="false" width="1468" height="1600">
+              <img loading="lazy" src="/src/images/gallery/Hochzeit/elegantes-blumen-face-art-hochzeit.jpg" alt="Blue flower face art" draggable="false" width="1468" height="1600">
               <div class="gallery-acc__overlay"></div>
-              <span class="gallery-acc__label">Blaue Blumen</span>
+              <span class="gallery-acc__label">Blue Flowers</span>
             </div>
           </div>
           <div class="feature__body">
-            <span class="feature__label" data-i18n="hochzeiten.f2_label">Romantisch &amp; Individuell</span>
-            <h2 class="feature__title" data-i18n="hochzeiten.f2_title">Hochzeits-Face Art individuell gestaltet</h2>
+            <span class="feature__label" data-i18n="hochzeiten.f2_label">Romantic & individual</span>
+            <h2 class="feature__title" data-i18n="hochzeiten.f2_title">Wedding face art designed individually</h2>
             <div class="divider"></div>
-            <p class="feature__text" data-i18n="hochzeiten.f2_text1">Ob romantische Rosen, zarte Ranken oder filigranes Blattgold — jedes Motiv wird individuell gemalt und harmoniert mit eurem Hochzeitsthema.</p>
-            <p class="feature__text" data-i18n="hochzeiten.f2_text2">Ich stimme mich vorab mit euch ab, damit alles zur Farbwelt und Atmosphäre eures grossen Tages passt.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f2_text1">Whether romantic roses, delicate vines or fine gold leaf — each design is painted individually and harmonises with your wedding theme.</p>
+            <p class="feature__text" data-i18n="hochzeiten.f2_text2">I coordinate with you in advance so that everything matches the colours and atmosphere of your special day.</p>
           </div>
         </div>
 
@@ -187,49 +187,49 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <span class="section__label" data-i18n="hochzeiten.ben_label">Warum Gäste es lieben</span>
-            <h2 class="section__title" data-i18n="hochzeiten.ben_title">Was Face Art Zürich besonders macht</h2>
+            <span class="section__label" data-i18n="hochzeiten.ben_label">Why guests love it</span>
+            <h2 class="section__title" data-i18n="hochzeiten.ben_title">What makes Face Art Zürich special</h2>
             <div style="margin-top: var(--sp-6);">
               <ul class="benefits">
                 <li class="benefit">
                   <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                   <div>
-                    <p class="benefit__title" data-i18n="hochzeiten.ben1_title">Für Gross und Klein</p>
-                    <p class="benefit__text" data-i18n="hochzeiten.ben1_text">Kinder lieben bunte Motive, aber diese Face &amp; Body Art begeistert Erwachsene, weil sie auch anders kann: Elegant, Abstrakt, Glamourös, Glitzernd, Einzigartig — ein Highlight zum Zuschauen, Staunen und sich besonders Fühlen.</p>
+                    <p class="benefit__title" data-i18n="hochzeiten.ben1_title">For young and old</p>
+                    <p class="benefit__text" data-i18n="hochzeiten.ben1_text">Children love colourful designs, but this face & body art also delights adults, because it can do so much more: elegant, abstract, glamorous, sparkling, unique — a highlight to watch, marvel at and feel special.</p>
                   </div>
                 </li>
                 <li class="benefit">
                   <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                   <div>
-                    <p class="benefit__title" data-i18n="hochzeiten.ben2_title">Perfekt für Fotos</p>
-                    <p class="benefit__text" data-i18n="hochzeiten.ben2_text">Immer angepasst an das Design der Hochzeit passen die Motive und Farben perfekt ins Bild und machen die Fotos noch einzigartiger.</p>
+                    <p class="benefit__title" data-i18n="hochzeiten.ben2_title">Perfect for photos</p>
+                    <p class="benefit__text" data-i18n="hochzeiten.ben2_text">Always matched to the wedding's design, the motifs and colours fit perfectly into the picture and make the photos even more unique.</p>
                   </div>
                 </li>
                 <li class="benefit">
                   <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                   <div>
-                    <p class="benefit__title" data-i18n="hochzeiten.ben3_title">Ice Breaker</p>
-                    <p class="benefit__text" data-i18n="hochzeiten.ben3_text">Man schaut zu, steht an und kommt auf ganz natürliche Weise ins Gespräch. Der perfekte Anfang von einer wunderbaren Zeit.</p>
+                    <p class="benefit__title" data-i18n="hochzeiten.ben3_title">Ice breaker</p>
+                    <p class="benefit__text" data-i18n="hochzeiten.ben3_text">Guests watch, queue up and naturally start chatting. The perfect start to a wonderful time.</p>
                   </div>
                 </li>
                 <li class="benefit">
                   <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                   <div>
-                    <p class="benefit__title" data-i18n="hochzeiten.ben4_title">Professionell &amp; Vegan</p>
-                    <p class="benefit__text" data-i18n="hochzeiten.ben4_text">Es werden ausschliesslich hochwertige und vegane Profifarben verwendet. Für mehr Informationen zu den Brands und meinen Hygienemassnahmen hier klicken:</p>
-                    <a class="material-box__link" href="src/images/gallery/hygienekonzept-kinderschminken.pdf" target="_blank" rel="noopener noreferrer" data-i18n="hochzeiten.ben4_link">Hygienekonzept ansehen →</a>
+                    <p class="benefit__title" data-i18n="hochzeiten.ben4_title">Professional & vegan</p>
+                    <p class="benefit__text" data-i18n="hochzeiten.ben4_text">Only high-quality, vegan professional colours are used. For more information on the brands and my hygiene measures, click here:</p>
+                    <a class="material-box__link" href="/src/images/gallery/hygienekonzept-kinderschminken.pdf" target="_blank" rel="noopener noreferrer" data-i18n="hochzeiten.ben4_link">View hygiene concept →</a>
                   </div>
                 </li>
               </ul>
               <p class="benefit__text" style="margin-top: var(--sp-4);">
-                <span data-i18n="hochzeiten.crosslink_text">Sind auch Kinder unter den Hochzeitsgästen?</span>
-                <a class="material-box__link" href="kinderschminken" data-i18n="hochzeiten.crosslink_kinderschminken">Kinderschminken →</a>
+                <span data-i18n="hochzeiten.crosslink_text">Are there children among your wedding guests too?</span>
+                <a class="material-box__link" href="/en/kinderschminken" data-i18n="hochzeiten.crosslink_kinderschminken">Face painting →</a>
               </p>
             </div>
           </div>
           <div>
-            <span class="section__label" data-i18n="hochzeiten.setup_label">Stressfrei organisiert</span>
-            <h2 class="section__title" data-i18n="hochzeiten.setup_title">Ich bringe alles mit</h2>
+            <span class="section__label" data-i18n="hochzeiten.setup_label">Stress-free organised</span>
+            <h2 class="section__title" data-i18n="hochzeiten.setup_title">I bring everything</h2>
             <div class="divider"></div>
             <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-3);">
               Ihr habt an eurem Tag genug zu koordinieren. Deshalb bringe ich alles Nötige selbst mit — Farben, Pinsel, Tisch und Stuhl. Nach rund 10 Minuten Aufbau kann es losgehen.
@@ -274,70 +274,70 @@
             <button class="faq__btn" aria-expanded="false">
               <div class="faq__btn-left">
                 <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-                <span class="faq__btn-text" data-i18n="hochzeiten.faq1_q">Wie früh sollte ich für meine Hochzeit buchen?</span>
+                <span class="faq__btn-text" data-i18n="hochzeiten.faq1_q">How early should I book for my wedding?</span>
               </div>
               <span class="faq__toggle" aria-hidden="true">
                 <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
               </span>
             </button>
-            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq1_a">Für Hochzeiten empfehle ich mindestens 2–3 Monate im Voraus. Beliebte Sommerdaten (Mai–September) sind oft früh vergeben — je früher, desto sicherer habt ihr euren Wunschtermin.</p></div></div>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq1_a">For weddings, I recommend booking at least 2–3 months in advance. Popular summer dates (May–September) are often booked up early — the sooner you book, the more certain your preferred date is.</p></div></div>
           </div>
 
           <div class="faq__item">
             <button class="faq__btn" aria-expanded="false">
               <div class="faq__btn-left">
                 <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
-                <span class="faq__btn-text" data-i18n="hochzeiten.faq2_q">Welche Motive eignen sich für eine Hochzeit?</span>
+                <span class="faq__btn-text" data-i18n="hochzeiten.faq2_q">Which designs are suitable for a wedding?</span>
               </div>
               <span class="faq__toggle" aria-hidden="true">
                 <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
               </span>
             </button>
-            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq2_a">Zarte Blumen, filigrane Ranken, Schmetterlinge, goldene Ornamente oder schlichte Linienkunst — alles was zu eurem Hochzeitsthema und eurer Farbwelt passt. Ich stimme die Designs vorab individuell mit euch ab, damit alles harmoniert.</p></div></div>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq2_a">Delicate flowers, filigree vines, butterflies, golden ornaments or simple line art — whatever suits your wedding theme and colour palette. I coordinate the designs individually with you in advance so everything is in harmony.</p></div></div>
           </div>
 
           <div class="faq__item">
             <button class="faq__btn" aria-expanded="false">
               <div class="faq__btn-left">
                 <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
-                <span class="faq__btn-text" data-i18n="hochzeiten.faq3_q">Wie viele Gäste können in einer Stunde geschminkt werden?</span>
+                <span class="faq__btn-text" data-i18n="hochzeiten.faq3_q">How many guests can be painted in an hour?</span>
               </div>
               <span class="faq__toggle" aria-hidden="true">
                 <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
               </span>
             </button>
-            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq3_a">Ca. 6–8 Gäste pro Stunde, je nach Motivwunsch und Komplexität. Bei der Planung helfe ich euch einschätzen, wie viel Zeit ihr für eure Gästezahl einrechnen solltet.</p></div></div>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq3_a">About 6–8 guests per hour, depending on the design and complexity. During planning, I'll help you estimate how much time to allow for your number of guests.</p></div></div>
           </div>
 
           <div class="faq__item">
             <button class="faq__btn" aria-expanded="false">
               <div class="faq__btn-left">
                 <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                <span class="faq__btn-text" data-i18n="hochzeiten.faq4_q">Ist auch Body Art möglich?</span>
+                <span class="faq__btn-text" data-i18n="hochzeiten.faq4_q">Is body art also possible?</span>
               </div>
               <span class="faq__toggle" aria-hidden="true">
                 <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
               </span>
             </button>
-            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq4_a">Ja — neben Face Art biete ich auch Body Art an, z.B. auf Schultern, Décolleté oder Armen. Ein romantisches und einzigartiges Extra, das besonders auf Fotos wunderschön aussieht.</p></div></div>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq4_a">Yes — alongside face art, I also offer body art, e.g. on shoulders, décolleté or arms. A romantic and unique extra that looks especially beautiful in photos.</p></div></div>
           </div>
 
           <div class="faq__item">
             <button class="faq__btn" aria-expanded="false">
               <div class="faq__btn-left">
                 <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
-                <span class="faq__btn-text" data-i18n="hochzeiten.faq5_q">Wie funktioniert die Buchung und Abrechnung?</span>
+                <span class="faq__btn-text" data-i18n="hochzeiten.faq5_q">How does booking and billing work?</span>
               </div>
               <span class="faq__toggle" aria-hidden="true">
                 <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
               </span>
             </button>
-            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq5_a">Ihr schickt mir eine Anfrage mit Datum, Ort und ungefährer Gästezahl. Ich sende euch eine unverbindliche Offerte. Abgerechnet wird nach Stunden (ab CHF 145/h), zuzüglich Anfahrt ab Dübendorf.</p></div></div>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="hochzeiten.faq5_a">You send me an enquiry with the date, location and approximate guest count. I'll send you a no-obligation quote. Billing is by the hour (from CHF 145/h), plus travel costs from Dübendorf.</p></div></div>
           </div>
 
         </div>
@@ -351,7 +351,7 @@
         <h2 class="section__title">Face Art für eure Hochzeit</h2>
         <p class="section__subtitle" style="margin: var(--sp-3) auto var(--sp-6);">Termin noch frei für euer Datum — jetzt unverbindlich anfragen.</p>
         <div style="display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap;">
-          <a href="kontakt" class="btn btn--primary">Jetzt anfragen</a>
+          <a href="/en/kontakt" class="btn btn--primary">Jetzt anfragen</a>
         </div>
       </div>
     </section>
@@ -363,16 +363,16 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <p class="footer__logo">Face Art Zürich</p>
-          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Face Painting & Face Art</p>
         </div>
         <div>
-          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
-                    <nav class="footer__links" aria-label="Footer Navigation">
-            <a href="kinderschminken">Kinderschminken</a>
-            <a href="hochzeiten">Hochzeiten</a>
-            <a href="unternehmen">Für Unternehmen</a>
-            <a href="about">Über mich</a>
-            <a href="kontakt">Kontakt</a>
+          <p class="footer__heading" data-i18n="footer.pages">Pages</p>
+                    <nav class="footer__links" aria-label="Footer navigation">
+            <a href="/en/kinderschminken">Kinderschminken</a>
+            <a href="/en/hochzeiten">Hochzeiten</a>
+            <a href="/en/unternehmen">Für Unternehmen</a>
+            <a href="/en/about">Über mich</a>
+            <a href="/en/kontakt">Kontakt</a>
           </nav>
         </div>
         <div>
@@ -391,42 +391,78 @@
       </div>
       <div class="footer__bottom">
         <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
-        <nav class="footer__legal" aria-label="Rechtliches">
-          <a href="impressum" data-i18n="footer.imprint">Impressum</a>
-          <a href="datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="/impressum" data-i18n="footer.imprint">Legal notice</a>
+          <a href="/datenschutz" data-i18n="footer.privacy">Privacy policy</a>
         </nav>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/41764394928" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+  <a href="https://wa.me/41764394928" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact">
     <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
 
-  <script src="src/js/i18n.js"></script>
-  <script src="src/js/main.js"></script>
+  <script src="/src/js/i18n.js"></script>
+  <script src="/src/js/main.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Face Art und Body Art für Hochzeiten",
-    "serviceType": "Face Art für Hochzeiten",
-    "url": "https://face-art-zuerich.ch/hochzeiten",
+    "name": "Face Art and Body Art for Weddings",
+    "serviceType": "Wedding Face Art",
+    "url": "https://face-art-zuerich.ch/en/hochzeiten",
     "areaServed": [
-      { "@type": "City", "name": "Zürich" },
-      { "@type": "City", "name": "Dübendorf" },
-      { "@type": "City", "name": "Wallisellen" },
-      { "@type": "City", "name": "Opfikon" },
-      { "@type": "City", "name": "Kloten" },
-      { "@type": "City", "name": "Regensdorf" },
-      { "@type": "City", "name": "Volketswil" },
-      { "@type": "City", "name": "Uster" },
-      { "@type": "City", "name": "Wetzikon" },
-      { "@type": "City", "name": "Küsnacht" },
-      { "@type": "City", "name": "Rapperswil" },
-      { "@type": "City", "name": "Winterthur" }
+      {
+        "@type": "City",
+        "name": "Zürich"
+      },
+      {
+        "@type": "City",
+        "name": "Dübendorf"
+      },
+      {
+        "@type": "City",
+        "name": "Wallisellen"
+      },
+      {
+        "@type": "City",
+        "name": "Opfikon"
+      },
+      {
+        "@type": "City",
+        "name": "Kloten"
+      },
+      {
+        "@type": "City",
+        "name": "Regensdorf"
+      },
+      {
+        "@type": "City",
+        "name": "Volketswil"
+      },
+      {
+        "@type": "City",
+        "name": "Uster"
+      },
+      {
+        "@type": "City",
+        "name": "Wetzikon"
+      },
+      {
+        "@type": "City",
+        "name": "Küsnacht"
+      },
+      {
+        "@type": "City",
+        "name": "Rapperswil"
+      },
+      {
+        "@type": "City",
+        "name": "Winterthur"
+      }
     ],
     "provider": {
       "@type": "LocalBusiness",
@@ -441,7 +477,8 @@
         "priceCurrency": "CHF",
         "unitText": "Stunde"
       }
-    }
+    },
+    "inLanguage": "en"
   }
   </script>
   <script type="application/ld+json">
@@ -451,30 +488,46 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Wie früh sollte ich für meine Hochzeit buchen?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Für Hochzeiten empfehle ich mindestens 2–3 Monate im Voraus. Beliebte Sommerdaten (Mai–September) sind oft früh vergeben." }
+        "name": "How early should I book for my wedding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For weddings, I recommend booking at least 2–3 months in advance. Popular summer dates (May–September) are often booked up early — the sooner you book, the more certain your preferred date is."
+        }
       },
       {
         "@type": "Question",
-        "name": "Welche Motive eignen sich für eine Hochzeit?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Zarte Blumen, filigrane Ranken, Schmetterlinge, goldene Ornamente — alles was zu eurem Hochzeitsthema und eurer Farbwelt passt. Ich stimme die Designs vorab individuell mit euch ab." }
+        "name": "Which designs are suitable for a wedding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Delicate flowers, filigree vines, butterflies, golden ornaments or simple line art — whatever suits your wedding theme and colour palette. I coordinate the designs individually with you in advance so everything is in harmony."
+        }
       },
       {
         "@type": "Question",
-        "name": "Wie viele Gäste können in einer Stunde geschminkt werden?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ca. 6–8 Gäste pro Stunde, je nach Motivwunsch und Komplexität." }
+        "name": "How many guests can be painted in an hour?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "About 6–8 guests per hour, depending on the design and complexity. During planning, I'll help you estimate how much time to allow for your number of guests."
+        }
       },
       {
         "@type": "Question",
-        "name": "Ist auch Body Art möglich?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ja — neben Face Art biete ich auch Body Art an, z.B. auf Schultern, Décolleté oder Armen." }
+        "name": "Is body art also possible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — alongside face art, I also offer body art, e.g. on shoulders, décolleté or arms. A romantic and unique extra that looks especially beautiful in photos."
+        }
       },
       {
         "@type": "Question",
-        "name": "Wie funktioniert die Buchung und Abrechnung?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ihr schickt mir eine Anfrage mit Datum, Ort und ungefährer Gästezahl. Ich sende eine unverbindliche Offerte. Abgerechnet wird nach Stunden (ab CHF 145/h), zuzüglich Anfahrt ab Dübendorf." }
+        "name": "How does booking and billing work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You send me an enquiry with the date, location and approximate guest count. I'll send you a no-obligation quote. Billing is by the hour (from CHF 145/h), plus travel costs from Dübendorf."
+        }
       }
-    ]
+    ],
+    "inLanguage": "en"
   }
   </script>
 </body>
