@@ -2273,6 +2273,17 @@ span.t-card__avatar {
   .two-col { gap: var(--sp-6); }
 }
 
+/* Sieben Navigationspunkte brauchen zwischen Hamburger-Breakpoint und voller
+   Desktop-Breite spuerbar weniger Raum pro Link — sonst brechen die Labels
+   zweizeilig um. Nur Groessen (Schriftgrad, Padding, Gap), keine
+   Strukturaenderung an der Navigation. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav__container { padding: 0 var(--sp-2); }
+  .nav__menu { gap: .1rem; }
+  .nav__link { font-size: .75rem; padding: .4rem .45rem; }
+  .nav__link--cta { margin-left: .25rem; }
+}
+
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
 
