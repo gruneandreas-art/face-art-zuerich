@@ -921,6 +921,18 @@ p  { color: var(--text-mid); }
   gap: var(--sp-4);
 }
 
+/* Zwei beschriftete Angebotsgruppen auf der Startseite */
+.services__group + .services__group { margin-top: var(--sp-8); }
+.services__group-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin-bottom: var(--sp-4);
+}
+
 .service-card {
   display: block;
   border-radius: var(--radius);
@@ -948,6 +960,9 @@ p  { color: var(--text-mid); }
 }
 .service-card__img--hochzeit {
   background: linear-gradient(135deg, #C8B8D0 0%, #A8A0C4 40%, #B8B4D0 100%);
+}
+.service-card__img--halloween {
+  background: linear-gradient(135deg, #5A3A6E 0%, #3C2050 45%, #6E3C6A 100%);
 }
 .service-card__img--about {
   background: linear-gradient(160deg, #2A1E34 0%, #523068 45%, #8A5888 100%);
