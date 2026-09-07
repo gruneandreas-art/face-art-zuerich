@@ -6,7 +6,7 @@ const I18n = (() => {
      Default" gilt daher nicht mehr. */
   const BASE = (document.documentElement.getAttribute('data-base-lang') === 'en') ? 'en' : 'de';
   /* Slugs mit eigener Seite. impressum/datenschutz bewusst ohne EN-Entsprechung. */
-  const SLUGS = ['kinderschminken', 'hochzeiten', 'unternehmen', 'about', 'kontakt'];
+  const SLUGS = ['kinderschminken', 'hochzeiten', 'halloween-events', 'unternehmen', 'about', 'kontakt'];
   const DE_ONLY = ['impressum', 'datenschutz'];
   let current = BASE;
   const cache = new Map();
