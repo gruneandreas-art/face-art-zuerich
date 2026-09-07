@@ -879,6 +879,7 @@ p  { color: var(--text-mid); }
 .page--about .hero--sub .hero__bg,
 .page--kontakt .hero--sub .hero__bg,
 .page--hochzeiten .hero--sub .hero__bg,
+.page--halloween .hero--sub .hero__bg,
 .page--events .hero--sub .hero__bg,
 .page--messen .hero--sub .hero__bg,
 .page--legal .hero--sub .hero__bg {

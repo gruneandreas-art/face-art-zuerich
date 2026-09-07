@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de" data-base-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Fehlerreporter: steht bewusst inline im <head> und damit vor i18n.js und main.js,
+       sonst wuerden Fehler aus i18n.js nicht erfasst. Meldet nur technische Angaben,
+       nie Formular- oder Personendaten. Max. eine Meldung pro Browser-Session, damit
+       das Formspree-Kontingent (50/Monat) nicht das Kontaktformular blockiert. -->
+  <script>
+  (function () {
+    /* TODO: eigene Formspree-Form-ID fuer Fehlerberichte anlegen, damit sich Fehler
+       und Kundenanfragen das Kontingent von 50 Einreichungen/Monat nicht teilen. */
+    var ENDPOINT = 'https://formspree.io/f/myklqzbr';
+    var KEY = 'fa_js_error_sent';
+    var sent = false;
+    var lastMsg = '';
+
+    function alreadySent() {
+      if (sent) return true;
+      try { return !!sessionStorage.getItem(KEY); } catch (e) { return false; }
+    }
+
+    function markSent() {
+      sent = true;
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }
+
+    function report(message, file, line, col) {
+      try {
+        var msg = String(message || '').slice(0, 300);
+        if (!msg) return;
+        if (msg === lastMsg) return;   /* identische Meldung nicht erneut senden */
+        if (alreadySent()) return;     /* max. eine Meldung pro Browser-Session */
+        lastMsg = msg;
+        markSent();
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: 'JS-Fehler face-art-zuerich.ch',
+            Fehler: msg,
+            Datei: String(file || '').slice(0, 200),
+            Position: (line || 0) + ':' + (col || 0),
+            Seite: location.href,
+            Browser: navigator.userAgent
+          })
+        }).catch(function () {});      /* Fehler beim Melden still verschlucken */
+      } catch (e) {}                   /* Reporter darf nie etwas blockieren */
+    }
+
+    window.onerror = function (message, file, line, col) {
+      report(message, file, line, col);
+    };
+
+    window.addEventListener('unhandledrejection', function (ev) {
+      var r = ev && ev.reason;
+      report((r && r.message) ? r.message : r, 'unhandledrejection', 0, 0);
+    });
+  })();
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://face-art-zuerich.ch/halloween-events">
+  <link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/halloween-events">
+  <link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/halloween-events">
+  <link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/halloween-events">
+  <title>Halloween Schminken Zürich | Face Art für Erwachsene | Face Art Zürich</title>
+  <meta name="description" content="Halloween-Schminken, Festival-Looks und Glitzertattoos in Zürich. Skulls, Narben und Wunden — hautverträglich, ohne Latex, ab CHF 145/h.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:url" content="https://face-art-zuerich.ch/halloween-events">
+  <meta property="og:title" content="Halloween Schminken Zürich | Face Art für Erwachsene | Face Art Zürich">
+  <meta property="og:description" content="Halloween-Schminken, Festival-Looks und Glitzertattoos in Zürich. Skulls, Narben und Wunden — hautverträglich, ohne Latex, ab CHF 145/h.">
+  <meta property="og:image" content="https://face-art-zuerich.ch/src/images/gallery/Start/face-art-erwachsene-blumen.jpg">
+  <meta property="og:site_name" content="Face Art Zürich">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Halloween Schminken Zürich | Face Art für Erwachsene">
+  <meta name="twitter:description" content="Skulls, Narben, Festival-Looks und Glitzertattoos — Face Art für Erwachsene an Halloween, Partys und Firmenanlässen in Zürich.">
+  <meta name="twitter:image" content="https://face-art-zuerich.ch/src/images/gallery/Start/face-art-erwachsene-blumen.jpg">
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+</head>
+<body class="page--halloween">
+
+  <!-- Navigation -->
+  <header class="nav nav--transparent" id="nav">
+    <div class="nav__container">
+      <a href="./" class="nav__logo">
+        <span class="nav__logo-text">
+          <span class="nav__logo-main">Face Art</span>
+          <span class="nav__logo-sub">Zürich</span>
+        </span>
+      </a>
+      <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
+        <a href="./" class="nav__link" data-i18n="nav.start">Start</a>
+        <a href="kinderschminken" class="nav__link" data-i18n="nav.kinderschminken">Kinderschminken</a>
+        <a href="hochzeiten" class="nav__link" data-i18n="nav.hochzeiten">Hochzeiten</a>
+        <a href="halloween-events" class="nav__link nav__link--active" data-i18n="nav.halloween">Halloween &amp; Events</a>
+        <a href="unternehmen" class="nav__link" data-i18n="nav.unternehmen">Für Unternehmen</a>
+        <a href="about" class="nav__link" data-i18n="nav.ueber">Über mich</a>
+        <a href="kontakt" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
+      </nav>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero hero--sub">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="halloween.hero_eyebrow">Halloween, Festivals &amp; Firmenanlässe</p>
+        <h1 class="hero__title"><span data-i18n="halloween.hero_title">Face Art für Erwachsene.</span><br><em data-i18n="halloween.hero_title_em">Halloween, Festivals &amp; Events.</em></h1>
+        <p class="hero__subtitle" data-i18n="halloween.hero_subtitle">Von eleganten Mustern bis zu Skulls, Narben und Wunden — professionell geschminkt, hautverträglich und in wenigen Minuten.</p>
+        <div class="hero__cta">
+          <a href="kontakt" class="btn btn--primary" data-i18n="halloween.hero_cta">Jetzt anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MOTIVE ========== -->
+    <section class="section">
+      <div class="container">
+        <header class="section__header section__header--center" style="margin-bottom: var(--sp-10);">
+          <span class="section__label" data-i18n="halloween.motive_label">Meine Motive</span>
+          <h2 class="section__title" data-i18n="halloween.motive_title">Drei Welten — ein Handwerk</h2>
+        </header>
+
+        <!-- Motiv 1 -->
+        <div class="feature">
+          <!-- PLATZHALTER: Skull-Make-up auf Erwachsenengesicht -->
+          <img loading="lazy" data-placeholder="true" src="src/images/placeholder.svg" alt="Halloween-Schminken — Skull-Make-up auf einem Erwachsenengesicht" width="800" height="1000" style="border-radius: var(--radius);">
+          <div class="feature__body">
+            <h3 class="feature__title" data-i18n="halloween.m1_title">Halloween &amp; Grusel</h3>
+            <div class="divider"></div>
+            <p class="feature__text" data-i18n="halloween.m1_text">Skulls, Narben, Wunden und Zombie-Looks. Realistisch gearbeitet, aber ohne Latex und Spezialkleber — hautverträglich und in Minuten wieder abgewaschen.</p>
+          </div>
+        </div>
+
+        <!-- Motiv 2 -->
+        <div class="feature feature--reverse">
+          <!-- PLATZHALTER: Festival-Look mit Glitzer und Ornamenten -->
+          <img loading="lazy" data-placeholder="true" src="src/images/placeholder.svg" alt="Festival-Look mit Glitzer und grafischen Ornamenten" width="800" height="1000" style="border-radius: var(--radius);">
+          <div class="feature__body">
+            <h3 class="feature__title" data-i18n="halloween.m2_title">Festival &amp; Party</h3>
+            <div class="divider"></div>
+            <p class="feature__text" data-i18n="halloween.m2_text">Glitzer, Farbverläufe, grafische Masken und Ornamente. Auf das Outfit abgestimmt, schweissfest und fotogen.</p>
+          </div>
+        </div>
+
+        <!-- Motiv 3 -->
+        <div class="feature">
+          <!-- PLATZHALTER: Erwachsene an einem Firmenanlass, geschminkt -->
+          <img loading="lazy" data-placeholder="true" src="src/images/placeholder.svg" alt="Geschminkte Erwachsene an einem Firmenanlass" width="800" height="1000" style="border-radius: var(--radius);">
+          <div class="feature__body">
+            <h3 class="feature__title" data-i18n="halloween.m3_title">Firmenanlässe &amp; Themenpartys</h3>
+            <div class="divider"></div>
+            <p class="feature__text" data-i18n="halloween.m3_text">Halloween-Apéro, Motto-Party oder Jubiläum: Ein Schminkbereich für Erwachsene bringt Bewegung in den Abend und liefert Bilder für die Social-Kanäle.</p>
+          </div>
+        </div>
+
+        <p class="feature__text" style="margin-top: var(--sp-8);" data-i18n="halloween.motive_note">Die genannten Motive sind Beispiele — die Kategorie wächst laufend. Erzählt mir euer Thema, das passende Design entsteht im Gespräch.</p>
+        <p class="feature__text" style="margin-top: var(--sp-3);">
+          <a class="material-box__link" href="hochzeiten" data-i18n="halloween.link_hochzeit">Elegante Motive für den grossen Tag: Hochzeiten →</a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ========== GLITZERTATTOOS ========== -->
+    <section class="section section--cream" id="glitzertattoos">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <span class="section__label" data-i18n="halloween.glitzer_label">Zusatzangebot</span>
+            <h2 class="section__title" data-i18n="halloween.glitzer_title">Glitzertattoos</h2>
+            <div class="divider"></div>
+            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-3);" data-i18n="halloween.glitzer_text1">
+              Glitzertattoos werden mit Schablone, hautfreundlichem Kleber und kosmetischem Glitzer aufgetragen. In rund zwei Minuten fertig, halten sie mehrere Tage und überstehen Duschen und Schwimmen.
+            </p>
+            <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: var(--sp-4);" data-i18n="halloween.glitzer_text2">
+              Am Festival, an der Party oder als schnelle Ergänzung zum geschminkten Gesicht — auch für Gäste, die nicht das ganze Gesicht bemalt haben möchten.
+            </p>
+            <div class="material-box">
+              <p class="material-box__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span data-i18n="halloween.glitzer_box_title">Wasserfest &amp; hautfreundlich</span>
+              </p>
+              <p class="material-box__text" data-i18n="halloween.glitzer_box_text">
+                Verwendet werden kosmetischer Glitzer und hautverträglicher Kleber. Ablösen lässt sich das Motiv jederzeit mit Öl.
+              </p>
+            </div>
+          </div>
+          <div>
+            <!-- PLATZHALTER: Glitzertattoo auf dem Unterarm, Detailaufnahme -->
+            <img loading="lazy" data-placeholder="true" src="src/images/placeholder.svg" alt="Glitzertattoo auf dem Unterarm" width="1000" height="1000" style="border-radius: var(--radius);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABLAUF ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <span class="section__label" data-i18n="halloween.ablauf_label">So läuft es ab</span>
+            <h2 class="section__title" data-i18n="halloween.ablauf_title">Alles dabei — sofort einsatzbereit</h2>
+            <div class="divider"></div>
+          </div>
+          <div>
+            <ul class="benefits">
+              <li class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <p class="benefit__title" data-i18n="halloween.ben1_title">Ich komme zu euch</p>
+                  <p class="benefit__text" data-i18n="halloween.ben1_text">Zürich, Dübendorf und Umgebung. Tisch, Stuhl, Licht und Farben bringe ich mit; nach rund 10 Minuten Aufbau kann es losgehen.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <p class="benefit__title" data-i18n="halloween.ben2_title">Tempo für viele Gäste</p>
+                  <p class="benefit__text" data-i18n="halloween.ben2_text">Je nach Aufwand 6–8 Gesichter pro Stunde. Kleine Motive und Glitzertattoos gehen deutlich schneller.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <p class="benefit__title" data-i18n="halloween.ben3_title">Hautverträglich und vegan</p>
+                  <p class="benefit__text" data-i18n="halloween.ben3_text">Ausschliesslich kosmetisch zugelassene Farben, vegan und ohne Tierversuche. Für empfindliche Haut gibt es vorab eine Testfläche am Arm.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <p class="benefit__title" data-i18n="halloween.ben4_title">Rückstandslos entfernbar</p>
+                  <p class="benefit__text" data-i18n="halloween.ben4_text">Alle Motive lassen sich mit Wasser und Seife abnehmen, Glitzertattoos mit Öl. Kein Latex, kein Spezialkleber.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="faq__header">
+          <span class="section__label" data-i18n="halloween.faq_label">Häufige Fragen</span>
+          <h2 class="section__title" data-i18n="halloween.faq_title">Halloween &amp; Face Art für Erwachsene — eure Fragen</h2>
+        </div>
+        <div class="faq__card">
+          <p class="faq__card-title">FAQ</p>
+
+          <div class="faq__item">
+            <button class="faq__btn" aria-expanded="false">
+              <div class="faq__btn-left">
+                <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                <span class="faq__btn-text" data-i18n="halloween.faq1_q">Wie lange hält Halloween-Schminke?</span>
+              </div>
+              <span class="faq__toggle" aria-hidden="true">
+                <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </span>
+            </button>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq1_a">Einen ganzen Abend. Sobald die Farben getrocknet sind, sind sie wischfest und überstehen auch Tanzen. Entfernen lassen sie sich danach mit Wasser und Seife.</p></div></div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__btn" aria-expanded="false">
+              <div class="faq__btn-left">
+                <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                <span class="faq__btn-text" data-i18n="halloween.faq2_q">Arbeitest du mit Latex und Kunstblut?</span>
+              </div>
+              <span class="faq__toggle" aria-hidden="true">
+                <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </span>
+            </button>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq2_a">Nein. Ich arbeite mit kosmetischen Farben und Verdickungsmitteln. Das ergibt plastisch wirkende Narben und Wunden, bleibt aber hautverträglich und geht rückstandslos ab.</p></div></div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__btn" aria-expanded="false">
+              <div class="faq__btn-left">
+                <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+                <span class="faq__btn-text" data-i18n="halloween.faq3_q">Wie viele Gäste schaffst du pro Stunde?</span>
+              </div>
+              <span class="faq__toggle" aria-hidden="true">
+                <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </span>
+            </button>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq3_a">6–8 Gesichter bei aufwendigen Motiven, deutlich mehr bei kleinen Designs und Glitzertattoos. Für grössere Anlässe planen wir die Zeit vorher gemeinsam.</p></div></div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__btn" aria-expanded="false">
+              <div class="faq__btn-left">
+                <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+                <span class="faq__btn-text" data-i18n="halloween.faq4_q">Was kostet das?</span>
+              </div>
+              <span class="faq__toggle" aria-hidden="true">
+                <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </span>
+            </button>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq4_a">CHF 145 pro Stunde, zuzüglich CHF 1/km Anfahrt ab 8600 Dübendorf. Für längere Einsätze und Firmenanlässe erstelle ich gerne eine individuelle Offerte.</p></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CLOSING CTA ========== -->
+    <section class="section section--cream text-center">
+      <div class="container container--narrow">
+        <span class="section__label" data-i18n="halloween.cta_label">Bereit?</span>
+        <h2 class="section__title" data-i18n="halloween.cta_title">Halloween, Festival oder Firmenanlass?</h2>
+        <p class="section__subtitle" style="margin: var(--sp-3) auto var(--sp-6);" data-i18n="halloween.cta_text">Erzählt mir von eurem Anlass — ich melde mich mit einem Vorschlag.</p>
+        <div style="display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap;">
+          <a href="kontakt" class="btn btn--primary" data-i18n="halloween.cta_btn">Jetzt anfragen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__logo">Face Art Zürich</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
+        </div>
+        <div>
+          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
+                    <nav class="footer__links" aria-label="Footer Navigation">
+            <a href="kinderschminken" data-i18n="nav.kinderschminken">Kinderschminken</a>
+            <a href="hochzeiten" data-i18n="nav.hochzeiten">Hochzeiten</a>
+            <a href="halloween-events" data-i18n="nav.halloween">Halloween &amp; Events</a>
+            <a href="unternehmen" data-i18n="nav.unternehmen">Für Unternehmen</a>
+            <a href="about" data-i18n="nav.ueber">Über mich</a>
+            <a href="kontakt" data-i18n="nav.kontakt">Kontakt</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__heading" data-i18n="nav.kontakt">Kontakt</p>
+          <div class="footer__contact">
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09A16 16 0 0016.91 17.1l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +41 (0)764394928
+            </p>
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              faceartzuerich@yahoo.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
+        <nav class="footer__legal" aria-label="Rechtliches">
+          <a href="impressum" data-i18n="footer.imprint">Impressum</a>
+          <a href="datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/41764394928" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="src/js/i18n.js"></script>
+  <script src="src/js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Halloween-Schminken & Face Art für Erwachsene Zürich",
+    "serviceType": "Halloween-Schminken und Face Art für Erwachsene",
+    "url": "https://face-art-zuerich.ch/halloween-events",
+    "areaServed": [
+      { "@type": "City", "name": "Zürich" },
+      { "@type": "City", "name": "Dübendorf" },
+      { "@type": "City", "name": "Wallisellen" },
+      { "@type": "City", "name": "Opfikon" },
+      { "@type": "City", "name": "Kloten" },
+      { "@type": "City", "name": "Regensdorf" },
+      { "@type": "City", "name": "Volketswil" },
+      { "@type": "City", "name": "Uster" },
+      { "@type": "City", "name": "Wetzikon" },
+      { "@type": "City", "name": "Küsnacht" },
+      { "@type": "City", "name": "Rapperswil" },
+      { "@type": "City", "name": "Winterthur" }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://face-art-zuerich.ch/#business",
+      "name": "Face Art Zürich"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "145",
+        "priceCurrency": "CHF",
+        "unitText": "Stunde"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie lange hält Halloween-Schminke?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Einen ganzen Abend. Sobald die Farben getrocknet sind, sind sie wischfest und überstehen auch Tanzen. Entfernen lassen sie sich danach mit Wasser und Seife." }
+      },
+      {
+        "@type": "Question",
+        "name": "Arbeitest du mit Latex und Kunstblut?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nein. Ich arbeite mit kosmetischen Farben und Verdickungsmitteln. Das ergibt plastisch wirkende Narben und Wunden, bleibt aber hautverträglich und geht rückstandslos ab." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viele Gäste schaffst du pro Stunde?",
+        "acceptedAnswer": { "@type": "Answer", "text": "6–8 Gesichter bei aufwendigen Motiven, deutlich mehr bei kleinen Designs und Glitzertattoos. Für grössere Anlässe planen wir die Zeit vorher gemeinsam." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet das?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CHF 145 pro Stunde, zuzüglich CHF 1/km Anfahrt ab 8600 Dübendorf. Für längere Einsätze und Firmenanlässe erstelle ich gerne eine individuelle Offerte." }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
