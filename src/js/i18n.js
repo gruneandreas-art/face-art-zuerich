@@ -63,14 +63,6 @@ const I18n = (() => {
         about_teaser_link:'More about Isa, the artist behind Face Art Zürich →'
       },
       kinderschminken: {
-        gal1:'Unicorns',
-        gal2:'Live at the event',
-        gal3:'Big turnout',
-        gal4:'Fine details',
-        gal5:'Butterfly',
-        gal6:'Ice queen',
-        gal7:'Aeroplane',
-        gal8:'Unicorn',
         faq_label:'Frequently asked questions',
         faq_title:'Kids face painting in Zurich — your questions',
         cta_label:'Ready?',
@@ -126,9 +118,6 @@ const I18n = (() => {
         glitzer_link:'Also for adults: Halloween & Events →'
       },
       hochzeiten: {
-        gal1:'Daisies',
-        gal2:'Flowers &amp; vines',
-        gal3:'Blue flowers',
         setup_text1:'You already have enough to coordinate on your day. That is why I bring everything myself — paints, brushes, table and chair. After about 10 minutes of setup I am ready to go.',
         setup_text2:'I adapt to your venue and the flow of the celebration — indoors, outdoors or with spontaneous changes of location.',
         mb1_title:'Everything included',
@@ -221,9 +210,6 @@ const I18n = (() => {
         cta_btn:'Enquire now'
       },
       unternehmen: {
-        gal1:'Live at the booth',
-        gal2:'Portrait',
-        gal3:'In action',
         cta_label:'Ready?',
         cta_title:'Face art for your next corporate event',
         cta_text:'Send a no-obligation enquiry — reply within 24 hours.',
@@ -354,14 +340,6 @@ const I18n = (() => {
         about_teaser_link:'En savoir plus sur Isa, l\'artiste derrière Face Art Zürich →'
       },
       kinderschminken: {
-        gal1:'Licornes',
-        gal2:'En direct sur place',
-        gal3:'Forte affluence',
-        gal4:'Détails fins',
-        gal5:'Papillon',
-        gal6:'Reine des neiges',
-        gal7:'Avion',
-        gal8:'Licorne',
         faq_label:'Questions fréquentes',
         faq_title:'Maquillage enfants à Zurich — vos questions',
         cta_label:'Prêts ?',
@@ -417,9 +395,6 @@ const I18n = (() => {
         glitzer_link:'Aussi pour les adultes : Halloween & Événements →'
       },
       hochzeiten: {
-        gal1:'Pâquerettes',
-        gal2:'Fleurs &amp; lianes',
-        gal3:'Fleurs bleues',
         setup_text1:'Vous avez déjà assez à coordonner ce jour-là. J\'apporte donc tout moi-même — couleurs, pinceaux, table et chaise. Après environ 10 minutes d\'installation, je suis prête.',
         setup_text2:'Je m\'adapte à votre lieu et au déroulement de la fête — à l\'intérieur, à l\'extérieur ou lors de changements spontanés.',
         mb1_title:'Tout compris',
@@ -512,9 +487,6 @@ const I18n = (() => {
         cta_btn:'Demander maintenant'
       },
       unternehmen: {
-        gal1:'En direct sur le stand',
-        gal2:'Portrait',
-        gal3:'En action',
         cta_label:'Prêts ?',
         cta_title:'Face art pour votre prochain événement d\'entreprise',
         cta_text:'Demande sans engagement — réponse sous 24 h.',
@@ -645,14 +617,6 @@ const I18n = (() => {
         about_teaser_link:'Scopri di più su Isa, l\'artista dietro Face Art Zürich →'
       },
       kinderschminken: {
-        gal1:'Unicorni',
-        gal2:'Dal vivo all\'evento',
-        gal3:'Grande affluenza',
-        gal4:'Dettagli fini',
-        gal5:'Farfalla',
-        gal6:'Regina dei ghiacci',
-        gal7:'Aereo',
-        gal8:'Unicorno',
         faq_label:'Domande frequenti',
         faq_title:'Truccabimbi a Zurigo — le vostre domande',
         cta_label:'Pronti?',
@@ -708,9 +672,6 @@ const I18n = (() => {
         glitzer_link:'Anche per adulti: Halloween ed eventi →'
       },
       hochzeiten: {
-        gal1:'Margherite',
-        gal2:'Fiori e rami',
-        gal3:'Fiori blu',
         setup_text1:'Il vostro giorno è già abbastanza impegnativo. Porto quindi tutto io — colori, pennelli, tavolo e sedia. Dopo circa 10 minuti di allestimento sono pronta.',
         setup_text2:'Mi adatto alla vostra location e allo svolgimento della festa — al chiuso, all\'aperto o con cambi di luogo spontanei.',
         mb1_title:'Tutto incluso',
@@ -803,9 +764,6 @@ const I18n = (() => {
         cta_btn:'Richiedi ora'
       },
       unternehmen: {
-        gal1:'Dal vivo allo stand',
-        gal2:'Ritratto',
-        gal3:'In azione',
         cta_label:'Pronti?',
         cta_title:'Face art per il vostro prossimo evento aziendale',
         cta_text:'Richiesta senza impegno — risposta entro 24 ore.',

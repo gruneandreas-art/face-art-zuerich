@@ -1861,31 +1861,6 @@ span.t-card__avatar {
   background: rgba(20,30,28,0.40);
 }
 
-.gallery-acc__label {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%) rotate(90deg);
-  color: rgba(255,255,255,0.88);
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-  transition:
-    transform 0.5s cubic-bezier(0.4,0,0.2,1),
-    bottom 0.5s ease,
-    left 0.5s ease,
-    font-size 0.3s ease;
-}
-.gallery-acc__panel--active .gallery-acc__label {
-  bottom: 14px;
-  left: 14px;
-  transform: translateX(0) rotate(0deg);
-  font-size: 0.75rem;
-}
 
 @media (max-width: 1024px) {
   .gallery-acc { height: 260px; }
@@ -1896,7 +1871,7 @@ span.t-card__avatar {
   .gallery-acc__panel { min-width: 30px; border-radius: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .gallery-acc__panel, .gallery-acc__panel img, .gallery-acc__label { transition: none; }
+  .gallery-acc__panel, .gallery-acc__panel img { transition: none; }
 }
 
 /* ===== 13. Feature Blocks ===== */
