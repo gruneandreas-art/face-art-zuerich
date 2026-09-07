@@ -5,8 +5,8 @@ set -u
 cd "$(dirname "$0")/.." || exit 1
 
 fail=0
-de_pages=(index kinderschminken hochzeiten unternehmen about kontakt impressum datenschutz)
-en_pages=(en/index en/kinderschminken en/hochzeiten en/unternehmen en/about en/kontakt)
+de_pages=(index kinderschminken hochzeiten halloween-events unternehmen about kontakt impressum datenschutz)
+en_pages=(en/index en/kinderschminken en/hochzeiten en/halloween-events en/unternehmen en/about en/kontakt)
 pages=("${de_pages[@]}" "${en_pages[@]}")
 
 echo "== WhatsApp =="
@@ -49,7 +49,7 @@ echo "== hreflang wechselseitig =="
 if ! python3 - <<'PY'
 import re, sys
 SITE = "https://face-art-zuerich.ch"
-PAIRS = ["", "kinderschminken", "hochzeiten", "unternehmen", "kontakt", "about"]
+PAIRS = ["", "kinderschminken", "hochzeiten", "halloween-events", "unternehmen", "kontakt", "about"]
 DE_ONLY = ["impressum", "datenschutz"]
 bad = 0
 for slug in PAIRS:
@@ -104,7 +104,7 @@ def walk(o):
         for x in o: yield from walk(x)
 bad = 0
 for base in ("", "en/"):
-    for p in ("index", "kinderschminken", "hochzeiten", "unternehmen", "kontakt"):
+    for p in ("index", "kinderschminken", "hochzeiten", "halloween-events", "unternehmen", "kontakt"):
         f = base + p + ".html"
         found = []
         for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>',
