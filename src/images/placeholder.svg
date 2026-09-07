@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Platzhalter">
+  <rect width="800" height="1000" fill="#EDEFEE"/>
+  <rect x="16" y="16" width="768" height="968" fill="none" stroke="#68A9A0" stroke-width="2" stroke-dasharray="12 10"/>
+  <text x="400" y="490" text-anchor="middle" font-family="Inter, sans-serif" font-size="34" fill="#68A9A0" letter-spacing="4">BILD FOLGT</text>
+  <text x="400" y="540" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#8AA6A2">Platzhalter</text>
+</svg>
