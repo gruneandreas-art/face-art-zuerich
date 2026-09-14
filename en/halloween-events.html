@@ -250,6 +250,23 @@
       </div>
     </section>
 
+    <!-- ========== WEITERE THEMEN ==========
+         Weitere Themen-Bloecke lassen sich nach dem Muster des Abschnitts
+         "Halloween & Grusel" direkt vor diesem Abschnitt einhaengen, ohne
+         dass hier etwas umgebaut werden muss. -->
+    <section class="section section--cream" id="themen">
+      <div class="container container--narrow">
+        <span class="section__label" data-i18n="halloween.themen_label">In planning</span>
+        <h2 class="section__title" data-i18n="halloween.themen_title">Your theme, your look</h2>
+        <div class="divider"></div>
+        <p class="feature__text" data-i18n="halloween.themen_text1">Pirates, the 1920s, neon, carnival, a company anniversary — as soon as an occasion has a clear theme, there is a way to paint for it. Further theme worlds will be added to this page over time.</p>
+        <p class="feature__text" style="margin-top: var(--sp-3);" data-i18n="halloween.themen_text2">Already have an idea? Write and tell me what you are planning — I will come back with a suggestion.</p>
+        <p class="feature__text" style="margin-top: var(--sp-4);">
+          <a class="material-box__link" href="unternehmen" data-i18n="halloween.themen_link_unternehmen">For corporate events and trade fairs: For Companies →</a>
+        </p>
+      </div>
+    </section>
+
     <!-- ========== ABLAUF ========== -->
     <section class="section">
       <div class="container">
@@ -331,6 +348,20 @@
               </span>
             </button>
             <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq2_a">No. I work with cosmetic colours and thickeners. That creates scars and wounds with real depth, yet stays skin-friendly and comes off without a trace.</p></div></div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__btn" aria-expanded="false">
+              <div class="faq__btn-left">
+                <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                <span class="faq__btn-text" data-i18n="halloween.faq5_q">What exactly is a glitter bar?</span>
+              </div>
+              <span class="faq__toggle" aria-hidden="true">
+                <span class="faq__toggle-icon faq__toggle-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                <span class="faq__toggle-icon faq__toggle-minus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </span>
+            </button>
+            <div class="faq__answer-wrap"><div class="faq__answer-inner"><p class="faq__answer" data-i18n="halloween.faq5_a">A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service.</p></div></div>
           </div>
 
           <div class="faq__item">
@@ -433,7 +464,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Halloween Face Painting & Face Art for Adults Zurich",
+    "name": "Face Art for Adults, Halloween Make-up & Glitter Bar Zurich",
+    "description": "Face art for adults in Zurich — Halloween make-up, a glitter bar and themed events. Skin-friendly, latex-free, from CHF 145/h.",
     "serviceType": "Halloween face painting and face art for adults",
     "url": "https://face-art-zuerich.ch/en/halloween-events",
     "areaServed": [
@@ -480,6 +512,11 @@
         "@type": "Question",
         "name": "Do you work with latex and fake blood?",
         "acceptedAnswer": { "@type": "Answer", "text": "No. I work with cosmetic colours and thickeners. That creates scars and wounds with real depth, yet stays skin-friendly and comes off without a trace." }
+      },
+      {
+        "@type": "Question",
+        "name": "What exactly is a glitter bar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service." }
       },
       {
         "@type": "Question",

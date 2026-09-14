@@ -221,7 +221,14 @@ const I18n = (() => {
         gb_text1:'A glitter station set up in the middle of your party: glitter, sequins, rhinestones and feathers, plus colour for small designs. Your guests drop by, pick something out and head off sparkling.',
         gb_text2:'On request I do the painting myself, or the bar runs as self-service with a short introduction. I match the range of colours to your theme.',
         gb_box_title:'Vegan & biodegradable',
-        gb_box_text:'I use exclusively cosmetically approved glitter without microplastics, vegan and free of animal testing.'
+        gb_box_text:'I use exclusively cosmetically approved glitter without microplastics, vegan and free of animal testing.',
+        themen_label:'In planning',
+        themen_title:'Your theme, your look',
+        themen_text1:'Pirates, the 1920s, neon, carnival, a company anniversary — as soon as an occasion has a clear theme, there is a way to paint for it. Further theme worlds will be added to this page over time.',
+        themen_text2:'Already have an idea? Write and tell me what you are planning — I will come back with a suggestion.',
+        themen_link_unternehmen:'For corporate events and trade fairs: For Companies →',
+        faq5_q:'What exactly is a glitter bar?',
+        faq5_a:'A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service.'
       },
       unternehmen: {
         cta_label:'Ready?',
@@ -512,7 +519,14 @@ const I18n = (() => {
         gb_text1:'Une station à paillettes installée au cœur de la fête : paillettes, sequins, strass et plumes, ainsi que de la couleur pour de petits motifs. Vos invités passent, choisissent et repartent scintillants.',
         gb_text2:'Sur demande, je maquille moi-même, ou le bar fonctionne en libre-service après une courte introduction. J\'accorde la palette à votre thème.',
         gb_box_title:'Vegan & biodégradable',
-        gb_box_text:'J\'utilise exclusivement des paillettes homologuées en cosmétique, sans microplastique, vegan et sans test sur les animaux.'
+        gb_box_text:'J\'utilise exclusivement des paillettes homologuées en cosmétique, sans microplastique, vegan et sans test sur les animaux.',
+        themen_label:'En préparation',
+        themen_title:'Votre thème, votre look',
+        themen_text1:'Pirates, années 20, néon, carnaval, anniversaire d\'entreprise — dès qu\'une occasion a un thème clair, il y a une façon de la maquiller. D\'autres univers viendront peu à peu enrichir cette page.',
+        themen_text2:'Vous avez déjà une idée ? Écrivez-moi ce que vous préparez — je vous fais une proposition.',
+        themen_link_unternehmen:'Pour les événements d\'entreprise et les salons : Pour entreprises →',
+        faq5_q:'Qu\'est-ce qu\'un bar à paillettes exactement ?',
+        faq5_a:'Une station installée à votre fête : paillettes, sequins, strass et plumes, avec un éclairage et une chaise. Les invités passent quand ils en ont envie. Je maquille moi-même ou j\'installe le bar en libre-service.'
       },
       unternehmen: {
         cta_label:'Prêts ?',
@@ -803,7 +817,14 @@ const I18n = (() => {
         gb_text1:'Una postazione glitter allestita nel cuore della festa: glitter, paillettes, strass e piume, oltre al colore per piccoli motivi. I vostri ospiti passano, scelgono e ripartono scintillanti.',
         gb_text2:'Su richiesta trucco io stessa, oppure il bar funziona in self-service dopo una breve introduzione. Scelgo i colori in base al vostro tema.',
         gb_box_title:'Vegano e biodegradabile',
-        gb_box_text:'Utilizzo esclusivamente glitter omologato per uso cosmetico, senza microplastiche, vegano e senza test sugli animali.'
+        gb_box_text:'Utilizzo esclusivamente glitter omologato per uso cosmetico, senza microplastiche, vegano e senza test sugli animali.',
+        themen_label:'In preparazione',
+        themen_title:'Il vostro tema, il vostro look',
+        themen_text1:'Pirati, anni Venti, neon, carnevale, anniversario aziendale: non appena un\'occasione ha un tema chiaro, si può truccare di conseguenza. Altri mondi tematici arriveranno man mano su questa pagina.',
+        themen_text2:'Avete già un\'idea? Scrivetemi cosa avete in mente e vi faccio una proposta.',
+        themen_link_unternehmen:'Per eventi aziendali e fiere: Per aziende →',
+        faq5_q:'Che cos\'è esattamente un glitter bar?',
+        faq5_a:'Una postazione allestita alla vostra festa: glitter, paillettes, strass e piume, con luce e una sedia. Gli ospiti passano quando ne hanno voglia. Trucco io stessa oppure allestisco il bar in self-service.'
       },
       unternehmen: {
         cta_label:'Pronti?',
