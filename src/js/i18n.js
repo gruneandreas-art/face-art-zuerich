@@ -60,7 +60,17 @@ const I18n = (() => {
         card_halloween_title:'Halloween & Events',
         card_halloween_text:'Skulls, scars, festival looks and glitter tattoos — face art for adults at Halloween, parties and corporate events.',
         card_halloween_link:'Learn more →',
-        about_teaser_link:'More about Isa, the artist behind Face Art Zürich →'
+        about_teaser_link:'More about Isa, the artist behind Face Art Zürich →',
+        acc1_short:'Kids',
+        acc1_label:'Face Painting',
+        acc2_short:'Body Art',
+        acc2_label:'Body Art',
+        acc3_short:'Events',
+        acc3_label:'Fast & Professional',
+        acc4_short:'Seasonal',
+        acc4_label:'Seasonal',
+        acc5_short:'Adults',
+        acc5_label:'Face Art for Adults'
       },
       kinderschminken: {
         faq_label:'Frequently asked questions',
@@ -337,7 +347,17 @@ const I18n = (() => {
         card_halloween_title:'Halloween & Événements',
         card_halloween_text:'Crânes, cicatrices, looks de festival et tatouages pailletés — du face art pour adultes à Halloween, en soirée et lors d\'événements d\'entreprise.',
         card_halloween_link:'En savoir plus →',
-        about_teaser_link:'En savoir plus sur Isa, l\'artiste derrière Face Art Zürich →'
+        about_teaser_link:'En savoir plus sur Isa, l\'artiste derrière Face Art Zürich →',
+        acc1_short:'Enfants',
+        acc1_label:'Maquillage enfants',
+        acc2_short:'Body Art',
+        acc2_label:'Body Art',
+        acc3_short:'Événements',
+        acc3_label:'Rapide & Professionnel',
+        acc4_short:'Saisonnier',
+        acc4_label:'Saisonnier',
+        acc5_short:'Adultes',
+        acc5_label:'Face Art pour Adultes'
       },
       kinderschminken: {
         faq_label:'Questions fréquentes',
@@ -614,7 +634,17 @@ const I18n = (() => {
         card_halloween_title:'Halloween ed eventi',
         card_halloween_text:'Teschi, cicatrici, look da festival e tatuaggi glitter — face art per adulti ad Halloween, alle feste e agli eventi aziendali.',
         card_halloween_link:'Scopri di più →',
-        about_teaser_link:'Scopri di più su Isa, l\'artista dietro Face Art Zürich →'
+        about_teaser_link:'Scopri di più su Isa, l\'artista dietro Face Art Zürich →',
+        acc1_short:'Bambini',
+        acc1_label:'Trucco bimbi',
+        acc2_short:'Body Art',
+        acc2_label:'Body Art',
+        acc3_short:'Eventi',
+        acc3_label:'Veloce e Professionale',
+        acc4_short:'Stagionale',
+        acc4_label:'Stagionale',
+        acc5_short:'Adulti',
+        acc5_label:'Face Art per Adulti'
       },
       kinderschminken: {
         faq_label:'Domande frequenti',
