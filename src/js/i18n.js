@@ -170,7 +170,12 @@ const I18n = (() => {
         ben4_link:'View hygiene concept →',
         crosslink_text:'Are there children among your wedding guests too?',
         crosslink_kinderschminken:'Face painting →',
-        link_halloween:'Also for adults: Halloween & Events →'
+        link_halloween:'Also for adults: Halloween & Events →',
+        gb_label:'Extra service',
+        gb_title:'A glitter bar for your guests',
+        gb_text1:'After dinner, when the music starts: a glitter station with glitter, sequins, rhinestones and feathers. Guests drop by whenever they like — it brings movement into the evening and delivers photos nobody else has.',
+        gb_text2:'I match colours and designs to your wedding theme. It also works as an addition to the bridal styling.',
+        gb_link:'More about the glitter bar: Halloween & Events →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festivals & corporate events',
@@ -468,7 +473,12 @@ const I18n = (() => {
         ben4_link:'Voir le concept d\'hygiène →',
         crosslink_text:'Des enfants parmi vos invités de mariage ?',
         crosslink_kinderschminken:'Maquillage enfants →',
-        link_halloween:'Aussi pour les adultes : Halloween & Événements →'
+        link_halloween:'Aussi pour les adultes : Halloween & Événements →',
+        gb_label:'Prestation complémentaire',
+        gb_title:'Un bar à paillettes pour vos invités',
+        gb_text1:'Après le dîner, quand la musique démarre : une station à paillettes avec sequins, strass et plumes. Les invités passent quand ils en ont envie — cela anime la soirée et donne des photos que personne d\'autre n\'a.',
+        gb_text2:'J\'accorde les couleurs et les motifs au thème de votre mariage. Cela fonctionne aussi en complément du stylisme de la mariée.',
+        gb_link:'En savoir plus sur le bar à paillettes : Halloween & Événements →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festivals & événements d\'entreprise',
@@ -766,7 +776,12 @@ const I18n = (() => {
         ben4_link:'Consulta il piano d\'igiene →',
         crosslink_text:'Ci sono bambini tra gli invitati al vostro matrimonio?',
         crosslink_kinderschminken:'Trucco bimbi →',
-        link_halloween:'Anche per adulti: Halloween ed eventi →'
+        link_halloween:'Anche per adulti: Halloween ed eventi →',
+        gb_label:'Servizio aggiuntivo',
+        gb_title:'Un glitter bar per i vostri ospiti',
+        gb_text1:'Dopo la cena, quando parte la musica: una postazione glitter con paillettes, strass e piume. Gli ospiti passano quando ne hanno voglia: anima la serata e regala foto che nessun altro ha.',
+        gb_text2:'Abbino colori e motivi al tema del vostro matrimonio. Funziona anche come completamento del bridal styling.',
+        gb_link:'Scopri di più sul glitter bar: Halloween ed eventi →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festival ed eventi aziendali',
