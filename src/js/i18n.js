@@ -243,7 +243,11 @@ const I18n = (() => {
         themen_link_unternehmen:'For corporate events and trade fairs: For Companies →',
         faq5_q:'What exactly is a glitter bar?',
         faq5_a:'A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service.',
-        hygiene_link:'View hygiene concept →'
+        hygiene_link:'View hygiene concept →',
+        xmas_label:'Theme',
+        xmas_title:'Christmas parties & advent',
+        xmas_text1:'Stars, snowflakes, ice crystals and fine gold — festive designs for the company Christmas party, the advent market or a family celebration.',
+        xmas_text2:'Understated and elegant for adults, playful and colourful for children. Both on the same evening is no problem.'
       },
       unternehmen: {
         cta_label:'Ready?',
@@ -556,7 +560,11 @@ const I18n = (() => {
         themen_link_unternehmen:'Pour les événements d\'entreprise et les salons : Pour entreprises →',
         faq5_q:'Qu\'est-ce qu\'un bar à paillettes exactement ?',
         faq5_a:'Une station installée à votre fête : paillettes, sequins, strass et plumes, avec un éclairage et une chaise. Les invités passent quand ils en ont envie. Je maquille moi-même ou j\'installe le bar en libre-service.',
-        hygiene_link:'Voir le concept d\'hygiène →'
+        hygiene_link:'Voir le concept d\'hygiène →',
+        xmas_label:'Thème',
+        xmas_title:'Fête de Noël & temps de l\'Avent',
+        xmas_text1:'Étoiles, flocons de neige, cristaux de glace et fines touches d\'or — des motifs festifs pour la fête de Noël d\'entreprise, le marché de l\'Avent ou la fête en famille.',
+        xmas_text2:'Discret et élégant pour les adultes, ludique et coloré pour les enfants. Les deux le même soir ne posent aucun problème.'
       },
       unternehmen: {
         cta_label:'Prêts ?',
@@ -869,7 +877,11 @@ const I18n = (() => {
         themen_link_unternehmen:'Per eventi aziendali e fiere: Per aziende →',
         faq5_q:'Che cos\'è esattamente un glitter bar?',
         faq5_a:'Una postazione allestita alla vostra festa: glitter, paillettes, strass e piume, con luce e una sedia. Gli ospiti passano quando ne hanno voglia. Trucco io stessa oppure allestisco il bar in self-service.',
-        hygiene_link:'Vedi il concetto di igiene →'
+        hygiene_link:'Vedi il concetto di igiene →',
+        xmas_label:'Tema',
+        xmas_title:'Festa di Natale e Avvento',
+        xmas_text1:'Stelle, fiocchi di neve, cristalli di ghiaccio e tocchi d\'oro — motivi festivi per la festa di Natale aziendale, il mercatino dell\'Avvento o la festa in famiglia.',
+        xmas_text2:'Sobrio ed elegante per gli adulti, giocoso e colorato per i bambini. Entrambi la stessa sera non sono un problema.'
       },
       unternehmen: {
         cta_label:'Pronti?',
