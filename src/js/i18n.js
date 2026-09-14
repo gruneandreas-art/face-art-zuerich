@@ -70,7 +70,14 @@ const I18n = (() => {
         acc4_short:'Seasonal',
         acc4_label:'Seasonal',
         acc5_short:'Adults',
-        acc5_label:'Face Art for Adults'
+        acc5_label:'Face Art for Adults',
+        group3_title:'Extra services',
+        card_glitterbar_title:'Glitter bar',
+        card_glitterbar_text:'A glitter station in the middle of your party — glitter, sequins, rhinestones and feathers. Guests drop by and head off sparkling.',
+        card_glitterbar_link:'Learn more →',
+        card_glitzer_title:'Glitter tattoos',
+        card_glitzer_text:'Done in two minutes, they last several days and survive showering and swimming. For everyone who would rather not have their whole face painted.',
+        card_glitzer_link:'Learn more →'
       },
       kinderschminken: {
         faq_label:'Frequently asked questions',
@@ -374,7 +381,14 @@ const I18n = (() => {
         acc4_short:'Saisonnier',
         acc4_label:'Saisonnier',
         acc5_short:'Adultes',
-        acc5_label:'Face Art pour Adultes'
+        acc5_label:'Face Art pour Adultes',
+        group3_title:'Prestations complémentaires',
+        card_glitterbar_title:'Bar à paillettes',
+        card_glitterbar_text:'Une station à paillettes au cœur de la fête — paillettes, sequins, strass et plumes. Les invités passent et repartent scintillants.',
+        card_glitterbar_link:'En savoir plus →',
+        card_glitzer_title:'Tatouages pailletés',
+        card_glitzer_text:'Prêts en deux minutes, ils tiennent plusieurs jours et résistent à la douche comme à la piscine. Pour celles et ceux qui préfèrent ne pas se faire maquiller tout le visage.',
+        card_glitzer_link:'En savoir plus →'
       },
       kinderschminken: {
         faq_label:'Questions fréquentes',
@@ -678,7 +692,14 @@ const I18n = (() => {
         acc4_short:'Stagionale',
         acc4_label:'Stagionale',
         acc5_short:'Adulti',
-        acc5_label:'Face Art per Adulti'
+        acc5_label:'Face Art per Adulti',
+        group3_title:'Servizi aggiuntivi',
+        card_glitterbar_title:'Glitter bar',
+        card_glitterbar_text:'Una postazione glitter nel cuore della festa — glitter, paillettes, strass e piume. Gli ospiti passano e ripartono scintillanti.',
+        card_glitterbar_link:'Scopri di più →',
+        card_glitzer_title:'Tatuaggi glitter',
+        card_glitzer_text:'Pronti in due minuti, durano diversi giorni e resistono alla doccia e al nuoto. Per chi preferisce non farsi dipingere tutto il viso.',
+        card_glitzer_link:'Scopri di più →'
       },
       kinderschminken: {
         faq_label:'Domande frequenti',

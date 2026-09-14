@@ -139,8 +139,12 @@
         <!-- Feature 1 -->
         <div class="feature">
           <div class="gallery-acc">
-            <div class="gallery-acc__panel gallery-acc__panel--active gallery-acc__panel--cool">
-              <img src="src/images/gallery/Kinder/einhoerner-kinderschminken.jpg" alt="Zwei Mädchen mit Einhorn-Kinderschminken" draggable="false" width="1342" height="1486" fetchpriority="high">
+            <div class="gallery-acc__panel gallery-acc__panel--active">
+              <img src="src/images/gallery/Kinder/drache-face-art-kinderschminken.jpg" alt="Junge mit grünem Drachen-Motiv im Gesicht, Hände wie Krallen" draggable="false" width="896" height="1195" fetchpriority="high">
+              <div class="gallery-acc__overlay"></div>
+            </div>
+            <div class="gallery-acc__panel gallery-acc__panel--cool">
+              <img src="src/images/gallery/Kinder/einhoerner-kinderschminken.jpg" alt="Zwei Mädchen mit Einhorn-Kinderschminken" draggable="false" width="1342" height="1486" loading="lazy">
               <div class="gallery-acc__overlay"></div>
             </div>
             <div class="gallery-acc__panel gallery-acc__panel--otj6">
@@ -168,11 +172,7 @@
         <!-- Feature 2 -->
         <div class="feature feature--reverse">
           <div class="gallery-acc">
-            <div class="gallery-acc__panel gallery-acc__panel--active">
-              <img loading="lazy" src="src/images/gallery/Kinder/drache-face-art-kinderschminken.jpg" alt="Junge mit grünem Drachen-Motiv im Gesicht, Hände wie Krallen" draggable="false" width="896" height="1195">
-              <div class="gallery-acc__overlay"></div>
-            </div>
-            <div class="gallery-acc__panel gallery-acc__panel--f2butterfly">
+            <div class="gallery-acc__panel gallery-acc__panel--active gallery-acc__panel--f2butterfly">
               <img loading="lazy" src="src/images/gallery/Kinder/schmetterling-blumen-kinderschminken.jpg" alt="Kind mit Schmetterling- und Blumen-Kinderschminken" draggable="false" width="864" height="1159">
               <div class="gallery-acc__overlay"></div>
             </div>
@@ -322,8 +322,13 @@
               <a class="material-box__link" href="halloween-events#glitzertattoos" data-i18n="kinderschminken.glitzer_link">Auch für Erwachsene: Halloween &amp; Events →</a>
             </p>
           </div>
-          <div>
-            <img loading="lazy" src="src/images/gallery/Erwachsene/glitzertattoos-kinder-arm.jpg" alt="Drei Kinder zeigen ihre Glitzertattoos am Arm" width="1600" height="872" style="border-radius: var(--radius);">
+          <div class="img-acc" data-img-acc>
+            <button type="button" class="img-acc__panel img-acc__panel--active" aria-label="Bild 1 von 2 anzeigen">
+              <img loading="lazy" src="src/images/gallery/Erwachsene/glitzertattoos-kinder-arm.jpg" alt="Drei Kinder zeigen ihre Glitzertattoos am Arm" width="1600" height="872">
+            </button>
+            <button type="button" class="img-acc__panel" aria-label="Bild 2 von 2 anzeigen">
+              <img loading="lazy" src="src/images/gallery/Erwachsene/glitzertattoo-flugzeug-arm.jpg" alt="Glitzertattoo in Flugzeugform mit Sternen auf einem Unterarm" width="1600" height="900">
+            </button>
           </div>
         </div>
       </div>
