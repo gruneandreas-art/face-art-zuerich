@@ -259,6 +259,16 @@
     accPanels.forEach(function (panel, i) {
       panel.addEventListener('mouseenter', function () { setAccActive(i); });
       panel.addEventListener('click',      function () { setAccActive(i); });
+      panel.addEventListener('focus',      function () { setAccActive(i); });
+      /* Die Panels sind <div> mit role="button": Enter und Leertaste muessen
+         von Hand abgebildet werden, ein echtes <button> haette das mitgebracht.
+         Die Struktur bleibt hier bewusst unveraendert. */
+      panel.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          setAccActive(i);
+        }
+      });
     });
   }
 

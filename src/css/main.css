@@ -617,6 +617,10 @@ p  { color: var(--text-mid); }
   transition: flex 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .acc-panel--active { flex: 3.5; }
+.acc-panel:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: -4px;
+}
 
 .acc-panel img {
   position: absolute;
