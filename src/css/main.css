@@ -568,7 +568,12 @@ p  { color: var(--text-mid); }
 
 .acc-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3.75rem);
+  /* Obergrenze so gewaehlt, dass die erste Zeile im 680px breiten Textblock
+     zusammenbleibt — bei 3.75rem brach sie ab 1280px hinter "Face &" um.
+     text-wrap: balance sorgt darunter fuer den Umbruch nach dem Komma statt
+     mitten in der Wortgruppe. */
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-wrap: balance;
   font-weight: 600;
   line-height: 1.15;
   color: #ffffff;
