@@ -1906,6 +1906,16 @@ span.t-card__avatar {
 .gallery-acc__panel.gallery-acc__panel--cool img { object-position: center 25%; }
 .gallery-acc__panel.gallery-acc__panel--otj2 img { object-position: 40% center; }
 .gallery-acc__panel.gallery-acc__panel--otj3 img { object-position: 62% center; }
+/* Drache: Hochformat. Im aktiven Zustand ist das Panel ab 1024px abwaerts ein
+   breiter, flacher Streifen — sichtbar bleibt dort nur ein waagrechtes Band von
+   rund 35% Bildhoehe. Der Ausschnitt haelt Stirnmotiv und Augen; die Haende im
+   unteren Bilddrittel passen in diesen Breiten nicht zusaetzlich hinein. */
+.gallery-acc__panel.gallery-acc__panel--drache img { object-position: center 18%; }
+/* Blumenmotiv: Hochformat, Motiv auf Augenhoehe */
+.gallery-acc__panel.gallery-acc__panel--blumenmotiv img { object-position: center 20%; }
+/* Magnolie: Querformat 1200x946 im hochkant-Panel. Der Basiswert top center
+   zeigte oben Kopf und Hintergrund statt der Body Art am Oberarm. */
+.gallery-acc__panel.gallery-acc__panel--magnolie img { object-position: center 50%; }
 
 /* Feature 2 „Jedes Motiv ein Unikat" — Porträts, Motiv sitzt an Stirn/Augen:
    Ausschnitt leicht nach oben, damit Gesicht + Motiv sichtbar bleiben */
