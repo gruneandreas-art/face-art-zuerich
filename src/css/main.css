@@ -1021,6 +1021,12 @@ p  { color: var(--text-mid); }
 .service-card__img--glitterbar {
   background: linear-gradient(135deg, #B8A8D8 0%, #8E7CB8 45%, #C8B8D8 100%);
 }
+/* Glitterbar-Karte: Zwei Personen im Querformat, Container ist 300px hoch.
+   Bei rund 768px Breite schneidet ein zentrierter Ausschnitt oben die Koepfe
+   an — der Ausschnitt sitzt deshalb hoeher. Unten geht nur der Tisch verloren. */
+.service-card__img--glitterbar.service-card__img img:not(.service-card__isa) {
+  object-position: center 25%;
+}
 .service-card__img--glitzer {
   background: linear-gradient(135deg, #C8D8E8 0%, #A8BCD8 45%, #C4C8E0 100%);
 }
