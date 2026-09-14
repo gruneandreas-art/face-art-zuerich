@@ -215,7 +215,13 @@ const I18n = (() => {
         hw_label:'Theme',
         hw_title:'Halloween & horror',
         hw_text1:'Skulls, scars, wounds and zombie looks. Realistically worked, but without latex or special adhesives — skin-friendly and washed off again within minutes.',
-        hw_text2:'For the Halloween drinks, the horror party or the occasion where everyone turns up in costume.'
+        hw_text2:'For the Halloween drinks, the horror party or the occasion where everyone turns up in costume.',
+        gb_label:'Theme',
+        gb_title:'The glitter bar',
+        gb_text1:'A glitter station set up in the middle of your party: glitter, sequins, rhinestones and feathers, plus colour for small designs. Your guests drop by, pick something out and head off sparkling.',
+        gb_text2:'On request I do the painting myself, or the bar runs as self-service with a short introduction. I match the range of colours to your theme.',
+        gb_box_title:'Vegan & biodegradable',
+        gb_box_text:'I use exclusively cosmetically approved glitter without microplastics, vegan and free of animal testing.'
       },
       unternehmen: {
         cta_label:'Ready?',
@@ -500,7 +506,13 @@ const I18n = (() => {
         hw_label:'Thème',
         hw_title:'Halloween & frissons',
         hw_text1:'Crânes, cicatrices, blessures et looks de zombie. Un rendu réaliste, mais sans latex ni colle spéciale — doux pour la peau et effaçable en quelques minutes.',
-        hw_text2:'Pour l\'apéro d\'Halloween, la soirée frissons ou l\'occasion où tout le monde vient costumé.'
+        hw_text2:'Pour l\'apéro d\'Halloween, la soirée frissons ou l\'occasion où tout le monde vient costumé.',
+        gb_label:'Thème',
+        gb_title:'Le bar à paillettes',
+        gb_text1:'Une station à paillettes installée au cœur de la fête : paillettes, sequins, strass et plumes, ainsi que de la couleur pour de petits motifs. Vos invités passent, choisissent et repartent scintillants.',
+        gb_text2:'Sur demande, je maquille moi-même, ou le bar fonctionne en libre-service après une courte introduction. J\'accorde la palette à votre thème.',
+        gb_box_title:'Vegan & biodégradable',
+        gb_box_text:'J\'utilise exclusivement des paillettes homologuées en cosmétique, sans microplastique, vegan et sans test sur les animaux.'
       },
       unternehmen: {
         cta_label:'Prêts ?',
@@ -785,7 +797,13 @@ const I18n = (() => {
         hw_label:'Tema',
         hw_title:'Halloween e horror',
         hw_text1:'Teschi, cicatrici, ferite e look da zombie. Realizzati in modo realistico, ma senza lattice né colle speciali: delicati sulla pelle e via in pochi minuti con l\'acqua.',
-        hw_text2:'Per l\'aperitivo di Halloween, la festa horror o l\'occasione in cui tutti arrivano in costume.'
+        hw_text2:'Per l\'aperitivo di Halloween, la festa horror o l\'occasione in cui tutti arrivano in costume.',
+        gb_label:'Tema',
+        gb_title:'Il glitter bar',
+        gb_text1:'Una postazione glitter allestita nel cuore della festa: glitter, paillettes, strass e piume, oltre al colore per piccoli motivi. I vostri ospiti passano, scelgono e ripartono scintillanti.',
+        gb_text2:'Su richiesta trucco io stessa, oppure il bar funziona in self-service dopo una breve introduzione. Scelgo i colori in base al vostro tema.',
+        gb_box_title:'Vegano e biodegradabile',
+        gb_box_text:'Utilizzo esclusivamente glitter omologato per uso cosmetico, senza microplastiche, vegano e senza test sugli animali.'
       },
       unternehmen: {
         cta_label:'Pronti?',
