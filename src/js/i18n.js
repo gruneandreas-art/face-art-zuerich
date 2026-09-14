@@ -233,7 +233,8 @@ const I18n = (() => {
         themen_text2:'Already have an idea? Write and tell me what you are planning — I will come back with a suggestion.',
         themen_link_unternehmen:'For corporate events and trade fairs: For Companies →',
         faq5_q:'What exactly is a glitter bar?',
-        faq5_a:'A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service.'
+        faq5_a:'A station set up at your party: glitter, sequins, rhinestones and feathers, plus lighting and a chair. Guests drop by whenever they feel like it. I do the painting myself or set the bar up for self-service.',
+        hygiene_link:'View hygiene concept →'
       },
       unternehmen: {
         cta_label:'Ready?',
@@ -536,7 +537,8 @@ const I18n = (() => {
         themen_text2:'Vous avez déjà une idée ? Écrivez-moi ce que vous préparez — je vous fais une proposition.',
         themen_link_unternehmen:'Pour les événements d\'entreprise et les salons : Pour entreprises →',
         faq5_q:'Qu\'est-ce qu\'un bar à paillettes exactement ?',
-        faq5_a:'Une station installée à votre fête : paillettes, sequins, strass et plumes, avec un éclairage et une chaise. Les invités passent quand ils en ont envie. Je maquille moi-même ou j\'installe le bar en libre-service.'
+        faq5_a:'Une station installée à votre fête : paillettes, sequins, strass et plumes, avec un éclairage et une chaise. Les invités passent quand ils en ont envie. Je maquille moi-même ou j\'installe le bar en libre-service.',
+        hygiene_link:'Voir le concept d\'hygiène →'
       },
       unternehmen: {
         cta_label:'Prêts ?',
@@ -839,7 +841,8 @@ const I18n = (() => {
         themen_text2:'Avete già un\'idea? Scrivetemi cosa avete in mente e vi faccio una proposta.',
         themen_link_unternehmen:'Per eventi aziendali e fiere: Per aziende →',
         faq5_q:'Che cos\'è esattamente un glitter bar?',
-        faq5_a:'Una postazione allestita alla vostra festa: glitter, paillettes, strass e piume, con luce e una sedia. Gli ospiti passano quando ne hanno voglia. Trucco io stessa oppure allestisco il bar in self-service.'
+        faq5_a:'Una postazione allestita alla vostra festa: glitter, paillettes, strass e piume, con luce e una sedia. Gli ospiti passano quando ne hanno voglia. Trucco io stessa oppure allestisco il bar in self-service.',
+        hygiene_link:'Vedi il concetto di igiene →'
       },
       unternehmen: {
         cta_label:'Pronti?',
