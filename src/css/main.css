@@ -1924,6 +1924,78 @@ span.t-card__avatar {
   .gallery-acc__panel, .gallery-acc__panel img { transition: none; }
 }
 
+/* ===== 12c. Bild-Akkordeon (wiederverwendbare Komponente) =====
+   Optik aus dem Hero-Akkordeon abgeleitet, aber vom Hero-Kontext geloest und
+   in Inhaltsabschnitten einsetzbar. Bewusst ohne Label-Element. */
+.img-acc {
+  display: flex;
+  gap: var(--sp-1);
+  width: 100%;
+  height: 420px;
+}
+
+.img-acc__panel {
+  position: relative;
+  flex: 0.5;
+  min-width: 52px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--mint-light);
+  transition: flex 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-acc__panel--active { flex: 3.5; }
+
+.img-acc__panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  display: block;
+  transition: transform 0.65s ease;
+}
+.img-acc__panel--active img { transform: scale(1.03); }
+
+/* Die Panels sind <button>: sichtbarer Fokus statt des entfernten Outlines */
+.img-acc__panel:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+}
+
+@media (max-width: 980px) {
+  .img-acc { height: 320px; }
+  .img-acc__panel { min-width: 44px; }
+}
+
+/* Unter 640px traegt das Akkordeon nicht mehr: die schmalen Panels waeren nur
+   noch Streifen von rund 30px. Stattdessen ein horizontal scrollbares Band mit
+   Scroll-Snap — jedes Bild bleibt gross, und die Seite waechst nicht um
+   mehrere Bildhoehen, wie es gestapelte Bilder taeten. */
+@media (max-width: 640px) {
+  .img-acc {
+    height: auto;
+    gap: var(--sp-2);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--sp-1);
+  }
+  .img-acc__panel,
+  .img-acc__panel--active {
+    flex: 0 0 78%;
+    min-width: 0;
+    aspect-ratio: 4 / 5;
+    scroll-snap-align: center;
+  }
+  .img-acc__panel--active img { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-acc__panel, .img-acc__panel img { transition: none; }
+}
+
 /* ===== 13. Feature Blocks ===== */
 .feature {
   display: grid;

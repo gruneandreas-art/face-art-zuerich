@@ -279,6 +279,29 @@
     });
   });
 
+  /* ===== Bild-Akkordeon (wiederverwendbare Komponente) =====
+     Findet alle [data-img-acc]-Container und schaltet pro Container das
+     aktive Panel. Die Panels sind <button>, daher greifen Enter und
+     Leertaste ohne zusaetzliches ARIA; der Fokus-Handler sorgt dafuer,
+     dass beim Durchtabben auch das passende Bild aufgeht. Die Hero-Logik
+     oben bleibt davon unberuehrt. */
+  document.querySelectorAll('[data-img-acc]').forEach(function (acc) {
+    var panels = acc.querySelectorAll('.img-acc__panel');
+    if (!panels.length) return;
+
+    function activate(index) {
+      panels.forEach(function (panel, i) {
+        panel.classList.toggle('img-acc__panel--active', i === index);
+      });
+    }
+
+    panels.forEach(function (panel, i) {
+      panel.addEventListener('click',      function () { activate(i); });
+      panel.addEventListener('mouseenter', function () { activate(i); });
+      panel.addEventListener('focus',      function () { activate(i); });
+    });
+  });
+
   /* ===== Photo Fan — drag interaction ===== */
   const photoCards = document.querySelectorAll('.photo-card');
 
