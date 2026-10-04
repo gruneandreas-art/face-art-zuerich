@@ -1916,6 +1916,12 @@ span.t-card__avatar {
 /* Magnolie: Querformat 1200x946 im hochkant-Panel. Der Basiswert top center
    zeigte oben Kopf und Hintergrund statt der Body Art am Oberarm. */
 .gallery-acc__panel.gallery-acc__panel--magnolie img { object-position: center 50%; }
+/* Lila Rosen Oberarm: Hochformat, Motiv mittig */
+.gallery-acc__panel.gallery-acc__panel--lilarosen img { object-position: 55% 45%; }
+/* Rosen Ruecken: Hochformat, Motiv links der Bildmitte */
+.gallery-acc__panel.gallery-acc__panel--rosenruecken img { object-position: 40% 45%; }
+/* Wellen-Auge: Hochformat, Motiv im oberen Drittel */
+.gallery-acc__panel.gallery-acc__panel--wellenauge img { object-position: 45% 35%; }
 
 /* Feature 2 „Jedes Motiv ein Unikat" — Porträts, Motiv sitzt an Stirn/Augen:
    Ausschnitt leicht nach oben, damit Gesicht + Motiv sichtbar bleiben */
