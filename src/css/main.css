@@ -886,6 +886,13 @@ p  { color: var(--text-mid); }
   line-height: 1.0;
   margin-bottom: var(--sp-3);
 }
+/* „Weihnachtsmarkt" im Halloween-Hero ist ab ca. 390px breiter als die Zeile
+   und lief sonst rechts aus dem Bild. Bewusst nur auf dieser Seite, damit die
+   Zeilenumbrueche der uebrigen Heros unveraendert bleiben. */
+.page--halloween .hero__title {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 .hero__title em { color: rgba(255,255,255,.68); }
 
 .hero__subtitle {
