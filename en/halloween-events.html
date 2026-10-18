@@ -157,9 +157,16 @@
               For the Halloween drinks, the horror party or the occasion where everyone turns up in costume.
             </p>
           </div>
-          <div>
-            <!-- Bei mehreren Bildern wieder auf .img-acc umstellen (Komponente in main.css / main.js vorhanden) -->
-            <img loading="lazy" src="../src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg" alt="Zombie unicorn body art on an arm, labelled &quot;Zombicorn&quot;" width="900" height="1200" style="border-radius: var(--radius);">
+          <div class="img-acc" data-img-acc>
+            <button type="button" class="img-acc__panel img-acc__panel--active" aria-label="Show image 1 of 3">
+              <img loading="lazy" src="../src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg" alt="Zombie unicorn body art on an arm, labelled &quot;Zombicorn&quot;" width="900" height="1200">
+            </button>
+            <button type="button" class="img-acc__panel" aria-label="Show image 2 of 3">
+              <img loading="lazy" src="../src/images/gallery/Erwachsene/halloween-naht-wunde-bein.jpg" alt="Painted stitched wound with scar streaks on a leg" width="900" height="1200">
+            </button>
+            <button type="button" class="img-acc__panel" aria-label="Show image 3 of 3">
+              <img loading="lazy" src="../src/images/gallery/Erwachsene/halloween-herbstrose-spinnennetz-bein.jpg" alt="Autumn roses with leaves and a spider web as body art on a leg" width="900" height="1200">
+            </button>
           </div>
         </div>
       </div>

@@ -157,9 +157,16 @@
               Für den Halloween-Apéro, die Grusel-Party oder den Anlass, an dem alle in Kostüm kommen.
             </p>
           </div>
-          <div>
-            <!-- Bei mehreren Bildern wieder auf .img-acc umstellen (Komponente in main.css / main.js vorhanden) -->
-            <img loading="lazy" src="src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg" alt="Zombie-Einhorn als Body Art auf dem Arm, beschriftet «Zombicorn»" width="900" height="1200" style="border-radius: var(--radius);">
+          <div class="img-acc" data-img-acc>
+            <button type="button" class="img-acc__panel img-acc__panel--active" aria-label="Bild 1 von 3 anzeigen">
+              <img loading="lazy" src="src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg" alt="Zombie-Einhorn als Body Art auf dem Arm, beschriftet «Zombicorn»" width="900" height="1200">
+            </button>
+            <button type="button" class="img-acc__panel" aria-label="Bild 2 von 3 anzeigen">
+              <img loading="lazy" src="src/images/gallery/Erwachsene/halloween-naht-wunde-bein.jpg" alt="Geschminkte, genähte Wunde mit Narbenstreifen am Bein" width="900" height="1200">
+            </button>
+            <button type="button" class="img-acc__panel" aria-label="Bild 3 von 3 anzeigen">
+              <img loading="lazy" src="src/images/gallery/Erwachsene/halloween-herbstrose-spinnennetz-bein.jpg" alt="Herbstliche Rosen mit Blättern und Spinnennetz als Body Art am Bein" width="900" height="1200">
+            </button>
           </div>
         </div>
       </div>
