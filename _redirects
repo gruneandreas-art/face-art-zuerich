@@ -20,3 +20,20 @@
 /en/unternehmen.html      /en/unternehmen       301!
 /en/kontakt.html          /en/kontakt           301!
 /en/about.html            /en/about             301!
+
+# Bild-Umbenennungen (SEO-Dateinamen), alte URLs -> neue (301)
+/src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg  /src/images/gallery/Erwachsene/zombicorn-face-art-zuerich.jpg  301
+/src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.webp  /src/images/gallery/Erwachsene/zombicorn-face-art-zuerich.webp  301
+/src/images/gallery/Kinder/weihnachten-eiskrone-blau-glitzer.jpg  /src/images/gallery/Kinder/eiskoenigin-face-art-zuerich.jpg  301
+/src/images/gallery/Kinder/weihnachten-eiskrone-blau-glitzer.webp  /src/images/gallery/Kinder/eiskoenigin-face-art-zuerich.webp  301
+/src/images/gallery/Kinder/flugzeug-body-art-motiv.jpg  /src/images/gallery/Kinder/flugzeug-face-art-zuerich.jpg  301
+/src/images/gallery/Otj%202.jpg  /src/images/gallery/isa-grune-face-art-zuerich-firmenanlass.jpg  301
+/src/images/gallery/OTJ3.jpeg  /src/images/gallery/isa-grune-events.jpeg  301
+/src/images/gallery/Events/Chlausmaert/isa-kind.jpeg  /src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-isa-mit-kind.jpeg  301
+/src/images/gallery/Events/Chlausmaert/msf-board.jpeg  /src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-motivtafel.jpeg  301
+/src/images/gallery/Events/Chlausmaert/msf-sign.jpeg  /src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-spendenschild.jpeg  301
+/src/images/gallery/Events/Chlausmaert/painting.jpeg  /src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-kinderschminken.jpeg  301
+/src/images/gallery/Events/Chlausmaert/stand.jpeg  /src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-schminkstand.jpeg  301
+/src/images/gallery/Events/Illuster/kinder-faces.jpeg  /src/images/gallery/Events/Illuster/einkaufszentrum-illuster-uster-face-art-zuerich-kinder.jpeg  301
+/src/images/gallery/Events/Illuster/menuboard.jpeg  /src/images/gallery/Events/Illuster/einkaufszentrum-illuster-uster-face-art-zuerich-motivtafel.jpeg  301
+/src/images/gallery/Events/Illuster/stand.jpeg  /src/images/gallery/Events/Illuster/einkaufszentrum-illuster-uster-face-art-zuerich-schminkstand.jpeg  301
