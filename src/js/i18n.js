@@ -78,8 +78,8 @@ const I18n = (() => {
         card_glitzer_title:'Glitter tattoos',
         card_glitzer_text:'Done in two minutes, they last several days and survive showering and swimming. For everyone who would rather not have their whole face painted.',
         card_glitzer_link:'Learn more →',
-        acc6_short:'Fine detail',
-        acc6_label:'Fine detail work'
+        acc6_short:'Every occasion',
+        acc6_label:'Every occasion'
       },
       kinderschminken: {
         faq_label:'Frequently asked questions',
@@ -394,8 +394,8 @@ const I18n = (() => {
         card_glitzer_title:'Tatouages pailletés',
         card_glitzer_text:'Prêts en deux minutes, ils tiennent plusieurs jours et résistent à la douche comme à la piscine. Pour celles et ceux qui préfèrent ne pas se faire maquiller tout le visage.',
         card_glitzer_link:'En savoir plus →',
-        acc6_short:'Détail',
-        acc6_label:'Motifs détaillés'
+        acc6_short:'Chaque occasion',
+        acc6_label:'Chaque occasion'
       },
       kinderschminken: {
         faq_label:'Questions fréquentes',
@@ -710,8 +710,8 @@ const I18n = (() => {
         card_glitzer_title:'Tatuaggi glitter',
         card_glitzer_text:'Pronti in due minuti, durano diversi giorni e resistono alla doccia e al nuoto. Per chi preferisce non farsi dipingere tutto il viso.',
         card_glitzer_link:'Scopri di più →',
-        acc6_short:'Dettagli',
-        acc6_label:'Motivi dettagliati'
+        acc6_short:'Ogni occasione',
+        acc6_label:'Ogni occasione'
       },
       kinderschminken: {
         faq_label:'Domande frequenti',
