@@ -750,6 +750,12 @@ p  { color: var(--text-mid); }
     white-space: normal;
     max-width: calc(100% - 28px);
     line-height: 1.3;
+    /* Lange Woerter (z. B. «Kinderschminken») im schmalen offenen Panel
+       umbrechen statt abschneiden; Silbentrennung, wo der Browser sie kann */
+    letter-spacing: .04em;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: anywhere;
   }
 }
 @media (prefers-reduced-motion: reduce) {
