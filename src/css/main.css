@@ -1950,6 +1950,18 @@ span.t-card__avatar {
 .gallery-acc__panel.gallery-acc__panel--u-portrait img { object-position: 65% 15%; }
 .gallery-acc__panel.gallery-acc__panel--u-detail img { object-position: 60% 40%; }
 .gallery-acc__panel.gallery-acc__panel--u-painted img { object-position: center 12%; }
+/* Halloween & Weihnachten (halloween-events): Ausschnitt pro Motiv, damit
+   Gesicht/Motiv und beim Zombicorn der Schriftzug sichtbar bleiben */
+.gallery-acc__panel.gallery-acc__panel--ritter img { object-position: 45% 38%; }
+.gallery-acc__panel.gallery-acc__panel--zombicorn img { object-position: center 74%; }
+.gallery-acc__panel.gallery-acc__panel--herbstrose img { object-position: center 50%; }
+.gallery-acc__panel.gallery-acc__panel--rentier img { object-position: center 35%; }
+.gallery-acc__panel.gallery-acc__panel--winterprinzessin img { object-position: center 32%; }
+.gallery-acc__panel.gallery-acc__panel--eiskoenigin img { object-position: center 45%; }
+/* Tablet: Streifen ist flach (ca. 2:1) — Zombicorn dort auf den Kopf statt Schriftzug */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .gallery-acc__panel.gallery-acc__panel--zombicorn img { object-position: center 30%; }
+}
 
 .gallery-acc__overlay {
   position: absolute;
