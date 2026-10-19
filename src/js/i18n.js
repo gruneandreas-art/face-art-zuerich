@@ -13,7 +13,7 @@ const I18n = (() => {
   /* ── Translations ─────────────────────────────────────── */
   const T = {
     en: {
-      nav: { start:'Home', kinderschminken:'Face Painting', hochzeiten:'Weddings', halloween:'Halloween & Events', unternehmen:'For Companies', ueber:'About me', kontakt:'Contact' },
+      nav: { start:'Home', kinderschminken:'Face Painting', hochzeiten:'Weddings', halloween:'Halloween & Seasonal Events', unternehmen:'For Companies', ueber:'About me', kontakt:'Contact' },
       footer: { tagline:'Face Painting & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Legal notice', privacy:'Privacy policy' },
       index: {
         nl_ph_email:'your@email.com',
@@ -57,7 +57,7 @@ const I18n = (() => {
         form_submit:'Send', form_confirm:'Thank you — I\'ll usually get back to you within 24 hours.',
         group1_title:'For children & families',
         group2_title:'For adults',
-        card_halloween_title:'Halloween & Events',
+        card_halloween_title:'Halloween & Seasonal Events',
         card_halloween_text:'Skulls, scars, festival looks and glitter tattoos — face art for adults at Halloween, parties and corporate events.',
         card_halloween_link:'Learn more →',
         about_teaser_link:'More about Isa, the artist behind Face Art Zürich →',
@@ -134,7 +134,7 @@ const I18n = (() => {
         glitzer_title:'Glitter tattoos — they outlast the event day',
         glitzer_text1:'Glitter tattoos are made with a stencil, skin-friendly glue and cosmetic glitter. They are finished in around two minutes, last several days and survive showering and swimming — so the memory of the party travels home too.',
         glitzer_text2:'Popular with children who would rather not have their whole face painted, and a quick addition when a lot of guests are waiting.',
-        glitzer_link:'Also for adults: Halloween & Events →'
+        glitzer_link:'Also for adults: Halloween & Seasonal Events →'
       },
       hochzeiten: {
         setup_text1:'You already have enough to coordinate on your day. That is why I bring everything myself — paints, brushes, table and chair. After about 10 minutes of setup I am ready to go.',
@@ -179,12 +179,12 @@ const I18n = (() => {
         ben4_link:'View hygiene concept →',
         crosslink_text:'Are there children among your wedding guests too?',
         crosslink_kinderschminken:'Face painting →',
-        link_halloween:'Also for adults: Halloween & Events →',
+        link_halloween:'Also for adults: Halloween & Seasonal Events →',
         gb_label:'Extra service',
         gb_title:'A glitter bar for your guests',
         gb_text1:'After dinner, when the music starts: a glitter station with glitter, sequins, rhinestones and feathers. Guests drop by whenever they like — it brings movement into the evening and delivers photos nobody else has.',
         gb_text2:'I match colours and designs to your wedding theme. It also works as an addition to the bridal styling.',
-        gb_link:'More about the glitter bar: Halloween & Events →'
+        gb_link:'More about the glitter bar: Halloween & Seasonal Events →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festivals & corporate events',
@@ -271,7 +271,7 @@ const I18n = (() => {
         glitzer_title:'Glitter tattoos — high throughput at your stand',
         glitzer_text1:'A glitter tattoo takes around two minutes instead of ten. At trade fairs and company events that means considerably more visitors per hour, shorter queues and a design your guests carry around for days.',
         glitzer_text2:'On request with stencils in your corporate colours or matched to the trade fair theme.',
-        glitzer_link:'Face art for adults: Halloween & Events →'},
+        glitzer_link:'Face art for adults: Halloween & Seasonal Events →'},
       about: {
         cta_label:'Your next event',
         cta_title:'Let\'s create something special together',
@@ -329,7 +329,7 @@ const I18n = (() => {
         area_note:'Your town not listed? Ask anyway — I also travel further when it fits the schedule.'}
     },
     fr: {
-      nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', halloween:'Halloween & Événements', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
+      nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', halloween:'Halloween & Événements saisonniers', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
       footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Mentions légales', privacy:'Politique de confidentialité' },
       index: {
         nl_ph_email:'votre@email.ch',
@@ -373,7 +373,7 @@ const I18n = (() => {
         form_submit:'Envoyer', form_confirm:'Merci — je vous répondrai généralement dans les 24 heures.',
         group1_title:'Pour les enfants & les familles',
         group2_title:'Pour les adultes',
-        card_halloween_title:'Halloween & Événements',
+        card_halloween_title:'Halloween & Événements saisonniers',
         card_halloween_text:'Crânes, cicatrices, looks de festival et tatouages pailletés — du face art pour adultes à Halloween, en soirée et lors d\'événements d\'entreprise.',
         card_halloween_link:'En savoir plus →',
         about_teaser_link:'En savoir plus sur Isa, l\'artiste derrière Face Art Zürich →',
@@ -450,7 +450,7 @@ const I18n = (() => {
         glitzer_title:'Tatouages pailletés — ils durent plus longtemps que la fête',
         glitzer_text1:'Les tatouages pailletés se réalisent au pochoir, avec une colle douce pour la peau et des paillettes cosmétiques. Prêts en deux minutes environ, ils tiennent plusieurs jours et résistent à la douche comme à la piscine — le souvenir de la fête rentre donc à la maison.',
         glitzer_text2:'Très appréciés des enfants qui préfèrent ne pas se faire maquiller tout le visage, et parfaits comme complément rapide quand de nombreux invités attendent.',
-        glitzer_link:'Aussi pour les adultes : Halloween & Événements →'
+        glitzer_link:'Aussi pour les adultes : Halloween & Événements saisonniers →'
       },
       hochzeiten: {
         setup_text1:'Vous avez déjà assez à coordonner ce jour-là. J\'apporte donc tout moi-même — couleurs, pinceaux, table et chaise. Après environ 10 minutes d\'installation, je suis prête.',
@@ -495,12 +495,12 @@ const I18n = (() => {
         ben4_link:'Voir le concept d\'hygiène →',
         crosslink_text:'Des enfants parmi vos invités de mariage ?',
         crosslink_kinderschminken:'Maquillage enfants →',
-        link_halloween:'Aussi pour les adultes : Halloween & Événements →',
+        link_halloween:'Aussi pour les adultes : Halloween & Événements saisonniers →',
         gb_label:'Prestation complémentaire',
         gb_title:'Un bar à paillettes pour vos invités',
         gb_text1:'Après le dîner, quand la musique démarre : une station à paillettes avec sequins, strass et plumes. Les invités passent quand ils en ont envie — cela anime la soirée et donne des photos que personne d\'autre n\'a.',
         gb_text2:'J\'accorde les couleurs et les motifs au thème de votre mariage. Cela fonctionne aussi en complément du stylisme de la mariée.',
-        gb_link:'En savoir plus sur le bar à paillettes : Halloween & Événements →'
+        gb_link:'En savoir plus sur le bar à paillettes : Halloween & Événements saisonniers →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festivals & événements d\'entreprise',
@@ -587,7 +587,7 @@ const I18n = (() => {
         glitzer_title:'Tatouages pailletés — un débit élevé sur votre stand',
         glitzer_text1:'Un tatouage pailleté prend environ deux minutes au lieu de dix. Sur un salon ou lors d\'une fête d\'entreprise, cela signifie nettement plus de visiteurs par heure, des files d\'attente plus courtes et un motif que vos invités portent pendant des jours.',
         glitzer_text2:'Sur demande avec des pochoirs aux couleurs de votre entreprise ou adaptés au thème du salon.',
-        glitzer_link:'Face art pour adultes : Halloween & Événements →'},
+        glitzer_link:'Face art pour adultes : Halloween & Événements saisonniers →'},
       about: {
         cta_label:'Votre prochain événement',
         cta_title:'Créons ensemble quelque chose de spécial',
@@ -645,7 +645,7 @@ const I18n = (() => {
         area_note:'Votre localité n\'y figure pas ? Demandez quand même — je me déplace aussi plus loin si le planning le permet.'}
     },
     it: {
-      nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', halloween:'Halloween ed eventi', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
+      nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', halloween:'Halloween ed eventi stagionali', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
       footer: { tagline:'Truccabimbi & Face Art', pages:'Pagine', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Note legali', privacy:'Informativa sulla privacy' },
       index: {
         nl_ph_email:'tua@email.ch',
@@ -689,7 +689,7 @@ const I18n = (() => {
         form_submit:'Invia', form_confirm:'Grazie — di solito rispondo entro 24 ore.',
         group1_title:'Per bambini e famiglie',
         group2_title:'Per adulti',
-        card_halloween_title:'Halloween ed eventi',
+        card_halloween_title:'Halloween ed eventi stagionali',
         card_halloween_text:'Teschi, cicatrici, look da festival e tatuaggi glitter — face art per adulti ad Halloween, alle feste e agli eventi aziendali.',
         card_halloween_link:'Scopri di più →',
         about_teaser_link:'Scopri di più su Isa, l\'artista dietro Face Art Zürich →',
@@ -766,7 +766,7 @@ const I18n = (() => {
         glitzer_title:'Tatuaggi glitter — durano più della festa',
         glitzer_text1:'I tatuaggi glitter si realizzano con mascherina, colla delicata sulla pelle e glitter cosmetico. Pronti in circa due minuti, durano diversi giorni e resistono alla doccia e al nuoto: il ricordo della festa torna a casa con i bambini.',
         glitzer_text2:'Piacciono molto ai bambini che preferiscono non farsi dipingere tutto il viso e sono un\'aggiunta rapida quando ci sono tanti ospiti in attesa.',
-        glitzer_link:'Anche per adulti: Halloween ed eventi →'
+        glitzer_link:'Anche per adulti: Halloween ed eventi stagionali →'
       },
       hochzeiten: {
         setup_text1:'Il vostro giorno è già abbastanza impegnativo. Porto quindi tutto io — colori, pennelli, tavolo e sedia. Dopo circa 10 minuti di allestimento sono pronta.',
@@ -811,12 +811,12 @@ const I18n = (() => {
         ben4_link:'Consulta il piano d\'igiene →',
         crosslink_text:'Ci sono bambini tra gli invitati al vostro matrimonio?',
         crosslink_kinderschminken:'Trucco bimbi →',
-        link_halloween:'Anche per adulti: Halloween ed eventi →',
+        link_halloween:'Anche per adulti: Halloween ed eventi stagionali →',
         gb_label:'Servizio aggiuntivo',
         gb_title:'Un glitter bar per i vostri ospiti',
         gb_text1:'Dopo la cena, quando parte la musica: una postazione glitter con paillettes, strass e piume. Gli ospiti passano quando ne hanno voglia: anima la serata e regala foto che nessun altro ha.',
         gb_text2:'Abbino colori e motivi al tema del vostro matrimonio. Funziona anche come completamento del bridal styling.',
-        gb_link:'Scopri di più sul glitter bar: Halloween ed eventi →'
+        gb_link:'Scopri di più sul glitter bar: Halloween ed eventi stagionali →'
       },
       halloween: {
         hero_eyebrow:'Halloween, festival ed eventi aziendali',
@@ -903,7 +903,7 @@ const I18n = (() => {
         glitzer_title:'Tatuaggi glitter — grande capacità allo stand',
         glitzer_text1:'Un tatuaggio glitter richiede circa due minuti invece di dieci. Alle fiere e alle feste aziendali significa molti più visitatori all\'ora, code più brevi e un motivo che i vostri ospiti portano con sé per giorni.',
         glitzer_text2:'Su richiesta con mascherine nei colori della vostra azienda o in linea con il tema della fiera.',
-        glitzer_link:'Face art per adulti: Halloween ed eventi →'},
+        glitzer_link:'Face art per adulti: Halloween ed eventi stagionali →'},
       about: {
         cta_label:'Il vostro prossimo evento',
         cta_title:'Creiamo insieme qualcosa di speciale',
