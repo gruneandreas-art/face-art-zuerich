@@ -2280,7 +2280,7 @@ span.t-card__avatar {
   align-items: flex-end;
   padding: var(--sp-3);
 }
-/* Ueber mich: grosses Portrait, kleines Event-Foto ueberlappt unten links
+/* Ueber mich: grosses Portrait links, kleines Event-Foto ueberlappt unten rechts
    (bewusst ungleiche Groesse, damit der Massstab der Fotos harmonisch wirkt) */
 .about-intro__img--overlap {
   aspect-ratio: auto;
@@ -2293,12 +2293,11 @@ span.t-card__avatar {
   width: 78%;
   height: auto;
   aspect-ratio: 3 / 4;
-  margin-left: auto;
   object-position: 58% center;
 }
 .about-intro__img--overlap .about-intro__photo--inset {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 42%;
   height: auto;
