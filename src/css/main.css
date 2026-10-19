@@ -2280,6 +2280,21 @@ span.t-card__avatar {
   align-items: flex-end;
   padding: var(--sp-3);
 }
+/* Ueber mich: zwei Portraits nebeneinander, gleiche Hoehe (3:4), cover ohne Gesichtsbeschnitt */
+.about-intro__img--duo {
+  aspect-ratio: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+  padding: 0;
+  background: none;
+}
+.about-intro__img--duo .about-intro__photo { aspect-ratio: 3 / 4; height: auto; object-position: center 20%; }
+.about-intro__img--duo .about-intro__photo--blumen { object-position: 58% center; }
+/* Sehr schmale Handys: unter ~150px pro Bild wird gestapelt */
+@media (max-width: 400px) {
+  .about-intro__img--duo { grid-template-columns: 1fr; }
+}
 .about-intro__img-label {
   font-size: .68rem;
   font-weight: 500;
