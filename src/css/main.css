@@ -1953,16 +1953,13 @@ span.t-card__avatar {
 /* Halloween & Weihnachten (halloween-events): Ausschnitt pro Motiv, damit
    Gesicht/Motiv sichtbar bleibt (Zombicorn: ganzer Kopf inkl. Hornspitze) */
 .gallery-acc__panel.gallery-acc__panel--ritter img { object-position: 45% 38%; }
-.gallery-acc__panel.gallery-acc__panel--zombicorn img { object-position: center 25%; }
+/* Zombicorn: Bild ist breit (2.4:1) mit erweitertem, unscharfem Hintergrund, damit Kopf, Horn und Schriftzug in jedem offenen Panel passen */
+.gallery-acc__panel.gallery-acc__panel--zombicorn img { object-position: center center; }
 .gallery-acc__panel.gallery-acc__panel--herbstrose img { object-position: center 50%; }
 .gallery-acc__panel.gallery-acc__panel--kuerbis img { object-position: center 38%; }
 .gallery-acc__panel.gallery-acc__panel--rentier img { object-position: center 35%; }
 .gallery-acc__panel.gallery-acc__panel--winterprinzessin img { object-position: center 32%; }
 .gallery-acc__panel.gallery-acc__panel--eiskoenigin img { object-position: center 45%; }
-/* Tablet: Streifen ist flach (ca. 2:1) — Zombicorn etwas höher, damit Hornspitze + Kinn passen */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .gallery-acc__panel.gallery-acc__panel--zombicorn img { object-position: center 20%; }
-}
 
 .gallery-acc__overlay {
   position: absolute;
