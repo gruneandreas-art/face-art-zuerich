@@ -9,6 +9,7 @@
 /unternehmen.html         /unternehmen          301!
 /about.html               /about                301!
 /kontakt.html             /kontakt              301!
+/event-story.html         /event-story          301!
 /impressum.html           /impressum            301!
 /datenschutz.html         /datenschutz          301!
 
@@ -20,6 +21,7 @@
 /en/unternehmen.html      /en/unternehmen       301!
 /en/kontakt.html          /en/kontakt           301!
 /en/about.html            /en/about             301!
+/en/event-story.html      /en/event-story       301!
 
 # Bild-Umbenennungen (SEO-Dateinamen), alte URLs -> neue (301)
 /src/images/gallery/Erwachsene/zombie-einhorn-face-art-arm.jpg  /src/images/gallery/Erwachsene/zombicorn-face-art-zuerich.jpg  301

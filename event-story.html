@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de" data-base-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Fehlerreporter: steht bewusst inline im <head> und damit vor i18n.js und main.js,
+       sonst wuerden Fehler aus i18n.js nicht erfasst. Meldet nur technische Angaben,
+       nie Formular- oder Personendaten. Max. eine Meldung pro Browser-Session, damit
+       das Formspree-Kontingent (50/Monat) nicht das Kontaktformular blockiert. -->
+  <script>
+  (function () {
+    /* TODO: eigene Formspree-Form-ID fuer Fehlerberichte anlegen, damit sich Fehler
+       und Kundenanfragen das Kontingent von 50 Einreichungen/Monat nicht teilen. */
+    var ENDPOINT = 'https://formspree.io/f/myklqzbr';
+    var KEY = 'fa_js_error_sent';
+    var sent = false;
+    var lastMsg = '';
+
+    function alreadySent() {
+      if (sent) return true;
+      try { return !!sessionStorage.getItem(KEY); } catch (e) { return false; }
+    }
+
+    function markSent() {
+      sent = true;
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }
+
+    function report(message, file, line, col) {
+      try {
+        var msg = String(message || '').slice(0, 300);
+        if (!msg) return;
+        if (msg === lastMsg) return;   /* identische Meldung nicht erneut senden */
+        if (alreadySent()) return;     /* max. eine Meldung pro Browser-Session */
+        lastMsg = msg;
+        markSent();
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: 'JS-Fehler face-art-zuerich.ch',
+            Fehler: msg,
+            Datei: String(file || '').slice(0, 200),
+            Position: (line || 0) + ':' + (col || 0),
+            Seite: location.href,
+            Browser: navigator.userAgent
+          })
+        }).catch(function () {});      /* Fehler beim Melden still verschlucken */
+      } catch (e) {}                   /* Reporter darf nie etwas blockieren */
+    }
+
+    window.onerror = function (message, file, line, col) {
+      report(message, file, line, col);
+    };
+
+    window.addEventListener('unhandledrejection', function (ev) {
+      var r = ev && ev.reason;
+      report((r && r.message) ? r.message : r, 'unhandledrejection', 0, 0);
+    });
+  })();
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://face-art-zuerich.ch/event-story">
+  <link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/event-story">
+  <link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/event-story">
+  <link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/event-story">
+  <title>Event-Story — Kinderschminken an Events in Dübendorf | Face Art Zürich</title>
+  <meta name="description" content="Event-Stories von Face Art Zürich: Kinderschminken am Flug &amp; Zug in Dübendorf 2025 und 2026 und am Chlausmärt Dübendorf — CHF 500 gespendet an Ärzte ohne Grenzen.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:url" content="https://face-art-zuerich.ch/event-story">
+  <meta property="og:title" content="Event-Story — Kinderschminken an Events in Dübendorf | Face Art Zürich">
+  <meta property="og:description" content="Event-Stories von Face Art Zürich: Kinderschminken am Flug &amp; Zug in Dübendorf 2025 und 2026 und am Chlausmärt Dübendorf — CHF 500 gespendet an Ärzte ohne Grenzen.">
+  <meta property="og:image" content="https://face-art-zuerich.ch/src/images/gallery/Events/Flug-Zug/kolibri-face-art-zuerich-flug-zug-2026.jpg">
+  <meta property="og:site_name" content="Face Art Zürich">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Event-Story — Kinderschminken an Events in Dübendorf | Face Art Zürich">
+  <meta name="twitter:description" content="Event-Stories von Face Art Zürich: Kinderschminken am Flug &amp; Zug in Dübendorf 2025 und 2026 und am Chlausmärt Dübendorf — CHF 500 gespendet an Ärzte ohne Grenzen.">
+  <meta name="twitter:image" content="https://face-art-zuerich.ch/src/images/gallery/Events/Flug-Zug/kolibri-face-art-zuerich-flug-zug-2026.jpg">
+  <link rel="stylesheet" href="src/css/main.css" />
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://face-art-zuerich.ch/event-story",
+  "name": "Event-Story — Face Art Zürich",
+  "inLanguage": "de-CH",
+  "description": "Event-Stories von Face Art Zürich: Kinderschminken am Flug & Zug in Dübendorf 2025 und 2026 und am Chlausmärt Dübendorf — CHF 500 gespendet an Ärzte ohne Grenzen.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://face-art-zuerich.ch/",
+    "name": "Face Art Zürich"
+  },
+  "about": {
+    "@type": "LocalBusiness",
+    "@id": "https://face-art-zuerich.ch/#business",
+    "name": "Face Art Zürich"
+  }
+}
+  </script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+</head>
+<body class="page--events">
+
+  <!-- Navigation -->
+  <header class="nav nav--transparent" id="nav">
+    <div class="nav__container">
+      <a href="./" class="nav__logo">
+        <span class="nav__logo-text">
+          <span class="nav__logo-main">Face Art</span>
+          <span class="nav__logo-sub">Zürich</span>
+        </span>
+      </a>
+      <nav class="nav__menu" id="navMenu" aria-label="Hauptnavigation">
+        <a href="./" class="nav__link" data-i18n="nav.start">Start</a>
+        <a href="kinderschminken" class="nav__link" data-i18n="nav.kinderschminken">Kinderschminken</a>
+        <a href="hochzeiten" class="nav__link" data-i18n="nav.hochzeiten">Hochzeiten</a>
+        <a href="halloween-events" class="nav__link" data-i18n="nav.halloween">Halloween &amp; Saisonale Events</a>
+        <a href="unternehmen" class="nav__link" data-i18n="nav.unternehmen">Für Unternehmen</a>
+        <a href="about" class="nav__link" data-i18n="nav.ueber">Über mich</a>
+        <a href="kontakt" class="nav__link nav__link--cta" data-i18n="nav.kontakt">Kontakt</a>
+      </nav>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn lang-btn--active" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero hero--sub">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="eventstory.hero_eyebrow">Event-Story</p>
+        <h1 class="hero__title"><span data-i18n="eventstory.hero_title">Momente,</span><br><em data-i18n="eventstory.hero_title_em">die bleiben.</em></h1>
+        <p class="hero__subtitle" data-i18n="eventstory.hero_subtitle">Geschichten von meinen Events — vom Flug &amp; Zug in Dübendorf bis zur Spendenaktion am Chlausmärt für Ärzte ohne Grenzen.</p>
+      </div>
+    </section>
+
+    <!-- ========== STORIES ========== -->
+    <section class="section section--cream">
+      <div class="container">
+
+        <!-- Story 1 — Flug & Zug 2025 und 2026 -->
+        <article class="event-entry event-entry--reverse" id="flug-zug">
+          <div class="event-entry__content">
+            <p class="event-entry__meta" data-i18n="eventstory.fz_meta">Dübendorf · 2025 &amp; 2026</p>
+            <h2 class="event-entry__title" data-i18n="eventstory.fz_title">Flug &amp; Zug 2025 und 2026</h2>
+            <div class="event-entry__divider"></div>
+            <p class="event-entry__text" data-i18n="eventstory.fz_text1">Zwei Jahre in Folge durfte ich nun schon an der zweitägigen Veranstaltung Flug &amp; Zug auf dem Gelände des Air Force Centers Dübendorf den Kindern Farbe ins Gesicht zaubern. Dabei drehte sich alles um Doppeldeckermaschinen, Züge und Hubschrauber.</p>
+            <p class="event-entry__text" data-i18n="eventstory.fz_text2">Und trotzdem schafften es am Ende auch ein paar Einhörner, Kolibris und andere Motive auf die Gesichter der Kids — was für ein schönes Event!</p>
+            <a href="https://www.flugundzug.ch" class="btn btn--primary" target="_blank" rel="noopener noreferrer" data-i18n="eventstory.fz_cta">Mehr zu Flug &amp; Zug →</a>
+          </div>
+        <div class="event-entry__gallery event-entry__gallery--6">
+            <img src="src/images/gallery/Events/Flug-Zug/schminkstand-face-art-zuerich-flug-zug-2025.jpg" alt="Schminkstand mit Pavillon und Aufsteller «Flug &amp; Zug 2025» in Dübendorf" loading="lazy" width="1200" height="900">
+            <img src="src/images/gallery/Events/Flug-Zug/isa-schminkt-kinder-face-art-zuerich-flug-zug-2025.jpg" alt="Isa schminkt zwei Kinder am Stand mit offenem Schminkkoffer, Flug &amp; Zug 2025" loading="lazy" width="866" height="563">
+            <img src="src/images/gallery/Events/Flug-Zug/isa-patrouille-suisse-jet-flug-zug-2025.jpg" alt="Isa vor einem Jet der Patrouille Suisse am Flug &amp; Zug 2025 in Dübendorf" loading="lazy" width="1200" height="1600">
+            <img src="src/images/gallery/Events/Flug-Zug/flugzeug-wolken-face-art-zuerich-flug-zug-2025.jpg" alt="Orangefarbenes Flugzeug mit Wolken auf der Stirn, Face Art am Flug &amp; Zug 2025 in Dübendorf" loading="lazy" width="1200" height="1600">
+            <img src="src/images/gallery/Events/Flug-Zug/zug-face-art-zuerich-flug-zug-2025.jpg" alt="Rot-blauer Zug auf der Stirn, Kinderschminken am Flug &amp; Zug 2025" loading="lazy" width="1200" height="1600">
+            <img src="src/images/gallery/Events/Flug-Zug/flugzeug-unterarm-face-art-zuerich-flug-zug-2025.jpg" alt="Gelbes Propellerflugzeug mit Schweizerkreuz auf dem Unterarm, Armbemalung am Flug &amp; Zug 2025" loading="lazy" width="866" height="563">
+            <img src="src/images/gallery/Events/Flug-Zug/collage-face-art-zuerich-flug-zug-2025.jpg" alt="Collage: Isa schminkt einem Mädchen ein Regenbogen-Motiv, daneben Kinder mit Drachen- und Blumenmotiven und der Schminkkoffer" loading="lazy" width="1600" height="575" class="fz-banner">
+            <img src="src/images/gallery/Events/Flug-Zug/kolibri-face-art-zuerich-flug-zug-2026.jpg" alt="Kolibri-Motiv mit rosa Blume am Auge, Face Art am Flug &amp; Zug 2026 in Dübendorf" loading="lazy" width="896" height="1195">
+            <img src="src/images/gallery/Events/Flug-Zug/einhorn-blumen-face-art-zuerich-flug-zug-2026.jpg" alt="Rosa Einhorn mit Blumen und goldenem Lidschatten, Kinderschminken am Flug &amp; Zug 2026" loading="lazy" width="896" height="1195">
+            <img src="src/images/gallery/Events/Flug-Zug/fuchs-face-art-zuerich-flug-zug-2026.jpg" alt="Blauer Fuchs mit lila Blume, Face Art am Flug &amp; Zug 2026" loading="lazy" width="1086" height="1448">
+          </div>
+        </article>
+
+        <!-- Story 2 — Chlausmärt Dübendorf -->
+        <article class="event-entry" id="chlausmaert">
+          <div class="event-entry__content">
+            <p class="event-entry__meta" data-i18n="eventstory.cm_meta">Dübendorf · 29. November 2025</p>
+            <h2 class="event-entry__title" data-i18n="eventstory.cm_title">48. Chlausmärt Dübendorf</h2>
+            <div class="event-entry__divider"></div>
+            <p class="event-entry__text" data-i18n="eventstory.cm_text1">Der Chlausmärt in Dübendorf ist jedes Jahr ein ganz besonderes Highlight! Mit dem feierlichen Chlauseinzug ab dem Bahnhof Dübendorf geht der Abend los — und ich bin dabei, um die kleinen Gesichter in leuchtende Kunstwerke zu verwandeln.</p>
+            <p class="event-entry__text" data-i18n="eventstory.cm_text2">Ein zauberhafter Winterabend für die ganze Familie — mit weihnachtlicher Stimmung, Lichtern und strahlenden Kinderaugen. Jedes Motiv kostet CHF 9.</p>
+
+            <div class="event-entry__donation">
+              <p class="event-entry__donation-amount">CHF 500</p>
+              <p class="event-entry__donation-label" data-i18n="eventstory.cm_donation_label">gespendet an Médecins Sans Frontières</p>
+              <p class="event-entry__donation-text" data-i18n-html="eventstory.cm_donation_text">Die Einnahmen wurden aufgerundet und die Standkosten aus eigener Tasche übernommen. So konnten wir gemeinsam eine stolze Summe von CHF 500 direkt an <strong>Ärzte ohne Grenzen</strong> spenden. Denn Schminken soll nicht nur Freude machen, sondern auch etwas bewirken. Ich freue mich schon auf den nächsten Chlausmärt.</p>
+            </div>
+          </div>
+          <div class="event-entry__gallery event-entry__gallery--6">
+            <img src="src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-isa-mit-kind.jpeg" alt="Isa mit strahlender Kind am Chlausmärt" loading="lazy" width="751" height="991">
+            <img src="src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-kinderschminken.jpeg" alt="Isa beim Kinderschminken am Chlausmärt" loading="lazy" width="1196" height="969">
+            <img src="src/images/gallery/Erwachsene/weihnachten-rentier-erwachsene.jpg" alt="Besucherin mit weihnachtlichem Rentier-Motiv am Chlausmärt" loading="lazy" width="1200" height="1600">
+            <img src="src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-schminkstand.jpeg" alt="Stand am Chlausmärt Dübendorf mit Farbpalette" loading="lazy" width="1210" height="919">
+            <img src="src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-spendenschild.jpeg" alt="Schild: Jedes Motiv CHF 9 – Erlös geht an Ärzte ohne Grenzen" loading="lazy" width="1600" height="1200">
+            <img src="src/images/gallery/Events/Chlausmaert/chlausmaert-duebendorf-motivtafel.jpeg" alt="MSF Plakat: Der gesamte Erlös geht an Ärzte ohne Grenzen" loading="lazy" width="1200" height="1600">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="section text-center">
+      <div class="container container--narrow">
+        <span class="section__label" data-i18n="eventstory.cta_label">Dein nächstes Event</span>
+        <h2 class="section__title" data-i18n="eventstory.cta_title">Lass uns gemeinsam etwas Besonderes schaffen</h2>
+        <p class="section__subtitle" style="margin: var(--sp-3) auto var(--sp-6);" data-i18n="eventstory.cta_text">Ich freue mich auf eure Nachricht — und noch mehr auf euer Event!</p>
+        <div style="display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap;">
+          <a href="kontakt" class="btn btn--primary" data-i18n="eventstory.cta_btn">Jetzt anfragen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__logo">Face Art Zürich</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Kinderschminken &amp; Face Art</p>
+        </div>
+        <div>
+          <p class="footer__heading" data-i18n="footer.pages">Seiten</p>
+                    <nav class="footer__links" aria-label="Footer Navigation">
+            <a href="kinderschminken" data-i18n="nav.kinderschminken">Kinderschminken</a>
+            <a href="hochzeiten" data-i18n="nav.hochzeiten">Hochzeiten</a>
+            <a href="halloween-events" data-i18n="nav.halloween">Halloween &amp; Saisonale Events</a>
+            <a href="unternehmen" data-i18n="nav.unternehmen">Für Unternehmen</a>
+            <a href="about" data-i18n="nav.ueber">Über mich</a>
+            <a href="event-story" data-i18n="nav.eventstory">Event-Story</a>
+            <a href="kontakt" data-i18n="nav.kontakt">Kontakt</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__heading" data-i18n="nav.kontakt">Kontakt</p>
+          <div class="footer__contact">
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09A16 16 0 0016.91 17.1l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +41 (0)764394928
+            </p>
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              faceartzuerich@yahoo.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copy">© 2026 Face Art Zürich — Isa, Dübendorf</p>
+        <nav class="footer__legal" aria-label="Rechtliches">
+          <a href="impressum" data-i18n="footer.imprint">Impressum</a>
+          <a href="datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/41764394928" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="src/js/i18n.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+</html>

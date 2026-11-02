@@ -65,6 +65,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://face-art-zuerich.ch/event-story</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/event-story"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/event-story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/event-story"/>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://face-art-zuerich.ch/en/</loc>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/"/>
@@ -124,6 +133,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/about"/>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/event-story</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/event-story"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/event-story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/event-story"/>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

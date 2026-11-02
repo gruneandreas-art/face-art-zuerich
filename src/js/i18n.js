@@ -6,14 +6,14 @@ const I18n = (() => {
      Default" gilt daher nicht mehr. */
   const BASE = (document.documentElement.getAttribute('data-base-lang') === 'en') ? 'en' : 'de';
   /* Slugs mit eigener Seite. impressum/datenschutz bewusst ohne EN-Entsprechung. */
-  const SLUGS = ['kinderschminken', 'hochzeiten', 'halloween-events', 'unternehmen', 'about', 'kontakt'];
+  const SLUGS = ['kinderschminken', 'hochzeiten', 'halloween-events', 'unternehmen', 'about', 'kontakt', 'event-story'];
   const DE_ONLY = ['impressum', 'datenschutz'];
   let current = BASE;
   const cache = new Map();
   /* ── Translations ─────────────────────────────────────── */
   const T = {
     en: {
-      nav: { start:'Home', kinderschminken:'Face Painting', hochzeiten:'Weddings', halloween:'Halloween & Seasonal Events', unternehmen:'For Companies', ueber:'About me', kontakt:'Contact' },
+      nav: { start:'Home', kinderschminken:'Face Painting', hochzeiten:'Weddings', halloween:'Halloween & Seasonal Events', unternehmen:'For Companies', ueber:'About me', kontakt:'Contact', eventstory:'Event story' },
       footer: { tagline:'Face Painting & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Legal notice', privacy:'Privacy policy' },
       index: {
         nl_ph_email:'your@email.com',
@@ -40,10 +40,6 @@ const I18n = (() => {
         card_kinder_title:'Face Painting', card_kinder_text:'Unicorns, superheroes, dragons, fairies — every design unique. For birthdays, private events and more.', card_kinder_link:'Learn more →',
         card_hochzeit_title:'Weddings', card_hochzeit_text:'Elegant designs for the couple and guests — a romantic highlight everyone will talk about for a long time.', card_hochzeit_link:'Learn more →',
         card_corporate_title:'For Companies', card_corporate_text:'Anniversary, summer party, Christmas celebration — face art as a crowd magnet and conversation starter for your event.', card_corporate_link:'Learn more →',
-        fz_label:'Event story', fz_title:'Flug & Zug 2025 and 2026',
-        fz_text1:'For the second year in a row, I had the pleasure of adding a splash of colour to children\'s faces at Flug & Zug, the two-day event held at the Air Force Centre Dübendorf. Everything revolved around biplanes, trains and helicopters.',
-        fz_text2:'And still, a few unicorns, hummingbirds and other designs made it onto the kids\' faces over the two days — what a wonderful event!',
-        fz_cta:'More about Flug & Zug →',
         msf_label:'Joy with impact', msf_title:'donated to Médecins Sans Frontières',
         msf_text:'At the 48th Chlausmärt Dübendorf (29 Nov 2025) I took part with festive designs and painted reindeer, ice queens and many other wonderful Christmas motifs onto the children\'s faces. The entire proceeds of the day went to Doctors Without Borders. A big thank you for the lively participation and support. Together we simply achieve more — which is why I\'ll be there again this year to collect donations. Feel free to drop by!',
         msf_cta:'Read the event story →',
@@ -278,6 +274,27 @@ const I18n = (() => {
         glitzer_text1:'Glitter tattoos allow considerably more people to be served. At trade fairs and company events that means more visitors, shorter queues and a design your guests carry around for days.',
         glitzer_text2:'On request with stencils in your corporate colours or matched to the trade fair theme.',
         glitzer_link:'Face art for adults: Halloween & Seasonal Events →'},
+      eventstory: {
+        hero_eyebrow:'Event story',
+        hero_title:'Moments that',
+        hero_title_em:'stay with us.',
+        hero_subtitle:'Stories from my events — from the Flug & Zug in Dübendorf to the Chlausmärt donation campaign for Médecins Sans Frontières.',
+        fz_meta:'Dübendorf · 2025 & 2026',
+        fz_title:'Flug & Zug 2025 and 2026',
+        fz_text1:'For the second year in a row, I had the pleasure of adding a splash of colour to children\'s faces at Flug & Zug, the two-day event held at the Air Force Centre Dübendorf. Everything revolved around biplanes, trains and helicopters.',
+        fz_text2:'And still, a few unicorns, hummingbirds and other designs made it onto the kids\' faces over the two days — what a wonderful event!',
+        fz_cta:'More about Flug & Zug →',
+        cm_meta:'Dübendorf · 29 November 2025',
+        cm_title:'48th Chlausmärt Dübendorf',
+        cm_text1:'The Chlausmärt in Dübendorf is a very special highlight every year! The evening kicks off with the festive Samichlaus procession from Dübendorf station — and I\'m there to turn little faces into glowing works of art.',
+        cm_text2:'A magical winter evening for the whole family — with festive mood, lights and beaming children\'s eyes. Each design costs CHF 9.',
+        cm_donation_label:'donated to Médecins Sans Frontières',
+        cm_donation_text:'The proceeds were rounded up and I covered the stall costs myself. Together, we were able to donate a proud sum of CHF 500 directly to <strong>Médecins Sans Frontières</strong>. Because face painting shouldn\'t just bring joy — it should also make a difference. I\'m already looking forward to the next Chlausmärt.',
+        cta_label:'Your next event',
+        cta_title:'Let\'s create something special together',
+        cta_text:'I look forward to your message — and even more to your event!',
+        cta_btn:'Enquire now'
+      },
       about: {
         cta_label:'Your next event',
         cta_title:'Let\'s create something special together',
@@ -334,7 +351,7 @@ const I18n = (() => {
         area_note:'Your town not listed? Ask anyway — I also travel further when it fits the schedule.'}
     },
     fr: {
-      nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', halloween:'Halloween & Événements saisonniers', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact' },
+      nav: { start:'Accueil', kinderschminken:'Maquillage enfants', hochzeiten:'Mariages', halloween:'Halloween & Événements saisonniers', unternehmen:'Pour entreprises', ueber:'À propos', kontakt:'Contact', eventstory:'Histoire d\'événement' },
       footer: { tagline:'Maquillage enfants & Face Art', pages:'Pages', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Mentions légales', privacy:'Politique de confidentialité' },
       index: {
         nl_ph_email:'votre@email.ch',
@@ -361,10 +378,6 @@ const I18n = (() => {
         card_kinder_title:'Maquillage enfants', card_kinder_text:'Licornes, super-héros, dragons, fées — chaque motif est unique. Pour anniversaires, événements privés et plus.', card_kinder_link:'En savoir plus →',
         card_hochzeit_title:'Mariages', card_hochzeit_text:'Motifs élégants pour les mariés et les invités — un highlight romantique dont tout le monde parlera longtemps.', card_hochzeit_link:'En savoir plus →',
         card_corporate_title:'Pour entreprises', card_corporate_text:'Anniversaire d\'entreprise, fête d\'été, soirée de Noël — le face art comme aimant à public et brise-glace pour votre événement.', card_corporate_link:'En savoir plus →',
-        fz_label:'Histoire d\'événement', fz_title:'Flug & Zug 2025 et 2026',
-        fz_text1:'Pour la deuxième année consécutive, j\'ai eu le plaisir de mettre de la couleur sur les visages des enfants lors de Flug & Zug, un événement de deux jours sur le site du Air Force Center de Dübendorf. Tout tournait autour des biplans, des trains et des hélicoptères.',
-        fz_text2:'Et pourtant, quelques licornes, colibris et autres motifs ont fini par orner les visages des enfants pendant ces deux jours — quel bel événement !',
-        fz_cta:'En savoir plus sur Flug & Zug →',
         msf_label:'Joie avec impact', msf_title:'donnés à Médecins Sans Frontières',
         msf_text:'Au 48e Chlausmärt de Dübendorf (29.11.2025), j\'ai pu participer avec des motifs de Noël et j\'ai peint aux enfants des rennes, des reines des neiges et bien d\'autres jolis motifs de Noël sur le visage. La totalité des recettes de la journée a été reversée à Médecins Sans Frontières. Un grand merci pour la participation enthousiaste et le soutien. Ensemble, on va tout simplement plus loin — c\'est pourquoi je serai à nouveau présente cette année pour récolter des dons. Passez donc nous voir !',
         msf_cta:'Lire l\'histoire de l\'événement →',
@@ -599,6 +612,27 @@ const I18n = (() => {
         glitzer_text1:'Les tatouages pailletés permettent d\'accueillir nettement plus de personnes. Sur un salon ou lors d\'une fête d\'entreprise, cela signifie plus de visiteurs, des files d\'attente plus courtes et un motif que vos invités portent pendant des jours.',
         glitzer_text2:'Sur demande avec des pochoirs aux couleurs de votre entreprise ou adaptés au thème du salon.',
         glitzer_link:'Face art pour adultes : Halloween & Événements saisonniers →'},
+      eventstory: {
+        hero_eyebrow:'Histoire d\'événement',
+        hero_title:'Des moments',
+        hero_title_em:'qui restent.',
+        hero_subtitle:'Des histoires de mes événements — du Flug & Zug à Dübendorf à l\'action de dons du Chlausmärt pour Médecins Sans Frontières.',
+        fz_meta:'Dübendorf · 2025 & 2026',
+        fz_title:'Flug & Zug 2025 et 2026',
+        fz_text1:'Pour la deuxième année consécutive, j\'ai eu le plaisir de mettre de la couleur sur les visages des enfants lors de Flug & Zug, un événement de deux jours sur le site du Air Force Center de Dübendorf. Tout tournait autour des biplans, des trains et des hélicoptères.',
+        fz_text2:'Et pourtant, quelques licornes, colibris et autres motifs ont fini par orner les visages des enfants pendant ces deux jours — quel bel événement !',
+        fz_cta:'En savoir plus sur Flug & Zug →',
+        cm_meta:'Dübendorf · 29 novembre 2025',
+        cm_title:'48e Chlausmärt de Dübendorf',
+        cm_text1:'Le Chlausmärt de Dübendorf est chaque année un moment très spécial ! La soirée commence par le cortège festif du Samichlaus depuis la gare de Dübendorf — et j\'y participe pour transformer les petits visages en œuvres d\'art lumineuses.',
+        cm_text2:'Une soirée d\'hiver enchanteresse pour toute la famille — avec ambiance festive, lumières et des yeux d\'enfants qui brillent. Chaque motif coûte CHF 9.',
+        cm_donation_label:'donnés à Médecins Sans Frontières',
+        cm_donation_text:'Les recettes ont été arrondies et j\'ai pris en charge moi-même les frais du stand. Ensemble, nous avons ainsi pu faire don d\'une belle somme de CHF 500 directement à <strong>Médecins Sans Frontières</strong>. Car le maquillage ne doit pas seulement faire plaisir, il doit aussi avoir un impact. Je me réjouis déjà du prochain Chlausmärt.',
+        cta_label:'Votre prochain événement',
+        cta_title:'Créons ensemble quelque chose de spécial',
+        cta_text:'J\'attends votre message avec impatience — et plus encore votre événement !',
+        cta_btn:'Demander maintenant'
+      },
       about: {
         cta_label:'Votre prochain événement',
         cta_title:'Créons ensemble quelque chose de spécial',
@@ -655,7 +689,7 @@ const I18n = (() => {
         area_note:'Votre localité n\'y figure pas ? Demandez quand même — je me déplace aussi plus loin si le planning le permet.'}
     },
     it: {
-      nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', halloween:'Halloween ed eventi stagionali', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto' },
+      nav: { start:'Home', kinderschminken:'Truccabimbi', hochzeiten:'Matrimoni', halloween:'Halloween ed eventi stagionali', unternehmen:'Per aziende', ueber:'Chi sono', kontakt:'Contatto', eventstory:'Storia di evento' },
       footer: { tagline:'Truccabimbi & Face Art', pages:'Pagine', copy:'© 2026 Face Art Zürich — Isa, Dübendorf', imprint:'Note legali', privacy:'Informativa sulla privacy' },
       index: {
         nl_ph_email:'tua@email.ch',
@@ -682,10 +716,6 @@ const I18n = (() => {
         card_kinder_title:'Truccabimbi', card_kinder_text:'Unicorni, supereroi, draghi, fate — ogni motivo un\'opera unica. Per compleanni, eventi privati e altro.', card_kinder_link:'Scopri di più →',
         card_hochzeit_title:'Matrimoni', card_hochzeit_text:'Motivi eleganti per gli sposi e gli ospiti — un highlight romantico di cui tutti parleranno a lungo.', card_hochzeit_link:'Scopri di più →',
         card_corporate_title:'Per aziende', card_corporate_text:'Anniversari, feste estive, cene di Natale — il face art come calamita per il pubblico e spunto di conversazione per il vostro evento.', card_corporate_link:'Scopri di più →',
-        fz_label:'Storia di evento', fz_title:'Flug & Zug 2025 e 2026',
-        fz_text1:'Per il secondo anno consecutivo ho avuto il piacere di portare un po\' di colore sui volti dei bambini al Flug & Zug, l\'evento di due giorni nell\'area dell\'Air Force Center di Dübendorf. Tutto ruotava attorno a biplani, treni ed elicotteri.',
-        fz_text2:'Eppure, alla fine, durante i due giorni anche qualche unicorno, colibrì e altri motivi sono arrivati sui visini dei bambini — che bell\'evento!',
-        fz_cta:'Scopri di più su Flug & Zug →',
         msf_label:'Gioia con impatto', msf_title:'donati a Médecins Sans Frontières',
         msf_text:'Al 48° Chlausmärt di Dübendorf (29.11.2025) ho potuto partecipare con motivi natalizi e ho dipinto ai bambini renne, regine delle nevi e molti altri bellissimi motivi natalizi sul viso. L\'intero ricavato della giornata è stato devoluto a Medici Senza Frontiere. Un grande grazie per la vivace partecipazione e il sostegno. Insieme ci si muove semplicemente di più — per questo anche quest\'anno sarò di nuovo presente a raccogliere donazioni. Venite a trovarci!',
         msf_cta:'Leggi la storia dell\'evento →',
@@ -920,6 +950,27 @@ const I18n = (() => {
         glitzer_text1:'Con i tatuaggi glitter si possono servire molte più persone. Alle fiere e alle feste aziendali significa più visitatori, code più brevi e un motivo che i vostri ospiti portano con sé per giorni.',
         glitzer_text2:'Su richiesta con mascherine nei colori della vostra azienda o in linea con il tema della fiera.',
         glitzer_link:'Face art per adulti: Halloween ed eventi stagionali →'},
+      eventstory: {
+        hero_eyebrow:'Storia di evento',
+        hero_title:'Momenti',
+        hero_title_em:'che restano.',
+        hero_subtitle:'Storie dai miei eventi — dal Flug & Zug a Dübendorf alla raccolta fondi del Chlausmärt per Medici Senza Frontiere.',
+        fz_meta:'Dübendorf · 2025 & 2026',
+        fz_title:'Flug & Zug 2025 e 2026',
+        fz_text1:'Per il secondo anno consecutivo ho avuto il piacere di portare un po\' di colore sui volti dei bambini al Flug & Zug, l\'evento di due giorni nell\'area dell\'Air Force Center di Dübendorf. Tutto ruotava attorno a biplani, treni ed elicotteri.',
+        fz_text2:'Eppure, alla fine, durante i due giorni anche qualche unicorno, colibrì e altri motivi sono arrivati sui visini dei bambini — che bell\'evento!',
+        fz_cta:'Scopri di più su Flug & Zug →',
+        cm_meta:'Dübendorf · 29 novembre 2025',
+        cm_title:'48° Chlausmärt di Dübendorf',
+        cm_text1:'Il Chlausmärt di Dübendorf è ogni anno un momento davvero speciale! La serata inizia con il festoso corteo del Samichlaus dalla stazione di Dübendorf — e io sono lì per trasformare i piccoli visi in opere d\'arte luminose.',
+        cm_text2:'Una magica serata invernale per tutta la famiglia — con atmosfera natalizia, luci e occhi di bambino che brillano. Ogni motivo costa CHF 9.',
+        cm_donation_label:'donati a Medici Senza Frontiere',
+        cm_donation_text:'Gli incassi sono stati arrotondati e ho coperto io stessa le spese dello stand. Così, insieme, siamo riusciti a donare una bella somma di CHF 500 direttamente a <strong>Medici Senza Frontiere</strong>. Perché truccare non deve solo far piacere, ma anche avere un impatto. Non vedo già l\'ora del prossimo Chlausmärt.',
+        cta_label:'Il vostro prossimo evento',
+        cta_title:'Creiamo insieme qualcosa di speciale',
+        cta_text:'Attendo con piacere il vostro messaggio — e ancora di più il vostro evento!',
+        cta_btn:'Richiedi ora'
+      },
       about: {
         cta_label:'Il vostro prossimo evento',
         cta_title:'Creiamo insieme qualcosa di speciale',
