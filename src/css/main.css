@@ -1347,6 +1347,12 @@ p  { color: var(--text-mid); }
 }
 .event-entry__gallery--6 img { aspect-ratio: 3 / 4; }
 
+/* Flug & Zug (index.html): Collage als Banner über volle Galeriebreite */
+.event-entry__gallery--6 img.fz-banner {
+  grid-column: 1 / -1;
+  aspect-ratio: 1600 / 575;
+}
+
 /* MSF Donation callout block */
 .event-entry__donation {
   margin: var(--sp-5) 0;
@@ -1436,6 +1442,12 @@ p  { color: var(--text-mid); }
   .event-entry--reverse .event-entry__gallery { order: 2; }
   .event-entry__gallery--6 {
     grid-template-columns: 1fr 1fr;
+  }
+  /* Flug & Zug: letztes Bild nimmt mobil die ganze Zeile (kein einzelnes Bild allein) */
+  #flug-zug .event-entry__gallery--6 img:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 3;
+    object-position: center 35%;
   }
 }
 

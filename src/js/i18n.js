@@ -309,7 +309,6 @@ const I18n = (() => {
         ev2_meta:'Illuster · Zurich · December 2025', ev2_title:'Face painting for Samichlaus at the Illuster',
         ev2_text1:'In the beautiful Illuster shopping centre, I transformed little visitors — fitting the Samichlaus season — into wintery unicorns, ice Spider-Men, reindeer, Samichlaus Stitches and many other festive designs, which brought me a great deal of joy.',
         ev2_text2:'With a professional design board and a festive atmosphere, it was a wonderful experience in the middle of everyday shopping that made children\'s eyes light up.',
-        ev2_link:'More about the Illuster →',
         ev3_meta:'Zurich · Summer 2025', ev3_title:'Street Parade 2025',
         ev3_text1:'Face painting meets the world\'s biggest techno parade — what a combination! I was there at Street Parade 2025, creating colourful, creative looks that perfectly matched the exuberant mood.',
         ev3_text2:'Whether wild designs or sparkling glitter patterns: here, everything was allowed to be a little more!'
@@ -631,7 +630,6 @@ const I18n = (() => {
         ev2_meta:'Illuster · Zurich · décembre 2025', ev2_title:'Maquillage enfants pour le Samichlaus à l\'Illuster',
         ev2_text1:'Dans le magnifique centre commercial Illuster, j\'ai transformé les petits visiteurs — dans l\'esprit du Samichlaus — en licornes hivernales, Spider-Man des glaces, rennes, Samichlaus-Stitch et bien d\'autres motifs festifs, ce qui m\'a procuré énormément de plaisir.',
         ev2_text2:'Avec un panneau de motifs professionnel et une ambiance festive, ce fut une expérience formidable au cœur du quotidien shopping, qui a fait briller les yeux des enfants.',
-        ev2_link:'En savoir plus sur l\'Illuster →',
         ev3_meta:'Zurich · Été 2025', ev3_title:'Street Parade 2025',
         ev3_text1:'Le face painting rencontre la plus grande parade techno du monde — quelle combinaison ! J\'étais présente à la Street Parade 2025, créant des looks colorés et créatifs, parfaitement adaptés à l\'ambiance festive.',
         ev3_text2:'Que ce soit un design extravagant ou des motifs pailletés scintillants : ici, tout pouvait être un peu plus !'
@@ -953,7 +951,6 @@ const I18n = (() => {
         ev2_meta:'Illuster · Zurigo · dicembre 2025', ev2_title:'Trucco bimbi per il Samichlaus all\'Illuster',
         ev2_text1:'Nel bellissimo centro commerciale Illuster ho trasformato i piccoli visitatori — in tema con il Samichlaus — in unicorni invernali, Spider-Man di ghiaccio, renne, Samichlaus-Stitch e molti altri motivi natalizi, il che mi ha regalato tantissima gioia.',
         ev2_text2:'Con un pannello motivi professionale e un\'atmosfera festosa, è stata un\'esperienza fantastica nel bel mezzo dello shopping quotidiano, che ha fatto brillare gli occhi dei bambini.',
-        ev2_link:'Scopri di più sull\'Illuster →',
         ev3_meta:'Zurigo · Estate 2025', ev3_title:'Street Parade 2025',
         ev3_text1:'Il face painting incontra la più grande parata techno del mondo — che combinazione! Ero presente alla Street Parade 2025, creando look colorati e creativi, perfettamente in linea con l\'atmosfera esuberante.',
         ev3_text2:'Che sia un design stravagante o motivi scintillanti glitterati: qui tutto poteva essere un po\' di più!'
