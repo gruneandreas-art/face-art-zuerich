@@ -578,6 +578,21 @@
               </div>
             </fieldset>
             <div class="contact-form__field">
+              <label class="contact-form__label" for="source"><span data-i18n="index.form_source">Wie hast du von mir erfahren?</span> <span class="contact-form__optional" data-i18n="index.form_optional">(optional)</span></label>
+              <select class="contact-form__input contact-form__select" id="source" name="source">
+                <option value="" data-i18n="index.form_source_ph">Bitte wählen</option>
+                <option value="Über Freunde/Familie" data-i18n="index.form_source_friends">Über Freunde/Familie</option>
+                <option value="Bei einem Event gesehen" data-i18n="index.form_source_event">Bei einem Event gesehen</option>
+                <option value="Google" data-i18n="index.form_source_google">Google</option>
+                <option value="AI" data-i18n="index.form_source_ai">AI</option>
+                <option value="Sonstige" data-i18n="index.form_source_other">Sonstige</option>
+              </select>
+            </div>
+            <div class="contact-form__field contact-form__source-other" id="sourceOtherField" hidden>
+              <label class="contact-form__label" for="sourceOther" data-i18n="index.form_source_other_label">Sonstige: Kommentar</label>
+              <input class="contact-form__input" type="text" id="sourceOther" name="sourceOther" maxlength="200" placeholder="Kurz erzählen, wo du von mir gehört hast …" data-i18n-placeholder="index.form_source_other_ph">
+            </div>
+            <div class="contact-form__field">
               <label class="contact-form__label" for="message" data-i18n="index.form_message">Nachricht</label>
               <textarea class="contact-form__textarea" id="message" name="message" rows="5" placeholder="Hallo Isa, ich plane einen Kindergeburtstag am …" required data-i18n-placeholder="index.form_ph_message"></textarea>
             </div>

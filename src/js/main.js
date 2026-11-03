@@ -108,6 +108,19 @@
     }
     syncPhoneRequired();
 
+    /* «Wie hast du von mir erfahren?»: Kommentarfeld nur bei «Sonstige» */
+    var sourceSelect = form.querySelector('select[name="source"]');
+    var otherField   = form.querySelector('.contact-form__source-other');
+    var otherInput   = form.querySelector('input[name="sourceOther"]');
+    function syncSourceOther() {
+      if (!sourceSelect || !otherField) return;
+      var show = sourceSelect.value === 'Sonstige';
+      otherField.hidden = !show;
+      if (!show && otherInput) otherInput.value = '';
+    }
+    if (sourceSelect) sourceSelect.addEventListener('change', syncSourceOther);
+    syncSourceOther();
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -154,6 +167,14 @@
         delete data.telefon;
       }
 
+      // «Wie hast du von mir erfahren?» (lesbare Keys für die Empfänger-Mail)
+      var srcVal = String(data.source || '').trim();
+      var srcOther = String(data.sourceOther || '').trim();
+      delete data.source;
+      delete data.sourceOther;
+      if (srcVal) data['Wie von mir erfahren'] = srcVal;
+      if (srcVal === 'Sonstige' && srcOther) data['Sonstige (Kommentar)'] = srcOther;
+
       // Email subject per form type
       data._subject = form.id === 'messenContactForm'
         ? 'Messeanfrage — Face Art Zürich'
@@ -170,6 +191,7 @@
           btn.textContent = originalText;
           if (json.ok) {
             form.reset();
+            syncSourceOther();
             confirmEl.classList.add('contact-form__confirm--visible');
             setTimeout(function () {
               confirmEl.classList.remove('contact-form__confirm--visible');
