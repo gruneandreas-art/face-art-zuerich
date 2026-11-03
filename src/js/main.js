@@ -88,7 +88,7 @@
 
     function syncPhoneRequired() {
       if (!phoneInput || !methodInputs.length) return;
-      var needsPhone = selectedMethod() === 'Per WhatsApp' || selectedMethod() === 'Telefon';
+      var needsPhone = selectedMethod() === 'Per WhatsApp' || selectedMethod() === 'Telefonisch';
       phoneInput.required = needsPhone;
       phoneInput.setAttribute('aria-required', String(needsPhone));
       if (phoneOptHint) phoneOptHint.hidden = needsPhone;
