@@ -353,8 +353,8 @@ const I18n = (() => {
         area_note:'Your town not listed? Ask anyway — I also travel further when it fits the schedule.'},
       gewinnspiel: {
         hero_eyebrow:'Giveaway · 16 Nov – 10 Dec 2026',
-        hero_title:'Win a face art appearance',
-        hero_title_em:'at your event.',
+        hero_title:'Win Face Art Zürich',
+        hero_title_em:'at your event!',
         hero_subtitle:'Sign up for my newsletter and you are automatically in the prize draw.',
         ended:'The giveaway has ended. Thank you for taking part! I will notify the winners by email.',
         hero_cta:'Enter now',
@@ -736,8 +736,8 @@ const I18n = (() => {
         area_note:'Votre localité n\'y figure pas ? Demandez quand même — je me déplace aussi plus loin si le planning le permet.'},
       gewinnspiel: {
         hero_eyebrow:'Concours · 16.11–10.12.2026',
-        hero_title:'Gagne une prestation face art',
-        hero_title_em:'pour ton événement.',
+        hero_title:'Gagne Face Art Zürich',
+        hero_title_em:'pour ton événement !',
         hero_subtitle:'Inscris-toi à ma newsletter et tu participes automatiquement au tirage au sort.',
         ended:'Le concours est terminé. Merci pour ta participation ! J\'informerai les gagnantes et gagnants par e-mail.',
         hero_cta:'Participer maintenant',
@@ -1119,8 +1119,8 @@ const I18n = (() => {
         area_note:'La vostra località non è elencata? Chiedete comunque — mi sposto anche più lontano se gli orari lo permettono.'},
       gewinnspiel: {
         hero_eyebrow:'Concorso · 16.11–10.12.2026',
-        hero_title:'Vinci un\'esibizione di face art',
-        hero_title_em:'al tuo evento.',
+        hero_title:'Vinci Face Art Zürich',
+        hero_title_em:'al tuo evento!',
         hero_subtitle:'Iscriviti alla mia newsletter e partecipi automaticamente all\'estrazione.',
         ended:'Il concorso è terminato. Grazie per aver partecipato! Avviserò le vincitrici e i vincitori via e-mail.',
         hero_cta:'Partecipa ora',
