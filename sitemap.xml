@@ -74,6 +74,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://face-art-zuerich.ch/gewinnspiel</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/gewinnspiel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/gewinnspiel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/gewinnspiel"/>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://face-art-zuerich.ch/en/</loc>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/"/>
@@ -144,6 +153,15 @@
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://face-art-zuerich.ch/en/gewinnspiel</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://face-art-zuerich.ch/gewinnspiel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://face-art-zuerich.ch/en/gewinnspiel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://face-art-zuerich.ch/gewinnspiel"/>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://face-art-zuerich.ch/impressum</loc>

@@ -953,6 +953,7 @@ p  { color: var(--text-mid); }
 .page--hochzeiten .hero--sub .hero__bg,
 .page--halloween .hero--sub .hero__bg,
 .page--events .hero--sub .hero__bg,
+.page--gewinnspiel .hero--sub .hero__bg,
 .page--messen .hero--sub .hero__bg,
 .page--legal .hero--sub .hero__bg {
   background: linear-gradient(140deg, #1C1420 0%, #3C2050 30%, #6E3C6A 58%, #3A1830 85%, #1C1020 100%);
@@ -3145,4 +3146,176 @@ span.t-card__avatar {
   margin-top: var(--sp-4);
   max-width: 620px;
   font-size: .92rem;
+}
+
+/* ===== Gewinnspiel 2026 (Startseiten-Button + Seite /gewinnspiel) ===== */
+/* Elemente mit data-gs-active blendet main.js nach Teilnahmeschluss aus;
+   das hidden-Attribut muss dabei display-Regeln der Komponenten schlagen. */
+[data-gs-active][hidden],
+.gs-ended[hidden] { display: none !important; }
+
+/* Startseite: prominenter Teilnahme-Button im Hero (above the fold) */
+.hero-promo {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  margin-top: var(--sp-3);
+  padding: .7rem 1.25rem .7rem .7rem;
+  background: var(--mint);
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 6px 28px rgba(104,169,160,.38);
+  text-align: left;
+  transition: background-color var(--t), transform var(--t), box-shadow var(--t);
+}
+.hero-promo:hover {
+  background: var(--mint-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(104,169,160,.48);
+}
+.hero-promo:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
+.hero-promo__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+}
+.hero-promo__icon svg { width: 1.25rem; height: 1.25rem; }
+.hero-promo__body { display: flex; flex-direction: column; line-height: 1.25; }
+.hero-promo__label {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+}
+.hero-promo__cta { font-size: 1rem; font-weight: 600; }
+.hero-promo__arrow { font-size: 1.1rem; margin-left: .15rem; transition: transform var(--t); }
+.hero-promo:hover .hero-promo__arrow { transform: translateX(3px); }
+@media (max-width: 480px) {
+  .hero-promo { margin-top: var(--sp-2); padding: .6rem 1rem .6rem .6rem; gap: .7rem; }
+  .hero-promo__icon { width: 2.2rem; height: 2.2rem; }
+  .hero-promo__cta { font-size: .92rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-promo, .hero-promo__arrow { transition: none; }
+  .hero-promo:hover { transform: none; }
+}
+
+/* Gewinnspiel-Seite */
+.gs-ended {
+  margin: 0 0 var(--sp-4);
+  padding: var(--sp-2) var(--sp-3);
+  border-left: 3px solid var(--mint);
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+}
+.gs-prizes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+}
+@media (min-width: 820px) {
+  .gs-prizes { grid-template-columns: 1.4fr 1fr 1fr; }
+}
+.gs-prize {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+.gs-prize--main {
+  background: #17282A;
+  border-color: #17282A;
+  box-shadow: var(--shadow-md);
+}
+.gs-prize__rank {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mint-hover);
+  margin-bottom: var(--sp-2);
+}
+.gs-prize--main .gs-prize__rank { color: var(--mint); }
+.gs-prize__title {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  margin-bottom: var(--sp-1);
+}
+.gs-prize--main .gs-prize__title { color: var(--white); }
+.gs-prize__text { line-height: 1.6; }
+.gs-prize--main .gs-prize__text { color: rgba(255,252,248,.78); }
+.gs-prize__detail {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  font-weight: 600;
+  color: var(--mint);
+}
+.gs-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+}
+@media (min-width: 820px) {
+  .gs-steps { grid-template-columns: repeat(3, 1fr); }
+}
+.gs-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  color: var(--text);
+}
+.gs-steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--white);
+  font-weight: 600;
+  font-size: .9rem;
+  margin-top: -.2rem;
+}
+.gs-note {
+  margin-top: var(--sp-4);
+  text-align: center;
+  font-size: .95rem;
+}
+.newsletter-section .nl-form__privacy a,
+.gs-terms a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.newsletter-section .nl-form__privacy a:hover { color: var(--mint); }
+.gs-terms__title { margin-bottom: var(--sp-4); }
+.gs-terms {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: var(--sp-1);
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+.gs-terms a { color: var(--mint-hover); }
+/* Platzhalter fuer noch nicht bestaetigte Angaben — vor dem Livegang entfernen */
+.gs-proposal {
+  display: inline-block;
+  padding: 0 .4rem;
+  border-radius: var(--radius-sm);
+  background: #FFF2C2;
+  color: #6B5200;
+  font-size: .8rem;
+  font-weight: 600;
 }

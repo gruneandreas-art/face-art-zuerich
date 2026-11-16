@@ -481,6 +481,14 @@
     });
   });
 
+  /* ===== Gewinnspiel 2026: nach Teilnahmeschluss automatisch beenden ===== */
+  // Teilnahmeschluss 10.12.2026, 23:59 Uhr Schweizer Zeit (MEZ, UTC+1). Rein lokal, kein Tracking.
+  const GS_END = Date.parse('2026-12-10T23:59:59+01:00');
+  if (Date.now() > GS_END) {
+    document.querySelectorAll('[data-gs-active]').forEach(function (el) { el.hidden = true; });
+    document.querySelectorAll('[data-gs-ended]').forEach(function (el) { el.hidden = false; });
+  }
+
   /* ===== FAQ Accordion ===== */
   document.querySelectorAll('.faq__btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
