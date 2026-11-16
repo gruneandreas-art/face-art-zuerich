@@ -3193,16 +3193,12 @@ span.t-card__avatar {
   font-weight: 500;
   color: rgba(255,255,255,.9);
 }
-.hero-promo__date { white-space: nowrap; opacity: .8; }
-.hero-promo__date::before { content: "· "; }
 .hero-promo__arrow { font-size: 1.1rem; margin-left: .15rem; transition: transform var(--t); }
 .hero-promo:hover .hero-promo__arrow { transform: translateX(3px); }
 @media (max-width: 480px) {
   .hero-promo { margin-top: var(--sp-2); padding: .6rem 1rem .6rem .6rem; gap: .7rem; }
   .hero-promo__icon { width: 2.2rem; height: 2.2rem; }
   .hero-promo__title { font-size: .92rem; }
-  .hero-promo__date { display: block; }
-  .hero-promo__date::before { content: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-promo, .hero-promo__arrow { transition: none; }
