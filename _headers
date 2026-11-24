@@ -1,0 +1,13 @@
+# Sicherheitsheader fuer alle Pfade (Netlify). GitHub Pages ignoriert diese Datei.
+# script-src: eigenes JS plus SHA-256 des Inline-Fehlerreporters (identisch auf
+# allen Seiten) und 'unsafe-hashes' plus SHA-256 des Font-preload-onload
+# (this.onload=null;this.rel='stylesheet'). Ohne die Hashes wuerden das
+# Inline-Skript und das asynchrone Laden der Google Fonts blockiert.
+# style-src erlaubt 'unsafe-inline', weil viele Elemente style-Attribute nutzen.
+# JSON-LD (type=application/ld+json) wird nicht als Skript ausgefuehrt.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-NJuwWpWNhOe9BxWTEmTe1Lk3L/jUE6TEHWfWYvYi8Mg=' 'unsafe-hashes' 'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: SAMEORIGIN
