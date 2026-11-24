@@ -1,3 +1,15 @@
+# Interne Arbeitsdateien nicht ausliefern (404).
+# Force-Flag "!", weil die Dateien im Deploy existieren und sonst mit 200
+# ausgeliefert wuerden (Rule Shadowing). GitHub Pages ignoriert _redirects
+# und _headers — die Sperre gilt nur auf Netlify (nach manuellem Deploy).
+/CLAUDE.md                     /404.html  404!
+/SEO-Copywriting-Report.md     /404.html  404!
+/SEO-Copywriting-Report-v2.md  /404.html  404!
+/*.md                          /404.html  404!
+/scripts/*                     /404.html  404!
+/docs/*                        /404.html  404!
+/tests/*                       /404.html  404!
+
 # .html -> Clean URL (301).
 # Force-Flag "!" ist nötig: die .html-Dateien existieren als statische Dateien im
 # Deploy und würden die Regel sonst überschatten (Netlify Rule Shadowing) — die
